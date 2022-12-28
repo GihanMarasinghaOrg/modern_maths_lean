@@ -1,4 +1,4 @@
 
-#reduce lean.version.snd
+#reduce lean.version.fst
 
 

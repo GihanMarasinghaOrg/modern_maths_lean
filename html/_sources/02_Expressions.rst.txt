@@ -4,3 +4,4 @@ Expressions
 ============
 
 .. include:: 02_Expressions/01_Evaluating_expressions.inc
+.. include:: 02_Expressions/02_Types.inc
