@@ -19,6 +19,7 @@
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -43,7 +44,10 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="01_Introduction.html">1. Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Expressions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Expressions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#evaluating-expressions">2.1. Evaluating expressions</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
@@ -75,6 +79,25 @@
              
   <section id="expressions">
 <span id="id1"></span><h1><span class="section-number">2. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">&#61633;</a></h1>
+<section id="evaluating-expressions">
+<h2><span class="section-number">2.1. </span>Evaluating expressions<a class="headerlink" href="#evaluating-expressions" title="Permalink to this heading">&#61633;</a></h2>
+<p>Lean can be used as a calculator to evaluate expressions.
+.. index:: reduce, commands ; reduce</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="mi">2</span> <span class="bp">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>The above code outputs <code class="docutils literal notranslate"><span class="pre">6</span></code> in the Infoview window.</p>
+<p>Adapt the code to evaluate expressions such as <span class="math notranslate nohighlight">\(1 + 2 + 3\)</span>, <span class="math notranslate nohighlight">\(7^4\)</span>,
+<span class="math notranslate nohighlight">\(6 - 3\)</span>, <span class="math notranslate nohighlight">\(20/5\)</span>, <span class="math notranslate nohighlight">\(10 + 2 \times 5\)</span>.</p>
+<p>You may add comments to your Lean code. Lean ignores any text within a comment.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="c">/-</span><span class="cm"></span>
+<span class="cm">This is a block comment. It is ignored by Lean</span>
+<span class="cm">-/</span>
+
+<span class="k">#eval</span> <span class="mi">1</span> <span class="bp">+</span> <span class="mi">2</span> <span class="c1">-- This line comment starts at the `--` and ends at the end of the line.</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 
