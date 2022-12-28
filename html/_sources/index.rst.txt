@@ -1,0 +1,16 @@
+
+
+Modern Mathematics with Lean
+============================
+
+.. toctree::
+   :numbered:
+   :maxdepth: 2
+
+   01_Introduction
+   02_Expressions
+
+.. toctree::
+   :hidden:
+
+   genindex
