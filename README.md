@@ -18,4 +18,5 @@ If you are viewing this in Visual Studio Code, then you should:
 1. Close the terminal 'panel' that stretches across the bottom of the screen by
 clicking on the X in the top-right of the panel.
 1. Click in the editor pane that contains this text and split the pane to right either by typing Ctrl+\ (or Cmd+\ on Mac) or by clicking the split editor button. This button looks like a square bisected by a vertical line.
-2. Click on the name of the file [CLICK_TO_START.lean](CLICK_TO_START.lean) in the sidebar on the left.
+2. Click once more on the editor pane containing this text.
+2. Click on the name of the file [start.lean](start.lean) in the sidebar on the left.
