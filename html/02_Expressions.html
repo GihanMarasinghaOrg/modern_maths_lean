@@ -178,62 +178,58 @@
 <section id="evaluating-expressions">
 <h2><span class="section-number">2.1. </span>Evaluating expressions<a class="headerlink" href="#evaluating-expressions" title="Permalink to this heading">&#182;</a></h2>
 <p>Lean can be used as a calculator to evaluate expressions.</p>
-<div id="index-0" style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/01_Evaluating_expressions.lean" id="index-0" target="_blank" tryitfile="../src/02_Expressions/01_Evaluating_expressions.lean">
-Go to source</a></div><div class="highlight-lean notranslate" id="index-0"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="mi">2</span> <span class="bp">*</span> <span class="mi">3</span>
+<div class="highlight-lean notranslate" id="index-0"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="mi">2</span> <span class="bp">*</span> <span class="mi">3</span>
 </pre></div>
 </div>
-</div><p>The above code outputs <code class="docutils literal notranslate"><span class="pre">6</span></code> in the Infoview window.</p>
+<p>The above code outputs <code class="docutils literal notranslate"><span class="pre">6</span></code> in the Infoview window.</p>
 <p>Adapt the code to evaluate expressions such as <span class="math notranslate nohighlight">\(1 + 2 + 3\)</span>, <span class="math notranslate nohighlight">\(7^4\)</span>,
 <span class="math notranslate nohighlight">\(6 - 3\)</span>, <span class="math notranslate nohighlight">\(20/5\)</span>, <span class="math notranslate nohighlight">\(10 + 2 \times 5\)</span>.</p>
 <p>Remember that to work with the code for this section, you just need
 to click on the &#8216;Go to source&#8217; link in any code fragment.</p>
 <p>You may add comments to your Lean code. Lean ignores any text within a comment.</p>
-<div style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/01_Evaluating_expressions.lean" target="_blank" tryitfile="../src/02_Expressions/01_Evaluating_expressions.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="c">/-</span><span class="cm"></span>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="c">/-</span><span class="cm"></span>
 <span class="cm">This is a block comment. It is ignored by Lean</span>
 <span class="cm">-/</span>
 
 <span class="k">#eval</span> <span class="mi">1</span> <span class="bp">+</span> <span class="mi">2</span> <span class="c1">-- This line comment starts at the `--` and ends at the end of the line.</span>
 </pre></div>
 </div>
-</div></section>
+</section>
 <section id="types-in-lean">
 <h2><span class="section-number">2.2. </span>Types in Lean<a class="headerlink" href="#types-in-lean" title="Permalink to this heading">&#182;</a></h2>
 <p>Every expression in mathematics (and in Lean) has a <cite>type</cite>.</p>
-<div id="index-1" style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/02_Types.lean" id="index-1" target="_blank" tryitfile="../src/02_Expressions/02_Types.lean">
-Go to source</a></div><div class="highlight-lean notranslate" id="index-1"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="mi">2</span>
+<div class="highlight-lean notranslate" id="index-1"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="mi">2</span>
 </pre></div>
 </div>
-</div><p>The code above outputs <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">:</span> <span class="pre">&#8469;</span></code>, showing that <code class="docutils literal notranslate"><span class="pre">2</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>, the type
+<p>The code above outputs <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">:</span> <span class="pre">&#8469;</span></code>, showing that <code class="docutils literal notranslate"><span class="pre">2</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>, the type
 of natural numbers.</p>
 <p>Numerals are treated as natural numbers by default. Consider the output
 of the following code</p>
-<div style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/02_Types.lean" target="_blank" tryitfile="../src/02_Expressions/02_Types.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="mi">3</span> <span class="bp">-</span><span class="mi">5</span>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="mi">3</span> <span class="bp">-</span><span class="mi">5</span>
 </pre></div>
 </div>
-</div><p>Lean claims that <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">-</span> <span class="pre">5</span></code> is <code class="docutils literal notranslate"><span class="pre">0</span></code>.The reason is that subtraction of two
+<p>Lean claims that <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">-</span> <span class="pre">5</span></code> is <code class="docutils literal notranslate"><span class="pre">0</span></code>.The reason is that subtraction of two
 natural numbers (non-negative integers) in Lean always returns a natural number.
 To deal with awkward situations like this, Lean defines <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">-</span> <span class="pre">b</span></code> to be <code class="docutils literal notranslate"><span class="pre">0</span></code>
 if <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are natural numbers where <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">&#8805;</span> <span class="pre">a</span></code>.</p>
 <p>To get the expected answer, we must request that Lean treats these numerals
 as integers.</p>
-<div style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/02_Types.lean" target="_blank" tryitfile="../src/02_Expressions/02_Types.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="o">(</span><span class="mi">3</span> <span class="bp">-</span> <span class="mi">5</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="o">(</span><span class="mi">3</span> <span class="bp">-</span> <span class="mi">5</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span>
 </pre></div>
 </div>
-</div><p>To produce the <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> symbold, type <code class="docutils literal notranslate"><span class="pre">\Z</span></code> followed by a space or tab.
+<p>To produce the <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> symbold, type <code class="docutils literal notranslate"><span class="pre">\Z</span></code> followed by a space or tab.
 Alternatively, type <code class="docutils literal notranslate"><span class="pre">\int</span></code>. Likewise, <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> is typesd <code class="docutils literal notranslate"><span class="pre">\nat</span></code> or <code class="docutils literal notranslate"><span class="pre">\N</span></code>.</p>
 <p>On some keyboards, it may be difficult to type <code class="docutils literal notranslate"><span class="pre">\</span></code>. You can change
 this by opening the VSCode settings with Ctrl+, (or Cmd+, in Mac)
 and searching for &#8216;Lean lnput leader&#8217;. Change the leader key to an
 easier-to-type symbol. For example, if you change it to <code class="docutils literal notranslate"><span class="pre">!</span></code>, then typing
 <code class="docutils literal notranslate"><span class="pre">!N</span></code> (followed by space) will produce <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>.</p>
+<p>:::{dropdown} Dropdown title
+Dropdown content
+::</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="bp">..</span> <span class="kd">end</span> <span class="n">of</span> <span class="n">inclusion</span> <span class="k">from</span> <span class="s2">&quot;source/02_Expressions/02_Types.inc&quot;</span>
+</pre></div>
+</div>
 </section>
 </section>
 
