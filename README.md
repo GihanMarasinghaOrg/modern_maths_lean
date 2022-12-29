@@ -8,10 +8,10 @@ you should either:
 
 1. Downwload a bundle via BLAH or
 2. Go to the [GitHub Repository](https://github.com/GihanMarasinghaOrg/modern_maths_lean).
-    2.1 Click on the green "Code" button
-    2.2 Click on the Codespaces tab and
-    2.3 Click "Create codespace on main"
-    2.4 Wait until the documentation appears. This may take a few minutes.
+    * Click on the green "Code" button
+    * Click on the Codespaces tab and
+    * Click "Create codespace on main"
+    * Wait until the documentation appears. This may take a few minutes.
 
 If you are viewing this in Visual Studio Code, then you should:
 

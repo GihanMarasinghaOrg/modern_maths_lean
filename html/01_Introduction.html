@@ -44,7 +44,7 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#using-this-resource">1.1. Using this resource</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-lean-vscode-interface">1.2. The Lean + VSCode interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-lean-in-vscode">1.2. Working with Lean in VSCode</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="02_Expressions.html">2. Expressions</a></li>
@@ -85,38 +85,37 @@
 through the LEAN theorem prover&#8217;.</p>
 <p>The simplest way to use this book is to download it as as bundle from <a class="reference external" href="http://example.com/">ADD THE URL HERE</a>.</p>
 </section>
-<section id="the-lean-vscode-interface">
-<h2><span class="section-number">1.2. </span>The Lean + VSCode interface<a class="headerlink" href="#the-lean-vscode-interface" title="Permalink to this heading">&#61633;</a></h2>
+<section id="working-with-lean-in-vscode">
+<h2><span class="section-number">1.2. </span>Working with Lean in VSCode<a class="headerlink" href="#working-with-lean-in-vscode" title="Permalink to this heading">&#61633;</a></h2>
 <p>I assume you have opened this resource in Visual Studio Code (VSCode). If so, should be reading
 this document in the right-most pane, titled &#8216;Lean Documentation&#8217;.</p>
 <p>If you haven&#8217;t already done so, read the instructions in the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> document contained
 with this project.</p>
 <p>Click on the link &#8216;Go to source&#8217; in the code fragment below.</p>
-<div style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/01_Introduction/02_The_Lean_interface.lean" target="_blank" tryitfile="../src/01_Introduction/02_The_Lean_interface.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#reduce</span> <span class="n">lean.version</span>
-</pre></div>
-</div>
-</div><p>The Lean Infoview window is in the middle pane. You&#8217;ll see feedback and other output from a
-running Lean file in this window. I&#8217;ll assume you have started by clicking on the
-<code class="docutils literal notranslate"><span class="pre">start.lean</span></code> file.</p>
-<p>On the very left of the VSCode window is the sidebar. In Explorer view (which is selected if
-you click the top-left icon), you&#8217;ll see the file hierarchy for this project.</p>
-<p>Do the following:</p>
-<ol class="arabic simple">
-<li><p>Ensure the Lean Documentation pane is locked by clicking the three dots in
-the top-right of this pane then selecting lock group. Do the same
-for the Lean Infoview pane.</p></li>
-<li><p>Click in the middle of the left-most pane, the pane that currently contains the
-<code class="docutils literal notranslate"><span class="pre">start.lean</span></code> file.</p></li>
-<li><p>The Lean files associated with this documentation are in subfolders of the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder.
-If you now go to the file <code class="docutils literal notranslate"><span class="pre">02_The_Lean_inferface.lean</span></code> in the <code class="docutils literal notranslate"><span class="pre">01_Introduction</span></code> subfolder of
-<code class="docutils literal notranslate"><span class="pre">src</span></code>, you&#8217;ll see the Lean file for this section.</p></li>
-</ol>
-<p>In the Lean editor, you&#8217;ll see the code below.</p>
 <div id="index-0" style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/01_Introduction/02_The_Lean_interface.lean" id="index-0" target="_blank" tryitfile="../src/01_Introduction/02_The_Lean_interface.lean">
-Go to source</a></div><div class="highlight-lean notranslate" id="index-0"><div class="highlight"><pre><span></span><span class="k">#reduce</span> <span class="n">lean.version.fst</span>
+Go to source</a></div><div class="highlight-lean notranslate" id="index-0"><div class="highlight"><pre><span></span><span class="k">#reduce</span> <span class="n">lean.version</span>
+</pre></div>
+</div>
+</div><p>Two things should have happened: (1) the left-most editor will contain the
+contents of the Lean file corresponding to this section of the book and
+(2) the middle pane will display the Lean Infoview window. Initially, it
+shows nothing.</p>
+<p>1. Click in the Lean file in the left-most pane to start
+Infoview.
+2. Click on the &#8216;All messages&#8217; drop-down in the Infoview window. This
+shows Lean output from the commands in the Lean file. Each item of output
+gives the file name and line number of the corresponding input. You&#8217;ll use
+it to get feedback on your mathematical proofs.</p>
+<p>The output from <code class="docutils literal notranslate"><span class="pre">#reduce</span> <span class="pre">lean.version</span></code> is a triple of numbers that
+represents the Lean version number used by this project.</p>
+<p>If desired, lock the Lean Documentation pane by clicking the three dots in
+the top-right of this pane then selecting lock group. Do the same
+for the Lean Infoview pane.</p>
+<p>Now, we&#8217;ll apply the <code class="docutils literal notranslate"><span class="pre">fst</span></code> function to the triple <code class="docutils literal notranslate"><span class="pre">lean.version</span></code>.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/01_Introduction/02_The_Lean_interface.lean" target="_blank" tryitfile="../src/01_Introduction/02_The_Lean_interface.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#reduce</span> <span class="n">lean.version.fst</span>
 </pre></div>
 </div>
 </div><p>The Lean Infoview window will show you Lean&#8217;s output: <code class="docutils literal notranslate"><span class="pre">3</span></code>. It has calcuated this
