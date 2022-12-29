@@ -7,9 +7,10 @@
   .proof .proof-title {
     background-color: #9fb1b4;
     border: 1px solid #86989b;
+    border-radius: 5px;
     color: white;
     font-size: 120%;
-    padding-left: 0.3em;
+    padding-left: 0.4em;
     }
   
   /* Content */
