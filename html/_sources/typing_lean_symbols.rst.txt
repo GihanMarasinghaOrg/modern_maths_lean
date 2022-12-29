@@ -14,11 +14,11 @@ Typing Lean symbols
   =========================     =======================     ===================
   Symbol                        Lean input                  Meaning
   =========================     =======================     ===================
-  :math:`h_1`                   `h\1`                       Subscript
-  :math:`\lambda`               `\lam`                      Lambda abstraction
-  :math:`\neg`                  `\n`                        Logical not
-  :math:`\land`                 `\and`                      Conjunction / Logical and
-  :math:`\lor`                  `\or`                       Disjunction / Logical or
-  :math:`\to`                   `\t`                        Implication
-  :math:`\leftrightarrow`       `\iff`                      If and only if
+  :math:`h_1`                   ``h\1``                     Subscript
+  :math:`\lambda`               ``\lam``                    Lambda abstraction
+  :math:`\neg`                  ``\n``                      Logical not
+  :math:`\land`                 ``\and``                    Conjunction / Logical and
+  :math:`\lor`                  ``\or``                     Disjunction / Logical or
+  :math:`\to`                   ``\t``                      Implication
+  :math:`\leftrightarrow`       ``\iff``                    If and only if
   =========================     =======================     ===================
