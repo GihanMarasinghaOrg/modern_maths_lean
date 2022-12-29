@@ -1,4 +1,4 @@
-.. _lean_symbols:
+.. _typing_lean_symbols:
 
 Typing Lean symbols
 ===================
