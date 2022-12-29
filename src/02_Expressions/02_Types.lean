@@ -17,3 +17,6 @@ import data.rat
 
 #eval (3.4 ^ 2 : ℚ)
 
+
+#check 3 = 1 + 2
+

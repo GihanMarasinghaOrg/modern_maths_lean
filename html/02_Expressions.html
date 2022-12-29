@@ -41,7 +41,7 @@
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Index" href="genindex.html" />
+    <link rel="next" title="typing Lean symbols" href="typing_lean_symbols.html" />
     <link rel="prev" title="1. Introduction" href="01_Introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -102,6 +102,11 @@
  </li>
 </ul>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="typing_lean_symbols.html">
+   typing Lean symbols
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="genindex.html">
    Index
@@ -299,7 +304,7 @@ Go to source</a></div><div class="highlight-lean notranslate" id="index-0"><div 
 </pre></div>
 </div>
 </div><p>The above code outputs <code class="docutils literal notranslate"><span class="pre">6</span></code> in the Infoview window.</p>
-<div class="proof proof-type-problem" id="id2">
+<div class="proof proof-type-problem" id="id4">
 
     <div class="proof-title">
         <span class="proof-type">Problem 2.1</span>
@@ -371,7 +376,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </div>
 </div><p>Here, <code class="docutils literal notranslate"><span class="pre">&#8474;</span></code> is typed <code class="docutils literal notranslate"><span class="pre">\rat</span></code> or <code class="docutils literal notranslate"><span class="pre">\Q</span></code>. Lean reduces <span class="math notranslate nohighlight">\(3.4^2\)</span> to
 the rational number <span class="math notranslate nohighlight">\(289/25\)</span>.</p>
-<div class="proof proof-type-problem" id="id3">
+<div class="proof proof-type-problem" id="id5">
 
     <div class="proof-title">
         <span class="proof-type">Problem 2.2</span>
@@ -385,7 +390,16 @@ gives the expected anser. That is, prefer <span class="math notranslate nohighli
 and prefer <span class="math notranslate nohighlight">\(\mathbb Z\)</span> to <span class="math notranslate nohighlight">\(\mathbb Q\)</span>.</p></li>
 </ul>
 <p>(i) <span class="math notranslate nohighlight">\((1-4)^5\)</span>, (ii) <span class="math notranslate nohighlight">\((1+4)^5\)</span>, (iii) <span class="math notranslate nohighlight">\(5/4 + 1/2\)</span>, (iv) <span class="math notranslate nohighlight">\(66/2\)</span>.</p>
-</div></div></section>
+</div></div><p>For proof, the most important type is <code class="docutils literal notranslate"><span class="pre">Prop</span></code>, the type of propositions.
+Examples of propositions include <span class="math notranslate nohighlight">\(3 = 1 + 2\)</span>, <span class="math notranslate nohighlight">\(1 + 1 &lt; 10\)</span> and
+&#8216;for every natural number <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(n \ge 0\)</span>&#8217;.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/02_Types.lean" target="_blank" tryitfile="../src/02_Expressions/02_Types.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="mi">3</span> <span class="bp">=</span> <span class="mi">1</span> <span class="bp">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div><p>The code above gives output <a href="#id2"><span class="problematic" id="id3">``</span></a>3 = 1 + 2 : Prop`, showing that <cite>3 = 1 + 2</cite> is a proposition.</p>
+</section>
 </section>
 
 
@@ -403,10 +417,10 @@ and prefer <span class="math notranslate nohighlight">\(\mathbb Z\)</span> to <s
             <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="genindex.html" title="next page">
+    <a class='right-next' id="next-link" href="typing_lean_symbols.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Index</p>
+        <p class="prev-next-title">typing Lean symbols</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

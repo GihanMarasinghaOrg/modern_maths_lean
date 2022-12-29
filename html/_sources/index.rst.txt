@@ -13,4 +13,6 @@ Modern Mathematics with Lean
 .. toctree::
    :hidden:
 
+   typing_lean_symbols
    genindex
+

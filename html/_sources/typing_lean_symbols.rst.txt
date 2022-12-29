@@ -1,0 +1,22 @@
+.. _lean_symbols:
+
+typing Lean symbols
+===================
+
+
+.. tabularcolumns:: |c|l|
+
+.. _tab_prop_connectives:
+
+.. table:: Connectives of propositional logic and their order of precedence
+  :widths: 10 20  
+
+  =========================  ===================
+  Connective                    Name
+  =========================  ===================
+  :math:`\neg`               Negation
+  :math:`\land`              Conjunction, And
+  :math:`\lor`               Disjunction, Or
+  :math:`\to`                Implication
+  :math:`\leftrightarrow`    If and only if
+  =========================  ===================
