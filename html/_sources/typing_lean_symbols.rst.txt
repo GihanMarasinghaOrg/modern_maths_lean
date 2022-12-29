@@ -9,7 +9,7 @@ Typing Lean symbols
 .. _tab_lean_symbols:
 
 .. table:: Symbols and how to type them in Lean
-  :widths: 10 20 20 
+  :widths: 10 10 20 
 
   =========================     =======================     ===================
   Symbol                        Lean input                  Meaning
@@ -30,4 +30,18 @@ Typing Lean symbols
   :math:`\lor`                  ``\or``                     Disjunction / Logical or
   :math:`\to`                   ``\r``                      Implication
   :math:`\leftrightarrow`       ``\iff``                    If and only if
+  :math:`\forall`               ``\all``                    For all / universal quantifier
+  :math:`\exists`               ``\ex``                     There exists / existential quantifier
+  :math:`\in`                   ``\in``                     Set membership
+  :math:`\notin`                ``\notin``                  Not in the Set
+  :math:`\emptyset`             ``\empty``                  Empty Set
+  :math:`\subseteq`             ``\sub``                    Subset
+  :math:`\cap`                  ``\i``                      Set intersection
+  :math:`\cup`                  ``\un``                     Set union
+  :math:`\times`                ``\x``                      Cartesian product of types
+  :math:`\times^s`              ``\x^s``                    Cartesian product of sets
+  :math:`\powerset`             ``\power``                  Power set
+  ``f '' S``                    ``f '' S``                  Image of set :math:`S` under function :math:`f`
+  ``f⁻¹'(U)``                   ``f\-1'(U)``                Preimage of set :math:`U` under function :math:`f`
+  :math:`\circ`                 ``\o``                      Composition of functions 
   =========================     =======================     ===================
