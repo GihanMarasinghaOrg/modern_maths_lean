@@ -10,8 +10,13 @@ you should either:
 2. Go to the [GitHub Repository](https://github.com/GihanMarasinghaOrg/modern_maths_lean).
     * Click on the green "Code" button
     * Click on the Codespaces tab and
-    * Click "Create codespace on main"
-    * Wait until the documentation appears. This may take a few minutes.
+    * Click "Create codespace on main". This creates a codespace
+      (a remote virtual machine) on which you will run the Lean project.
+    * It may take several minutes to build the codespace. Be patient.
+      You only need to create the codespace once. In future, you
+      can save time by using the codespace you have built.
+    * Once Visual Studio Code opens, wait a little while until
+      the documentation appears in the right-hand pane.
 
 If you are viewing this in Visual Studio Code, then you should:
 
