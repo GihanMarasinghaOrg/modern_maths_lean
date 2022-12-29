@@ -6,9 +6,9 @@ Typing Lean symbols
 
 .. tabularcolumns:: |l|l||l|
 
-.. _tab_prop_connectives:
+.. _tab_lean_symbols:
 
-.. table:: Connectives of propositional logic and their order of precedence
+.. table:: Symbols and how to type them in Lean
   :widths: 10 20 20 
 
   =========================     =======================     ===================
@@ -16,9 +16,18 @@ Typing Lean symbols
   =========================     =======================     ===================
   :math:`h_1`                   ``h\1``                     Subscript
   :math:`\lambda`               ``\lam``                    Lambda abstraction
+  :math:`X \to Y`               ``X \r Y``                  Function type
+  :math:`\mathbb N`             ``\N``                      Natural number (non-negative integer) type
+  :math:`\mathbb Z`             ``\Z``                      Integer type
+  :math:`\mathbb Q`             ``\Q``                      Rational number type
+  :math:`\mathbb R`             ``\R``                      Real number type
+  :math:`\mathbb C`             ``\C``                      Complex number type
+  :math:`\sum`                  ``\sum``                    Sum (in finite sum notation)
+  :math:`\prec`                 ``\prec``                   Less than (in finite sum notation)
+  :math:`\preceq`               ``\preceq``                 Less that or equal to (in finite sum notation)
   :math:`\neg`                  ``\n``                      Logical not
   :math:`\land`                 ``\and``                    Conjunction / Logical and
   :math:`\lor`                  ``\or``                     Disjunction / Logical or
-  :math:`\to`                   ``\t``                      Implication
+  :math:`\to`                   ``\r``                      Implication
   :math:`\leftrightarrow`       ``\iff``                    If and only if
   =========================     =======================     ===================
