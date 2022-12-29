@@ -22,6 +22,12 @@ Typing Lean symbols
   :math:`\mathbb Q`             ``\Q``                      Rational number type
   :math:`\mathbb R`             ``\R``                      Real number type
   :math:`\mathbb C`             ``\C``                      Complex number type
+  ``*``                         ``*``                       Multiplication
+  ``/``                         ``/``                       Division
+  :math:`a^b`                   ``a^b``                     Exponentiation
+  :math:`\le`                   ``\le``                     Less-than-or-equal-to
+  :math:`\ge`                   ``\ge``                     Greater-than-or-equal-to
+  :math:`\ne`                   ``\ne``                     Not equal to
   :math:`\sum`                  ``\sum``                    Sum (in finite sum notation)
   :math:`\prec`                 ``\prec``                   Less than (in finite sum notation)
   :math:`\preceq`               ``\preceq``                 Less that or equal to (in finite sum notation)
@@ -40,7 +46,7 @@ Typing Lean symbols
   :math:`\cup`                  ``\un``                     Set union
   :math:`\times`                ``\x``                      Cartesian product of types
   :math:`\times^s`              ``\x^s``                    Cartesian product of sets
-  :math:`\powerset`             ``\power``                  Power set
+  :math:`\mathcal P`            ``\power``                  Power set
   ``f '' S``                    ``f '' S``                  Image of set :math:`S` under function :math:`f`
   ``f⁻¹'(U)``                   ``f\-1'(U)``                Preimage of set :math:`U` under function :math:`f`
   :math:`\circ`                 ``\o``                      Composition of functions 
