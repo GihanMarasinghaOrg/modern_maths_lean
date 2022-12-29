@@ -20,7 +20,13 @@
     background-color: #F5F7F9;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: 0.5em 1em;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 
+  }
+
+  .proof-content .p:last-child {
+    margin-bottom: 0px;
   }
   
   /* Toggle proof */
@@ -28,6 +34,8 @@
       display: block;
       clear: both;
   }
+
+
   
   /*
   .proof-type-proof > .proof-title:after {
