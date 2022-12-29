@@ -92,6 +92,44 @@ this document in the right-most pane, titled &#8216;Lean Documentation&#8217;.</
 <p>If you haven&#8217;t already done so, read the instructions in the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> document contained
 with this project.</p>
 <p>Click on the link &#8216;Go to source&#8217; in the code fragment below.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/01_Introduction/02_The_Lean_interface.lean" target="_blank" tryitfile="../src/01_Introduction/02_The_Lean_interface.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#reduce</span> <span class="n">lean.version</span>
+</pre></div>
+</div>
+</div><p>The Lean Infoview window is in the middle pane. You&#8217;ll see feedback and other output from a
+running Lean file in this window. I&#8217;ll assume you have started by clicking on the
+<code class="docutils literal notranslate"><span class="pre">start.lean</span></code> file.</p>
+<p>On the very left of the VSCode window is the sidebar. In Explorer view (which is selected if
+you click the top-left icon), you&#8217;ll see the file hierarchy for this project.</p>
+<p>Do the following:</p>
+<ol class="arabic simple">
+<li><p>Ensure the Lean Documentation pane is locked by clicking the three dots in
+the top-right of this pane then selecting lock group. Do the same
+for the Lean Infoview pane.</p></li>
+<li><p>Click in the middle of the left-most pane, the pane that currently contains the
+<code class="docutils literal notranslate"><span class="pre">start.lean</span></code> file.</p></li>
+<li><p>The Lean files associated with this documentation are in subfolders of the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder.
+If you now go to the file <code class="docutils literal notranslate"><span class="pre">02_The_Lean_inferface.lean</span></code> in the <code class="docutils literal notranslate"><span class="pre">01_Introduction</span></code> subfolder of
+<code class="docutils literal notranslate"><span class="pre">src</span></code>, you&#8217;ll see the Lean file for this section.</p></li>
+</ol>
+<p>In the Lean editor, you&#8217;ll see the code below.</p>
+<div id="index-0" style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/01_Introduction/02_The_Lean_interface.lean" id="index-0" target="_blank" tryitfile="../src/01_Introduction/02_The_Lean_interface.lean">
+Go to source</a></div><div class="highlight-lean notranslate" id="index-0"><div class="highlight"><pre><span></span><span class="k">#reduce</span> <span class="n">lean.version.fst</span>
+</pre></div>
+</div>
+</div><p>The Lean Infoview window will show you Lean&#8217;s output: <code class="docutils literal notranslate"><span class="pre">3</span></code>. It has calcuated this
+from the first element (indicated by <code class="docutils literal notranslate"><span class="pre">fst</span></code>) of the Lean version number.</p>
+<p>Modify the Lean code, replacing <code class="docutils literal notranslate"><span class="pre">fst</span></code> with <code class="docutils literal notranslate"><span class="pre">snd</span></code>. Is that what you expected?</p>
+<p>If you ever accidentally close the Lean Documentation window, you can retrieve it
+by opening the Command Palette from the View -&gt; Command Palette menu and searching for:
+&#8216;Lean: Open Documentation View&#8217;. Then click &#8216;Open documentation of current project&#8217;.</p>
+<p>Likewise, you can display the Infoview window by searching for &#8216;Lean: Infoview: Display Goal&#8217;
+in the Command Palette.</p>
+<p><em>Acknowledgments.</em> The tools needed to build this documentation are based on
+the &#8216;Mathematics in Lean&#8217; project by Jeremy Avigad, Kevin Buzzard, Robert Y. Lewis, and
+Patrick Massot. Their project depdended on infrastructure built by  Gabriel Ebner.</p>
 </section>
 </section>
 
