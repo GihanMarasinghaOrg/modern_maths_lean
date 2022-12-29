@@ -37,5 +37,5 @@
 	"remoteEnv": {
         	"PATH" : "${containerEnv:PATH}:/home/vscode/.elan/bin"
 	},
-	"updateContentCommand": "curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- --default-toolchain none --no-modify-path -y && leanpkg configure"
+	"updateContentCommand": "curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- --default-toolchain none --no-modify-path -y && leanpkg configure && sudo apt update && sudo apt install -y python3-pip python3-venv && python3 -m pip install --user pipx && pipx install mathlibtools && leanproject get-mathlib-cache"
 }
