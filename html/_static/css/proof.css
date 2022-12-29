@@ -1,4 +1,3 @@
-
 .proof {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -10,6 +9,7 @@
     border: 1px solid #86989b;
     color: white;
     font-size: 120%;
+    padding: 0.1em;
     }
   
   /* Content */
