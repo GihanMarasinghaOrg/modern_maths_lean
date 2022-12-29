@@ -10,8 +10,6 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     color: white;
-/*     padding-top: 0.3em;
-    padding-left: 0.4em; */
     padding: 0.5em;
     }
   
@@ -21,7 +19,7 @@
     background-color: #F5F7F9;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: 0.7em 1em;
+    padding: 1em;
   }
 
   .proof-content > :last-child {
