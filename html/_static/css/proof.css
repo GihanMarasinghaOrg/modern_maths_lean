@@ -7,7 +7,8 @@
   .proof .proof-title {
     background-color: #9fb1b4;
     border: 1px solid #86989b;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     color: white;
     font-size: 120%;
     padding-left: 0.4em;
@@ -17,6 +18,8 @@
   .proof-content {
     border: 1px solid #9fb1b4;
     background-color: #F5F7F9;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     padding: 0em 1em;
   }
   
