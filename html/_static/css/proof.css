@@ -10,7 +10,7 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     color: white;
-    padding-left: 0.4em;
+    padding: 0.2em 0.4em;
     }
   
   /* Content */
@@ -28,11 +28,11 @@
       clear: both;
   }
   
-  
+  /*
   .proof-type-proof > .proof-title:after {
       content: " â–¼";
   }
   
   .proof-type-proof > .proof-title.open:after {
       content: " â–²";
-  }
+  } */
