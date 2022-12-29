@@ -1,4 +1,0 @@
-
-#reduce lean.version.fst
-
-

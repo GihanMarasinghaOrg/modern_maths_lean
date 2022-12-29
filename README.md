@@ -18,5 +18,4 @@ If you are viewing this in Visual Studio Code, then you should:
 1. Close the terminal 'panel' that stretches across the bottom of the screen by
 clicking on the X in the top-right of the panel.
 2. Click in the editor pane that contains this text and split the editor to right either by typing Ctrl+\ (or Cmd+\ on Mac) or by clicking the split editor button. This button looks like a square bisected by a vertical line.
-3. Click once more on the editor containing this text.
-4. Click on the name of the file [start.lean](start.lean) in the sidebar on the left.
+3. Read the book in the right-most pane. Start by cliking on the link for Chapter 1. Introduction.
