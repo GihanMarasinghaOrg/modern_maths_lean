@@ -83,7 +83,9 @@
 <h2><span class="section-number">1.1. </span>Using this resource<a class="headerlink" href="#using-this-resource" title="Permalink to this heading">&#61633;</a></h2>
 <p>This interactive resource is designed to complement the book &#8216;Modern Mathematics: An introduction
 through the LEAN theorem prover&#8217;.</p>
-<p>The simplest way to use this book is to download it as as bundle from <a class="reference external" href="http://example.com/">ADD THE URL HERE</a>.</p>
+<p>It is designed to be used interactively in Visual Studio Code.</p>
+<p>The simplest way to run the project is to open a GitHub Codespace via the
+<a class="reference external" href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/">repository for this project</a>.</p>
 </section>
 <section id="working-with-lean-in-vscode">
 <h2><span class="section-number">1.2. </span>Working with Lean in VSCode<a class="headerlink" href="#working-with-lean-in-vscode" title="Permalink to this heading">&#61633;</a></h2>
@@ -103,10 +105,8 @@ contents of the Lean file corresponding to this section of the book and
 shows nothing.</p>
 <p>1. Click in the Lean file in the left-most pane to start
 Infoview.
-2. Click on the &#8216;All messages&#8217; drop-down in the Infoview window. This
-shows Lean output from the commands in the Lean file. Each item of output
-gives the file name and line number of the corresponding input. You&#8217;ll use
-it to get feedback on your mathematical proofs.</p>
+2. Click the end of the line <code class="docutils literal notranslate"><span class="pre">#reduce</span> <span class="pre">lean.version</span></code> in the Lean window.
+You&#8217;ll then the output from this command in the Infoview window.</p>
 <p>The output from <code class="docutils literal notranslate"><span class="pre">#reduce</span> <span class="pre">lean.version</span></code> is a triple of numbers that
 represents the Lean version number used by this project.</p>
 <p>If desired, lock the Lean Documentation pane by clicking the three dots in
@@ -118,7 +118,8 @@ for the Lean Infoview pane.</p>
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#reduce</span> <span class="n">lean.version.fst</span>
 </pre></div>
 </div>
-</div><p>The Lean Infoview window will show you Lean&#8217;s output: <code class="docutils literal notranslate"><span class="pre">3</span></code>. It has calcuated this
+</div><p>If you click the end of the line <code class="docutils literal notranslate"><span class="pre">#reduce</span> <span class="pre">lean.version.fst</span></code> in the
+Infoview window, you wee see Lean&#8217;s output: <code class="docutils literal notranslate"><span class="pre">3</span></code>. It has calcuated this
 from the first element (indicated by <code class="docutils literal notranslate"><span class="pre">fst</span></code>) of the Lean version number.</p>
 <p>Modify the Lean code, replacing <code class="docutils literal notranslate"><span class="pre">fst</span></code> with <code class="docutils literal notranslate"><span class="pre">snd</span></code>. Is that what you expected?</p>
 <p>If you ever accidentally close the Lean Documentation window, you can retrieve it
@@ -126,6 +127,9 @@ by opening the Command Palette from the View -&gt; Command Palette menu and sear
 &#8216;Lean: Open Documentation View&#8217;. Then click &#8216;Open documentation of current project&#8217;.</p>
 <p>Likewise, you can display the Infoview window by searching for &#8216;Lean: Infoview: Display Goal&#8217;
 in the Command Palette.</p>
+<p><strong>To navigate between chapters</strong>, either use the &#8216;Next&#8217; and &#8216;Previous&#8217;
+buttons below or scroll to the top and use the home button or the
+triple line menu.</p>
 <p><em>Acknowledgments.</em> The tools needed to build this documentation are based on
 the &#8216;Mathematics in Lean&#8217; project by Jeremy Avigad, Kevin Buzzard, Robert Y. Lewis, and
 Patrick Massot. Their project depdended on infrastructure built by  Gabriel Ebner.</p>
