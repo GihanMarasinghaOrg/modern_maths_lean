@@ -1,6 +1,6 @@
 /-
 # Chapter 2: Expressions
-## 2.4 Functions in Lean
+## 2.5 Predicates
 -/
 import data.int.basic
 

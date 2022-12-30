@@ -2,7 +2,7 @@
 # Chapter 2: Expressions
 ## 2.4 Functions in Lean
 -/
-import tactic.pp_app
+import data.int.basic
 
 
 namespace functional_notation
@@ -16,6 +16,9 @@ def f (x : ℕ) : ℤ := - x^2
 #check f
 
 #check f 5
+
+
+
 
 /- PROBLEM:
 Use the space below to determine what happens when you type

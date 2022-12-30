@@ -15,7 +15,7 @@ setup_tactic_parser
 
 namespace interactive
 
- meta def pp_app (e : parse parser.pexpr) : tactic unit :=
+meta def pp_app (e : parse parser.pexpr) : tactic unit :=
 do e ← to_expr e,
   match e with
   | (pi _ _ var_type _) :=
@@ -46,6 +46,9 @@ do e ← to_expr e,
     | (const `bit0 _) := trace "primitive expression"
     | _ := trace fn
     end
+  | (lam _ _ _ _) := trace "λ-abstraction"
+  | (sort _) := trace "type universe"
+  | (const _ _) := trace "global constant"
   | _ := trace "primitive expression"
   end
 
