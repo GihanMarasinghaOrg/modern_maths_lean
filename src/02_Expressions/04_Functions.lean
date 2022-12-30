@@ -31,3 +31,9 @@ variable y : ℤ
 
 
 
+-- EXAMPLE:
+variables (u v : ℕ) (y z : ℤ)
+
+/-
+Try out your solutions to 'which expressions are meaninful?' below.
+-/
