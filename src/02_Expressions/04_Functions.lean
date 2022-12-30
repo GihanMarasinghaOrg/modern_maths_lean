@@ -26,8 +26,7 @@ variable y : ℤ
 
 
 
-/-
-PROBLEM:
+/- PROBLEM:
 Give your solutions to 'which expressions are meaningful? ' after
 the `variables` declaration below.
 -/
@@ -46,5 +45,4 @@ variables (u v : ℕ) (y z : ℤ)
 
 /- PROBLEM:
 Write a lambda abstraction as described in the book and apply it to the integer `-3`
-
 -/

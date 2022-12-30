@@ -23,3 +23,8 @@ without Lean then with the Lean ``#eval`` command.
 
 #check 3 = 1 + 2
 
+
+/- PROBLEM:
+
+Determine the types of each of the expressions given in the book.
+-/

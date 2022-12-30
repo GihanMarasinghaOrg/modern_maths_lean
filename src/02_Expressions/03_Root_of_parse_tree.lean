@@ -6,7 +6,6 @@ import tactic.pp_app
 
 #pp_app (2 * 3)
 
-/-
-PROBLEM:
+/- PROBLEM:
 Determine the types of the expressions given in the book.
 -/
