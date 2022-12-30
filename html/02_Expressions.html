@@ -491,12 +491,12 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
             <span class="proof-title-name">(Applying <code class="docutils literal notranslate"><span class="pre">f</span></code> to an integer)</span>
         
     </div><div class="proof-content">
-<p>Type
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">variable</span> <span class="pre">y</span> <span class="pre">:</span> <span class="pre">&#8484;</span>
-<span class="pre">#check</span> <span class="pre">f</span> <span class="pre">y</span>
-<span class="pre">`</span></code>
-in Lean.</p>
+<p>Type</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">variable</span> <span class="n">y</span> <span class="o">:</span> <span class="n">&#8484;</span>
+<span class="k">#check</span> <span class="n">f</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>in Lean.</p>
 <p>You&#8217;ll get an error message that term <code class="docutils literal notranslate"><span class="pre">y</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> but is expected to
 have type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>. Can you explain this message?</p>
 </div></div><p>There are some subtleties with types. If <code class="docutils literal notranslate"><span class="pre">u</span></code> is a natural number and <code class="docutils literal notranslate"><span class="pre">y</span></code> is
