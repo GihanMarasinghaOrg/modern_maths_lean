@@ -15,8 +15,7 @@ def f (x : ℕ) : ℤ := - x^2
 
 #check f 5
 
-/-
-PROBLEM:
+/- PROBLEM:
 Use the space below to determine what happens when you type
 
 variable y : ℤ
@@ -38,7 +37,6 @@ variables (u v : ℕ) (y z : ℤ)
 
 #check λ x, 2 * x
 
-
 #eval (λ x, 2 * x) 5
 
 #check λ (x : ℕ), (2 * x : ℤ)
@@ -46,3 +44,4 @@ variables (u v : ℕ) (y z : ℤ)
 /- PROBLEM:
 Write a lambda abstraction as described in the book and apply it to the integer `-3`
 -/
+
