@@ -10,8 +10,12 @@ import data.rat
 #eval 3 - 5
 
 #eval (3 - 5 : ℤ)
+
 #eval (3.4 ^ 2 : ℚ)
 
+/- PROBLEM:
+Evaluate the expressions given in the book first without Lean then with the Lean ``#eval`` command.
+-/
 
 #check 3 = 1 + 2
 
