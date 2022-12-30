@@ -3,9 +3,7 @@
 ## 2.1 Evaluating expressions
 -/
 
-
 #eval 2 * 3
-
 
 
 
