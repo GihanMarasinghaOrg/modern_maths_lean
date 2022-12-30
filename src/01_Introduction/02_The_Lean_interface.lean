@@ -3,11 +3,9 @@
 ## 1.2 Working with Lean in VSCode
 -/
 
-
 #reduce lean.version
 
 #reduce lean.version.fst
-
 
 /-
 Problem: Modify the Lean code, replacing ``fst`` with ``snd``.

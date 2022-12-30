@@ -4,7 +4,8 @@
 -/
 
 #eval 2 * 3
-
+/- Problem: Adapt the code above to evaluate other expressions, as described in the book.
+-/
 
 
 /-
