@@ -151,10 +151,4 @@ noncomputable def f₄(w : ℕ) := v * w ^ 2
 noncomputable def f₅(u : ℕ) := v * u ^ 2
 
 
-
-
-
-
-
-
 end functions_and_variables
