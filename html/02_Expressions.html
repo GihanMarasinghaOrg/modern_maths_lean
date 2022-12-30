@@ -659,7 +659,7 @@ of two objects that are definitionally equal.</p>
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">q</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">5</span> <span class="bp">+</span> <span class="n">x</span>
 </pre></div>
 </div>
-</div><p>To illustrate this, I defined a function that is syntactically identical <cite>except</cite> for the
+</div><p>To illustrate this, I define a function that is syntactically identical <cite>except</cite> for the
 name of the bound variable.</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
@@ -670,17 +670,18 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">q</span> <span class="bp">=</span> <span class="n">q&#8322;</span> <span class="o">:=</span> <span class="n">rfl</span>
-
-
-<span class="bp">..</span> <span class="n">proof</span><span class="o">:</span><span class="n">problem</span><span class="o">::</span>
-
-  <span class="n">Give</span> <span class="n">the</span> <span class="n">Lean</span> <span class="kd">definition</span> <span class="n">of</span> <span class="n">two</span> <span class="n">functions</span> <span class="bp">``</span><span class="n">f</span><span class="bp">``</span> <span class="n">and</span> <span class="bp">``</span><span class="n">f&#8322;</span><span class="bp">``</span> <span class="n">where</span>
-  <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">:=</span> <span class="n">x</span><span class="bp">^</span><span class="mi">2</span> <span class="bp">+</span> <span class="mi">5</span><span class="n">x</span> <span class="bp">+</span> <span class="mi">2</span><span class="bp">`</span> <span class="n">and</span> <span class="n">where</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">f_2</span><span class="bp">`</span> <span class="n">is</span> <span class="n">the</span> <span class="n">same</span> <span class="n">except</span> <span class="k">with</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">y</span><span class="bp">`</span> <span class="k">in</span> <span class="n">place</span> <span class="n">of</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">x</span><span class="bp">`.</span>
-
-  <span class="n">Use</span> <span class="n">Lean</span> <span class="n">to</span> <span class="n">prove</span> <span class="bp">``</span><span class="n">f</span> <span class="bp">=</span> <span class="n">f&#8322;</span><span class="bp">``.</span>
 </pre></div>
 </div>
-</div></section>
+</div><div class="proof proof-type-problem" id="id11">
+
+    <div class="proof-title">
+        <span class="proof-type">Problem 2.10</span>
+        
+    </div><div class="proof-content">
+<p>Give the Lean definition of two functions <code class="docutils literal notranslate"><span class="pre">f</span></code> and <code class="docutils literal notranslate"><span class="pre">f&#8322;</span></code> where
+<span class="math notranslate nohighlight">\(f(x) := x^2 + 5x + 2\)</span> and where <span class="math notranslate nohighlight">\(f_2\)</span> is the same except with <span class="math notranslate nohighlight">\(y\)</span> in place of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Use Lean to prove <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">f&#8322;</span></code>.</p>
+</div></div></section>
 </section>
 </section>
 
