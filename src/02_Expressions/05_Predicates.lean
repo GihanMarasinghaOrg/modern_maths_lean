@@ -15,7 +15,6 @@ example : f(2) = (2 > 5) := rfl
 /-
 
 .. danger::
-
   In school mathematics, almost every function return numeric values. It can take some 
 
 
