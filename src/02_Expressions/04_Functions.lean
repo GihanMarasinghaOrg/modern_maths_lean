@@ -47,7 +47,7 @@ Write a lambda abstraction as described in the book and apply it to the integer 
 -/
 
 
-section first_p
+namespace first_p
 
 /-
 Here is a named lambda abstraction:
@@ -60,11 +60,11 @@ end first_p
 /-
 The quantity `p` is the same as the function `p` defined below
 -/
-section second_p
+namespace second_p
 def p (u : ℕ) : ℤ := 2 * u
 end second_p
 
-section third_p
+namespace third_p
 def p : ℕ → ℤ := λ u, 2 * u
 
 end third_p
