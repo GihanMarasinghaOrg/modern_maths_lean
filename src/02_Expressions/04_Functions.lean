@@ -46,3 +46,25 @@ variables (V : Type) [has_add V] (u v : ℕ) (y z : V) (g : ℕ → V)
 Write a lambda abstraction as described in the book and apply it to the integer `-3`.
 -/
 
+
+section first_p
+
+/-
+Here is a named lambda abstraction:
+-/
+def p := λ (u : ℕ), (2 * u : ℤ)
+
+end first_p
+
+
+/-
+The quantity `p` is the same as the function `p` defined below
+-/
+section second_p
+def p (u : ℕ) : ℤ := 2 * u
+end second_p
+
+section third_p
+def p : ℕ → ℤ := λ u, 2 * u
+
+end third_p
