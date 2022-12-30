@@ -11,8 +11,8 @@
 
 
 
-
 /-
-Modify the Lean code, replacing ``fst`` with ``snd``. Is that what you expected?
+Problem: Modify the Lean code, replacing ``fst`` with ``snd``.
+Is the result what you expected?
 -/
 

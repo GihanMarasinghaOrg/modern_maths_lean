@@ -21,7 +21,8 @@ variable y : ℤ
 
 
 /-
-Problem: Give your solutions to 'which expressions are meaningful? ' after the ``variables`` declaration below.
+Problem: Give your solutions to 'which expressions are meaningful? ' after
+the ``variables`` declaration below.
 -/
 
 variables (u v : ℕ) (y z : ℤ)
