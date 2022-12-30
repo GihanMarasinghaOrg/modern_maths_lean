@@ -33,7 +33,9 @@ variables (V : Type) [has_add V] (u v : ℕ) (y z : V) (g : ℕ → V)
 
 
 
-
+/-
+### 2.4.1 Lambda abstraction
+-/
 
 
 #check λ x, 2 * x
@@ -72,7 +74,6 @@ def p₃ : ℕ → ℤ := λ u, 2 * u
 /- PROBLEM:
 Give three Lean definitions of a function `h : ℕ → ℤ` so that `h(u) =: u - 3`. Adapt
 the three methods for definining the functions `p`, `p₂`, and `p₃` above.
-
 -/
 
 
@@ -89,5 +90,13 @@ Prove that `p = p₃`.
 -/
 
 
+/-
+### 2.4.2 Functions and variables
+-/
 
-example : p = p₂ := rfl
+
+The name of the 'bound' variable ``x`` is irrelevant in a function definition such as
+BOTH. -/
+def q(x) := 5 + x
+
+#check x
