@@ -62,7 +62,7 @@ def p₂ (u : ℕ) : ℤ := 2 * u
 
 
 /-
-Below, we declare the type of the function `p₃` before definining it.
+Below, we declare the type of the function `p₃` before giving its definition.
 -/
 
 def p₃ : ℕ → ℤ := λ u, 2 * u
