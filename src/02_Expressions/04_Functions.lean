@@ -30,7 +30,11 @@ Give your solutions to 'which expressions are meaningful?' in the space
 following the `variables` declaration below.
 -/
 
-variables (u v : ℕ) (y z : ℤ)
+
+
+variables (V : Type) [has_add V] (u v : ℕ) (y z : V) (g : ℕ → V)
+
+
 
 
 

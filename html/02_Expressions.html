@@ -6,7 +6,7 @@
     <meta charset="ascii" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Expressions &#8212; Modern Mathematics in Lean</title>
+    <title>2. Expressions &#8212; Modern Mathematics with Lean</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -85,7 +85,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">Modern Mathematics in Lean</h1>
+      <h1 class="site-logo" id="site-title">Modern Mathematics with Lean</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -539,10 +539,15 @@ of integer type, Lean is able to &#8216;coerce&#8217; <code class="docutils lite
             <span class="proof-title-name">(Which expressions are meaningful?)</span>
         
     </div><div class="proof-content">
-<p>Suppose <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>, that <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> have type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>, and that  <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code> have type <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code>.
-Which of the following expresssions are meaningful. For each meaningful expression,
-give its type. Check your answers in Lean.</p>
-<p>(i) <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">+</span> <span class="pre">v</span></code>, (ii) <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">z</span></code>, (iii) <code class="docutils literal notranslate"><span class="pre">f(u</span> <span class="pre">+</span> <span class="pre">v)</span></code>, (iv) <code class="docutils literal notranslate"><span class="pre">f(y</span> <span class="pre">+</span> <span class="pre">z)</span></code>, (v) <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">+</span> <span class="pre">f(u)</span></code>, (vi) <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">f(u)</span></code>, (vii) <code class="docutils literal notranslate"><span class="pre">f(u)</span> <span class="pre">+</span> <span class="pre">u</span></code>, (viii) <code class="docutils literal notranslate"><span class="pre">f(u)</span> <span class="pre">+</span> <span class="pre">y</span></code>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(V\)</span> is an abstract type equipped with an addition operator. For example,
+<span class="math notranslate nohighlight">\(V\)</span> could be the type of pairs of natural number with <span class="math notranslate nohighlight">\((x_1, x_2) + (y_1, y_2)\)</span>
+defined to be <span class="math notranslate nohighlight">\((x_1 + y_1, x_2 +y_2)\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(g : \mathbb N \to V\)</span>. That is, <span class="math notranslate nohighlight">\(g\)</span> is a function from the natural numbers to <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> are natural numbers and <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> have type <span class="math notranslate nohighlight">\(V\)</span>. Determine which of the
+following expressions are meaningful. For each meaningful expression, give its type.
+Check your answers in Lean.</p>
+<p>(i) <span class="math notranslate nohighlight">\(u + v\)</span>, (ii) <span class="math notranslate nohighlight">\(y + z\)</span>, (iii) <span class="math notranslate nohighlight">\(g(u + v)\)</span>, (iv) <span class="math notranslate nohighlight">\(g(y + z)\)</span>,
+(v) <span class="math notranslate nohighlight">\(u + g(u)\)</span>, (vi) <span class="math notranslate nohighlight">\(y + g(u)\)</span>, (vii) <span class="math notranslate nohighlight">\(g(u) + u\)</span>, (viii) <span class="math notranslate nohighlight">\(g(u) + y\)</span>.</p>
 </div></div><section id="lambda-abstraction">
 <h3><span class="section-number">2.4.1. </span>Lambda abstraction<a class="headerlink" href="#lambda-abstraction" title="Permalink to this headline">#</a></h3>
 <p>Lambda abstractions are unnamed functions. For example <code class="docutils literal notranslate"><span class="pre">&#955;</span> <span class="pre">x,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> is the
