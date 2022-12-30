@@ -47,12 +47,12 @@ Write a lambda abstraction as described in the book and apply it to the integer 
 -/
 
 
+
+
 /-
 Here is a named lambda abstraction:
 -/
 def p := λ (u : ℕ), (2 * u : ℤ)
-
-
 
 /-
 The quantity `p` is the same as the function `p₂` defined below
@@ -67,3 +67,27 @@ Below, we declare the type of the function `p₃` before giving its definition.
 
 def p₃ : ℕ → ℤ := λ u, 2 * u
 
+
+
+/- PROBLEM:
+Give three Lean definitions of a function `h : ℕ → ℤ` so that `h(u) =: u - 3`. Adapt
+the three methods for definining the functions `p`, `p₂`, and `p₃` above.
+
+-/
+
+
+
+
+/-
+A proof that `p = p₂`.
+-/
+example : p = p₂ := rfl
+
+
+/- PROBLEM:
+Prove that `p = p₃`.
+-/
+
+
+
+example : p = p₂ := rfl
