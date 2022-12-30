@@ -22,10 +22,10 @@
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -35,8 +35,12 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/proof.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script src="_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -357,20 +361,14 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 Alternatively, type <code class="docutils literal notranslate"><span class="pre">\int</span></code>. Likewise, <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> is typesd <code class="docutils literal notranslate"><span class="pre">\nat</span></code> or <code class="docutils literal notranslate"><span class="pre">\N</span></code>.</p>
 <p>A full list of the Lean symbols used in this resource are shown
 in the Chapter <a class="reference internal" href="typing_lean_symbols.html#typing-lean-symbols"><span class="std std-ref">Typing Lean Symbols</span></a>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Click to read this dropdown if you can&#8217;t easily type <code class="docutils literal notranslate"><span class="pre">\</span></code><div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">On some keyboards, it may be difficult to type <code class="docutils literal notranslate"><span class="pre">\</span></code>. You can change
+<div class="toggle docutils container">
+<p>On some keyboards, it may be difficult to type <code class="docutils literal notranslate"><span class="pre">\</span></code>. You can change
 this by opening the VSCode settings with Ctrl+, (or Cmd+, in Mac)
 and searching for &#8216;Lean lnput leader&#8217;. Change the leader key to an
 easier-to-type symbol. For example, if you change it to <code class="docutils literal notranslate"><span class="pre">!</span></code>, then typing
 <code class="docutils literal notranslate"><span class="pre">!N</span></code> (followed by space) will produce <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>.</p>
 </div>
-</details><p>You can evaluate the rational number <span class="math notranslate nohighlight">\(3.4^2\)</span> by typing:</p>
+<p>You can evaluate the rational number <span class="math notranslate nohighlight">\(3.4^2\)</span> by typing:</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/02_Types.lean" target="_blank" tryitfile="../src/02_Expressions/02_Types.lean">
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="o">(</span><span class="mi">3</span><span class="bp">.</span><span class="mi">4</span> <span class="bp">^</span> <span class="mi">2</span> <span class="o">:</span> <span class="n">&#8474;</span><span class="o">)</span>
