@@ -133,6 +133,11 @@ Type `example : t = t₂ := rfl` in the space below and read the error message.
  
 
 
+/- PROBLEM:
+
+Which of the pairs of functions chosen from `f₁`, …, `f₅` below are equal? Verify your answers
+in Lean.
+-/
 constants (u v : ℕ)
 
 noncomputable def f₁(w : ℕ) := u * w ^ 2
@@ -145,13 +150,6 @@ noncomputable def f₄(w : ℕ) := v * w ^ 2
 
 noncomputable def f₅(u : ℕ) := v * u ^ 2
 
-
-
-/- PROBLEM:
-
-Which of the pairs of functions chosen from `f₁`, …, `f₅` are equal? Verify your answers
-in Lean.
--/
 
 
 
