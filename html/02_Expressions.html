@@ -258,6 +258,11 @@ title="Print to PDF"
    2.2. Types in Lean
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-root-of-a-parse-tree-in-lean">
+   2.3. The root of a parse tree in Lean
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -285,6 +290,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#types-in-lean">
    2.2. Types in Lean
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-root-of-a-parse-tree-in-lean">
+   2.3. The root of a parse tree in Lean
   </a>
  </li>
 </ul>
@@ -360,9 +370,9 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </div><p>To produce the <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> symbold, type <code class="docutils literal notranslate"><span class="pre">\Z</span></code> followed by a space or tab.
 Alternatively, type <code class="docutils literal notranslate"><span class="pre">\int</span></code>. Likewise, <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> is typesd <code class="docutils literal notranslate"><span class="pre">\nat</span></code> or <code class="docutils literal notranslate"><span class="pre">\N</span></code>.</p>
 <p>A full list of the Lean symbols used in this resource are shown
-in the Chapter <a class="reference internal" href="typing_lean_symbols.html#typing-lean-symbols"><span class="std std-ref">Typing Lean Symbols</span></a>.</p>
+in the Appendix <a class="reference internal" href="typing_lean_symbols.html#typing-lean-symbols"><span class="std std-ref">Typing Lean Symbols</span></a>.</p>
 <div class="dropdown admonition">
-<p class="admonition-title">Click to read this dropdown if you can&#8217;t easily type <code class="docutils literal notranslate"><span class="pre">\</span></code></p>
+<p class="admonition-title">Read this if you can&#8217;t easily type <code class="docutils literal notranslate"><span class="pre">\</span></code></p>
 <p>On some keyboards, it may be difficult to type <code class="docutils literal notranslate"><span class="pre">\</span></code>. You can change
 this by opening the VSCode settings with Ctrl+, (or Cmd+, in Mac)
 and searching for &#8216;Lean lnput leader&#8217;. Change the leader key to an
@@ -400,6 +410,85 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </pre></div>
 </div>
 </div><p>The code above gives output <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">:</span> <span class="pre">Prop</span></code>, showing that <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code> is a proposition.</p>
+<p>The proposition ;for all natural numbers <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(n + 1 &gt; 0\)</span>&#8217; is
+displayed in Lean as <code class="docutils literal notranslate"><span class="pre">&#8704;</span> <span class="pre">(n</span> <span class="pre">:</span> <span class="pre">&#8469;),</span> <span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. Type <code class="docutils literal notranslate"><span class="pre">\all</span></code> for <code class="docutils literal notranslate"><span class="pre">&#8704;</span></code>.</p>
+<p>Likewise, <code class="docutils literal notranslate"><span class="pre">&#8707;</span> <span class="pre">(m</span> <span class="pre">:</span> <span class="pre">&#8469;),</span> <span class="pre">m</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">5</span></code> is how to write &#8216;there exists a natural number
+<span class="math notranslate nohighlight">\(m\)</span> such that <span class="math notranslate nohighlight">\(m + 2 = 5\)</span>&#8217;. Here, <code class="docutils literal notranslate"><span class="pre">&#8707;</span></code> is typed <code class="docutils literal notranslate"><span class="pre">\ex</span></code>.</p>
+</section>
+<section id="the-root-of-a-parse-tree-in-lean">
+<h2><span class="section-number">2.3. </span>The root of a parse tree in Lean<a class="headerlink" href="#the-root-of-a-parse-tree-in-lean" title="Permalink to this headline">#</a></h2>
+<p>This project defines the command <code class="docutils literal notranslate"><span class="pre">#pp_app</span></code> that displays the root of a parse tree of
+an expression.</p>
+<p>For example, typing</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/03_Root_of_parse_tree.lean" target="_blank" tryitfile="../src/02_Expressions/03_Root_of_parse_tree.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="bp">#</span><span class="n">pp_app</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">*</span> <span class="mi">3</span><span class="o">)</span>
+</pre></div>
+</div>
+</div><p>gives the output <code class="docutils literal notranslate"><span class="pre">multiply</span></code>. This shows that <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">3</span></code> is an application of multiplication.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/03_Root_of_parse_tree.lean" target="_blank" tryitfile="../src/02_Expressions/03_Root_of_parse_tree.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="mi">3</span> <span class="bp">-</span><span class="mi">5</span>
+</pre></div>
+</div>
+</div><p>Lean claims that <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">-</span> <span class="pre">5</span></code> is <code class="docutils literal notranslate"><span class="pre">0</span></code>.The reason is that subtraction of two
+natural numbers (non-negative integers) in Lean always returns a natural number.
+To deal with awkward situations like this, Lean defines <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">-</span> <span class="pre">b</span></code> to be <code class="docutils literal notranslate"><span class="pre">0</span></code>
+if <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are natural numbers where <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">&#8805;</span> <span class="pre">a</span></code>.</p>
+<p>To get the expected answer, we must request that Lean treats these numerals
+as integers.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/03_Root_of_parse_tree.lean" target="_blank" tryitfile="../src/02_Expressions/03_Root_of_parse_tree.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="o">(</span><span class="mi">3</span> <span class="bp">-</span> <span class="mi">5</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span>
+</pre></div>
+</div>
+</div><p>To produce the <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> symbold, type <code class="docutils literal notranslate"><span class="pre">\Z</span></code> followed by a space or tab.
+Alternatively, type <code class="docutils literal notranslate"><span class="pre">\int</span></code>. Likewise, <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> is typesd <code class="docutils literal notranslate"><span class="pre">\nat</span></code> or <code class="docutils literal notranslate"><span class="pre">\N</span></code>.</p>
+<p>A full list of the Lean symbols used in this resource are shown
+in the Chapter <a class="reference internal" href="typing_lean_symbols.html#typing-lean-symbols"><span class="std std-ref">Typing Lean Symbols</span></a>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Read this if you can&#8217;t easily type <code class="docutils literal notranslate"><span class="pre">\</span></code></p>
+<p>On some keyboards, it may be difficult to type <code class="docutils literal notranslate"><span class="pre">\</span></code>. You can change
+this by opening the VSCode settings with Ctrl+, (or Cmd+, in Mac)
+and searching for &#8216;Lean lnput leader&#8217;. Change the leader key to an
+easier-to-type symbol. For example, if you change it to <code class="docutils literal notranslate"><span class="pre">!</span></code>, then typing
+<code class="docutils literal notranslate"><span class="pre">!N</span></code> (followed by space) will produce <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>.</p>
+</div>
+<p>You can evaluate the rational number <span class="math notranslate nohighlight">\(3.4^2\)</span> by typing:</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/03_Root_of_parse_tree.lean" target="_blank" tryitfile="../src/02_Expressions/03_Root_of_parse_tree.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="o">(</span><span class="mi">3</span><span class="bp">.</span><span class="mi">4</span> <span class="bp">^</span> <span class="mi">2</span> <span class="o">:</span> <span class="n">&#8474;</span><span class="o">)</span>
+</pre></div>
+</div>
+</div><p>Here, <code class="docutils literal notranslate"><span class="pre">&#8474;</span></code> is typed <code class="docutils literal notranslate"><span class="pre">\rat</span></code> or <code class="docutils literal notranslate"><span class="pre">\Q</span></code>. Lean reduces <span class="math notranslate nohighlight">\(3.4^2\)</span> to
+the rational number <span class="math notranslate nohighlight">\(289/25\)</span>.</p>
+<div class="proof proof-type-problem" id="id4">
+
+    <div class="proof-title">
+        <span class="proof-type">Problem 2.3</span>
+        
+    </div><div class="proof-content">
+<p>For each of the following expressions:</p>
+<ul class="simple">
+<li><p>Without Lean, evaluate the expression.</p></li>
+<li><p>Verify your answer using the <code class="docutils literal notranslate"><span class="pre">#eval</span></code> command in Lean. Use the &#8216;simplest&#8217; type that
+gives the expected anser. That is, prefer <span class="math notranslate nohighlight">\(\mathbb N\)</span> to  <span class="math notranslate nohighlight">\(\mathbb Z\)</span>
+and prefer <span class="math notranslate nohighlight">\(\mathbb Z\)</span> to <span class="math notranslate nohighlight">\(\mathbb Q\)</span>.</p></li>
+</ul>
+<p>(i) <span class="math notranslate nohighlight">\((1-4)^5\)</span>, (ii) <span class="math notranslate nohighlight">\((1+4)^5\)</span>, (iii) <span class="math notranslate nohighlight">\(5/4 + 1/2\)</span>, (iv) <span class="math notranslate nohighlight">\(66/2\)</span>.</p>
+</div></div><p>For proof, the most important type is <code class="docutils literal notranslate"><span class="pre">Prop</span></code>, the type of propositions.
+Examples of propositions include <span class="math notranslate nohighlight">\(3 = 1 + 2\)</span>, <span class="math notranslate nohighlight">\(1 + 1 &lt; 10\)</span> and
+&#8216;for every natural number <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(n \ge 0\)</span>&#8217;.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/03_Root_of_parse_tree.lean" target="_blank" tryitfile="../src/02_Expressions/03_Root_of_parse_tree.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="mi">3</span> <span class="bp">=</span> <span class="mi">1</span> <span class="bp">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div><p>The code above gives output <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">:</span> <span class="pre">Prop</span></code>, showing that <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code> is a proposition.</p>
+<p>The proposition ;for all natural numbers <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(n + 1 &gt; 0\)</span>&#8217; is
+displayed in Lean as <code class="docutils literal notranslate"><span class="pre">&#8704;</span> <span class="pre">(n</span> <span class="pre">:</span> <span class="pre">&#8469;),</span> <span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. Type <code class="docutils literal notranslate"><span class="pre">\all</span></code> for <code class="docutils literal notranslate"><span class="pre">&#8704;</span></code>.</p>
+<p>Likewise, <code class="docutils literal notranslate"><span class="pre">&#8707;</span> <span class="pre">(m</span> <span class="pre">:</span> <span class="pre">&#8469;),</span> <span class="pre">m</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">5</span></code> is how to write &#8216;there exists a natural number
+<span class="math notranslate nohighlight">\(m\)</span> such that <span class="math notranslate nohighlight">\(m + 2 = 5\)</span>&#8217;. Here, <code class="docutils literal notranslate"><span class="pre">&#8707;</span></code> is typed <code class="docutils literal notranslate"><span class="pre">\ex</span></code>.</p>
 </section>
 </section>
 
