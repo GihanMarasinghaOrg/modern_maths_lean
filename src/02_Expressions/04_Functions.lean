@@ -5,6 +5,8 @@
 import tactic.pp_app
 
 
+namespace functional_notation
+
 def f (x : ℕ) : ℤ := - x^2
 
 #eval f(10)
@@ -32,10 +34,13 @@ following the `variables` declaration below.
 variables (V : Type) [has_add V] (u v : ℕ) (y z : V) (g : ℕ → V)
 
 
+end functional_notation
 
 /-
 ### 2.4.1 Lambda abstraction
 -/
+
+namespace lambda_abstraction
 
 
 #check λ x, 2 * x
@@ -88,15 +93,40 @@ example : p = p₂ := rfl
 /- PROBLEM:
 Prove that `p = p₃`.
 -/
+end lambda_abstraction
 
+
+namespace functions_and_variables
 
 /-
 ### 2.4.2 Functions and variables
 -/
 
-
-The name of the 'bound' variable ``x`` is irrelevant in a function definition such as
-BOTH. -/
 def q(x) := 5 + x
 
-#check x
+def q₂(u) := 5 + u
+
+
+example : q = q₂ := rfl
+
+
+/- PROBLEM:
+
+Below, give the Lean definition of two functions `f` and `f₂` where
+`f(x)` is x-squared plus 5x plus 2 and where `f₂` is the same except with y in place of x.
+
+Use Lean to prove `f = f₂`.
+
+-/
+
+
+
+constants (a b : ℕ)
+
+noncomputable def t(x : ℕ) := a + x
+
+noncomputable def t₂(x : ℕ) := b + x
+
+-- example : t = t₂ := rfl
+
+end functions_and_variables

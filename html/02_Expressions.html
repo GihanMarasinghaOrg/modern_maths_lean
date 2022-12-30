@@ -638,7 +638,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </pre></div>
 </div>
 </div><p>In the code above, <code class="docutils literal notranslate"><span class="pre">example</span></code> says to Lean, &#8220;I&#8217;m about to prove something&#8221;.
-The text between the <code class="docutils literal notranslate"><span class="pre">:</span></code> and the <code class="docutils literal notranslate"><span class="pre">:=</span></code> is the statement we will prove. Here, we will prove
+The text between the <code class="docutils literal notranslate"><span class="pre">:</span></code> and the <code class="docutils literal notranslate"><span class="pre">:=</span></code> specifies what we will prove. Here, we will prove
 <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">p&#8322;</span></code>. The text after the <code class="docutils literal notranslate"><span class="pre">:=</span></code> is the proof, which in this case is simply the
 word <code class="docutils literal notranslate"><span class="pre">rfl</span></code>. This word is short for
 &#8216;reflexivity&#8217;, a notion we will encounter in the next chapter. It is used to prove equality
@@ -653,9 +653,31 @@ of two objects that are definitionally equal.</p>
 </div></div></section>
 <section id="functions-and-variables">
 <h3><span class="section-number">2.4.2. </span>Functions and variables<a class="headerlink" href="#functions-and-variables" title="Permalink to this headline">#</a></h3>
+<p>The name of the &#8216;bound&#8217; variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is irrelevant in a function definition such as</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">q</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">5</span> <span class="bp">+</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div><p>To illustrate this, I defined a function that is syntactically identical <cite>except</cite> for the
+name of the bound variable.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">q&#8322;</span><span class="o">(</span><span class="n">u</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">5</span> <span class="bp">+</span> <span class="n">u</span>
+</pre></div>
+</div>
+</div><p>We can show these functions are equal.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">q</span> <span class="bp">=</span> <span class="n">q&#8322;</span> <span class="o">:=</span> <span class="n">rfl</span>
+
+
+<span class="bp">..</span> <span class="n">proof</span><span class="o">:</span><span class="n">problem</span><span class="o">::</span>
+
+  <span class="n">Give</span> <span class="n">the</span> <span class="n">Lean</span> <span class="kd">definition</span> <span class="n">of</span> <span class="n">two</span> <span class="n">functions</span> <span class="bp">``</span><span class="n">f</span><span class="bp">``</span> <span class="n">and</span> <span class="bp">``</span><span class="n">f&#8322;</span><span class="bp">``</span> <span class="n">where</span>
+  <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">:=</span> <span class="n">x</span><span class="bp">^</span><span class="mi">2</span> <span class="bp">+</span> <span class="mi">5</span><span class="n">x</span> <span class="bp">+</span> <span class="mi">2</span><span class="bp">`</span> <span class="n">and</span> <span class="n">where</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">f_2</span><span class="bp">`</span> <span class="n">is</span> <span class="n">the</span> <span class="n">same</span> <span class="n">except</span> <span class="k">with</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">y</span><span class="bp">`</span> <span class="k">in</span> <span class="n">place</span> <span class="n">of</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">x</span><span class="bp">`.</span>
+
+  <span class="n">Use</span> <span class="n">Lean</span> <span class="n">to</span> <span class="n">prove</span> <span class="bp">``</span><span class="n">f</span> <span class="bp">=</span> <span class="n">f&#8322;</span><span class="bp">``.</span>
 </pre></div>
 </div>
 </div></section>
