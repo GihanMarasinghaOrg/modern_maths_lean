@@ -267,6 +267,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#functions-in-lean">
    2.4. Functions in Lean
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lambda-abstraction">
+     2.4.1. Lambda abstraction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -306,6 +313,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#functions-in-lean">
    2.4. Functions in Lean
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lambda-abstraction">
+     2.4.1. Lambda abstraction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -516,7 +530,28 @@ of integer type, Lean is able to &#8216;coerce&#8217; <code class="docutils lite
 Which of the following expresssions are meaningful. For each meaningful expression,
 give its type. Check your answers in Lean.</p>
 <p>(i) <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">+</span> <span class="pre">v</span></code>, (ii) <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">z</span></code>, (iii) <code class="docutils literal notranslate"><span class="pre">f(u</span> <span class="pre">+</span> <span class="pre">v)</span></code>, (iv) <code class="docutils literal notranslate"><span class="pre">f(y</span> <span class="pre">+</span> <span class="pre">z)</span></code>, (v) <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">+</span> <span class="pre">f(u)</span></code>, (vi) <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">f(u)</span></code>, (vii) <code class="docutils literal notranslate"><span class="pre">f(u)</span> <span class="pre">+</span> <span class="pre">u</span></code>, (viii) <code class="docutils literal notranslate"><span class="pre">f(u)</span> <span class="pre">+</span> <span class="pre">y</span></code>.</p>
-</div></div></section>
+</div></div><section id="lambda-abstraction">
+<h3><span class="section-number">2.4.1. </span>Lambda abstraction<a class="headerlink" href="#lambda-abstraction" title="Permalink to this headline">#</a></h3>
+<p>Lambda expressions are unnamed functions. For example <code class="docutils literal notranslate"><span class="pre">&#955;</span> <span class="pre">x,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> is the
+lambda expression that doubles its input. More precisely, Lean assumes that quantities involved
+in arithmetic operations are natural numbers (unless told otherwise)! So this function
+maps every natural number to twice its value, as a natural number.</p>
+<p>We can see this by checking the type of the expression.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="bp">&#955;</span> <span class="n">x</span><span class="o">,</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div><p>This shows that <code class="docutils literal notranslate"><span class="pre">&#955;</span> <span class="pre">(x</span> <span class="pre">:</span> <span class="pre">&#8469;),</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8469;</span></code>, as expected.</p>
+<p>Using type ascriptions, we can define a similar function, but one that takes its natural number
+input to twice its value <cite>as an integer</cite>.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="bp">&#955;</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">),</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">*</span> <span class="n">x</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span>
+</pre></div>
+</div>
+</div></section>
+</section>
 </section>
 
 

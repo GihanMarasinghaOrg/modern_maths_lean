@@ -17,11 +17,13 @@ def f (x : ℕ) : ℤ := - x^2
 
 /-
 PROBLEM:
-Use the space below to see what happens if you type
+Use the space below to determine what happens when you type
 
 variable y : ℤ
 #check f y
 -/
+
+
 
 
 /-
@@ -31,4 +33,10 @@ the `variables` declaration below.
 -/
 
 variables (u v : ℕ) (y z : ℤ)
+
+
+#check λ x, 2 * x
+
+
+#check λ (x : ℕ), (2 * x : ℤ)
 
