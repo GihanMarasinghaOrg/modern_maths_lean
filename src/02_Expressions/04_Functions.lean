@@ -8,32 +8,21 @@ import tactic.pp_app
 def f (x : ℕ) : ℤ := - x^2
 
 #eval f(10)
-
-
 #eval f 10
-
-
 #check f
-
-
 #check f 5
 
-
-
 /-
-Use the space below to see what happens if you type
+Problem: Use the space below to see what happens if you type
 
 variable y : ℤ
 #check f y
 -/
 
 
-
-
-
+/-
+Problem: Give your solutions to 'which expressions are meaningful? ' after the ``variables`` declaration below.
+-/
 
 variables (u v : ℕ) (y z : ℤ)
 
-/-
-Try out your solutions to 'which expressions are meaninful?' below.
--/
