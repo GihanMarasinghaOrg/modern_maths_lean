@@ -590,26 +590,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 function to <span class="math notranslate nohighlight">\(-3\)</span>.</p>
 </div></div><p>Any expression can be given a name. If desired, we can name lambda abstractions. We
 do this through the <code class="docutils literal notranslate"><span class="pre">def</span></code> mechanism.</p>
-<div style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p</span> <span class="o">:=</span> <span class="bp">&#955;</span> <span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">),</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span>
-</pre></div>
-</div>
-</div><p>The named lambda abstraction <code class="docutils literal notranslate"><span class="pre">p</span></code> above is just another way to give a function definition.
-It has the same effect as writing:</p>
-<div style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p</span> <span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:</span> <span class="n">&#8484;</span> <span class="o">:=</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span>
-</pre></div>
-</div>
-</div><p>As a final alternative, we can specify the type of a lambda abstraction within a <code class="docutils literal notranslate"><span class="pre">def</span></code>.
-This removes the need to give type ascriptions in the lambda abstraction itself:</p>
-<div style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p</span> <span class="o">:</span> <span class="n">&#8469;</span> <span class="bp">&#8594;</span> <span class="n">&#8484;</span> <span class="o">:=</span> <span class="bp">&#955;</span> <span class="n">u</span><span class="o">,</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span>
-</pre></div>
-</div>
-</div></section>
+</section>
 </section>
 </section>
 
