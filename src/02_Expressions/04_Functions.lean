@@ -27,11 +27,13 @@ variable y : ℤ
 
 
 /- PROBLEM:
-Give your solutions to 'which expressions are meaningful? ' after
-the `variables` declaration below.
+Give your solutions to 'which expressions are meaningful?' in the space
+following the `variables` declaration below.
 -/
 
 variables (u v : ℕ) (y z : ℤ)
+
+
 
 
 #check λ x, 2 * x
@@ -39,9 +41,7 @@ variables (u v : ℕ) (y z : ℤ)
 
 #eval (λ x, 2 * x) 5
 
-
 #check λ (x : ℕ), (2 * x : ℤ)
-
 
 /- PROBLEM:
 Write a lambda abstraction as described in the book and apply it to the integer `-3`
