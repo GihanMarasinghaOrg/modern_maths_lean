@@ -599,14 +599,15 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 It has the same effect as writing:</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p</span> <span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:</span> <span class="n">&#8484;</span> <span class="o">:=</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span>
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p&#8322;</span> <span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:</span> <span class="n">&#8484;</span> <span class="o">:=</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span>
 </pre></div>
 </div>
-</div><p>As a final alternative, we can specify the type of a lambda abstraction within a <code class="docutils literal notranslate"><span class="pre">def</span></code>.
+</div><p>As a final alternative, we can declare the type of a lambda abstraction before giving
+its definition.
 This removes the need to give type ascriptions in the lambda abstraction itself:</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p</span> <span class="o">:</span> <span class="n">&#8469;</span> <span class="bp">&#8594;</span> <span class="n">&#8484;</span> <span class="o">:=</span> <span class="bp">&#955;</span> <span class="n">u</span><span class="o">,</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span>
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p&#8323;</span> <span class="o">:</span> <span class="n">&#8469;</span> <span class="bp">&#8594;</span> <span class="n">&#8484;</span> <span class="o">:=</span> <span class="bp">&#955;</span> <span class="n">u</span><span class="o">,</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span>
 </pre></div>
 </div>
 </div></section>

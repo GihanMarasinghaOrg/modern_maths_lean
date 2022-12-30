@@ -47,24 +47,23 @@ Write a lambda abstraction as described in the book and apply it to the integer 
 -/
 
 
-namespace first_p
-
 /-
 Here is a named lambda abstraction:
 -/
 def p := λ (u : ℕ), (2 * u : ℤ)
 
-end first_p
 
 
 /-
-The quantity `p` is the same as the function `p` defined below
+The quantity `p` is the same as the function `p₂` defined below
 -/
-namespace second_p
-def p (u : ℕ) : ℤ := 2 * u
-end second_p
 
-namespace third_p
-def p : ℕ → ℤ := λ u, 2 * u
+def p₂ (u : ℕ) : ℤ := 2 * u
 
-end third_p
+
+/-
+Below, we declare the type of the function `p₃` before definining it.
+-/
+
+def p₃ : ℕ → ℤ := λ u, 2 * u
+
