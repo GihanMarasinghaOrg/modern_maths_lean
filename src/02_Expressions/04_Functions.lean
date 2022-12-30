@@ -120,13 +120,12 @@ Use Lean to prove `f = f₂`.
 -/
 
 
-
 constants (a b : ℕ)
 
 noncomputable def t(x : ℕ) := a + x
 
 noncomputable def t₂(x : ℕ) := b + x
 
--- example : t = t₂ := rfl
+
 
 end functions_and_variables

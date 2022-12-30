@@ -687,6 +687,19 @@ necessarily the names of other variables. Suppose <span class="math notranslate 
 If functions <span class="math notranslate nohighlight">\(t : \mathbb N \to \mathbb N\)</span> and <span class="math notranslate nohighlight">\(t_2 : \mathbb N \to \mathbb N\)</span> are defined by
 <span class="math notranslate nohighlight">\(t(x) := a + x\)</span>
 and <span class="math notranslate nohighlight">\(t_2(x) := b + x\)</span>, then <span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> are not necessarily equal.</p>
+<p>Here is a Lean implementation of the functions described above. For the moment, you may be
+content to be ignorant of the meanings of <cite>connstants</cite> and <cite>noncomputable</cite>.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">constants</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">t</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">a</span> <span class="bp">+</span> <span class="n">x</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">t&#8322;</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">b</span> <span class="bp">+</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div><p>Were you to type</p>
+<p>Lean would present you with an error message.</p>
 </section>
 </section>
 </section>
