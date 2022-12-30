@@ -748,8 +748,28 @@ in Lean.</p>
 </section>
 <section id="predicates">
 <h2><span class="section-number">2.5. </span>Predicates<a class="headerlink" href="#predicates" title="Permalink to this headline">#</a></h2>
-<p>BLAH</p>
-</section>
+<p>Below is the definition of a predicate. It&#8217;s simply a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
+that takes each natural number <code class="docutils literal notranslate"><span class="pre">x</span></code> to the proposition <code class="docutils literal notranslate"><span class="pre">Prop</span></code></p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/05_Predicates.lean" target="_blank" tryitfile="../src/02_Expressions/05_Predicates.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">:=</span> <span class="n">x</span> <span class="bp">&gt;</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div><p>As usual, we can find the type of <code class="docutils literal notranslate"><span class="pre">f</span></code> using</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/05_Predicates.lean" target="_blank" tryitfile="../src/02_Expressions/05_Predicates.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="n">f</span>
+</pre></div>
+</div>
+</div><p>This shows <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">Prop</span></code>.
+As <code class="docutils literal notranslate"><span class="pre">f</span></code> is a function on the type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>, it can be applied to natural numbers. We show
+<code class="docutils literal notranslate"><span class="pre">f(2)</span></code> equals <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&gt;</span> <span class="pre">5</span></code> in Lean:</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/05_Predicates.lean" target="_blank" tryitfile="../src/02_Expressions/05_Predicates.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">f</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="bp">=</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rfl</span>
+</pre></div>
+</div>
+</div></section>
 </section>
 
 

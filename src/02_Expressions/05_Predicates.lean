@@ -4,3 +4,19 @@
 -/
 import data.int.basic
 
+
+def f(x) := x > 5 
+
+#check f
+
+
+example : f(2) = (2 > 5) := rfl
+
+/-
+
+.. danger::
+
+  In school mathematics, almost every function return numeric values. It can take some 
+
+
+-/
