@@ -12,10 +12,3 @@ def f(x) := x > 5
 
 example : f(2) = (2 > 5) := rfl
 
-/-
-
-.. DANGER::
-  In school mathematics, almost every function returns numeric values. It can take some 
-
-
--/
