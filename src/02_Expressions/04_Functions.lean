@@ -32,6 +32,7 @@ variable y : ℤ
 
 
 -- EXAMPLE:
+
 variables (u v : ℕ) (y z : ℤ)
 
 /-

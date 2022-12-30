@@ -10,3 +10,6 @@
 #reduce lean.version.fst
 
 
+
+-- EXAMPLE: Modify the Lean code, replacing ``fst`` with ``snd``. Is that what you expected?
+
