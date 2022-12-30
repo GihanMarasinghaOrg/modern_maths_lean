@@ -683,7 +683,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <span class="math notranslate nohighlight">\(f(x) := x^2 + 5x + 2\)</span> and where <span class="math notranslate nohighlight">\(f_2\)</span> is the same except with <span class="math notranslate nohighlight">\(y\)</span> in place of <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>Use Lean to prove <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">f&#8322;</span></code>.</p>
 </div></div><p>Equality of functions is preserved under changing the names of bound variables, but not
-necessarily the names of other variables. Suppose <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are natural number constants.
+necessarily the names of the &#8216;free&#8217; variables. Suppose <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are natural number constants.
 If functions <span class="math notranslate nohighlight">\(t : \mathbb N \to \mathbb N\)</span> and <span class="math notranslate nohighlight">\(t_2 : \mathbb N \to \mathbb N\)</span> are defined by
 <span class="math notranslate nohighlight">\(t(x) := a + x\)</span>
 and <span class="math notranslate nohighlight">\(t_2(x) := b + x\)</span>, then <span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> are not necessarily equal.</p>
@@ -698,12 +698,35 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">t&#8322;</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">b</span> <span class="bp">+</span> <span class="n">x</span>
 </pre></div>
 </div>
-</div><p>Were you to type</p>
+</div><div class="proof proof-type-problem" id="id12">
+
+    <div class="proof-title">
+        <span class="proof-type">Problem 2.11</span>
+        
+    </div><div class="proof-content">
+<p>Type</p>
 <div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">t</span> <span class="bp">=</span> <span class="n">t&#8322;</span> <span class="o">:</span> <span class="n">rfl</span>
 </pre></div>
 </div>
-<p>Lean would present you with an error message.</p>
-</section>
+<p>and read the error message.</p>
+</div></div><p>It&#8217;s time for a problem that mixes together changes to bound and free variables.</p>
+<p>First we define a few constants and functions.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/04_Functions.lean" target="_blank" tryitfile="../src/02_Expressions/04_Functions.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">constants</span> <span class="o">(</span><span class="n">u</span> <span class="n">v</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">f&#8321;</span><span class="o">(</span><span class="n">w</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">u</span> <span class="bp">*</span> <span class="n">w</span> <span class="bp">^</span> <span class="mi">2</span>
+
+              <span class="kd">def</span> <span class="n">f&#8322;</span><span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">u</span> <span class="bp">*</span> <span class="n">u</span> <span class="bp">^</span> <span class="mi">2</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">f&#8323;</span><span class="o">(</span><span class="n">z</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">u</span> <span class="bp">*</span> <span class="n">z</span> <span class="bp">^</span> <span class="mi">2</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">f&#8324;</span><span class="o">(</span><span class="n">w</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">v</span> <span class="bp">*</span> <span class="n">w</span> <span class="bp">^</span> <span class="mi">2</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">f&#8325;</span><span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">v</span> <span class="bp">*</span> <span class="n">u</span> <span class="bp">^</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div></section>
 </section>
 </section>
 
