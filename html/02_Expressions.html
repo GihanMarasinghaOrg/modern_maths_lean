@@ -438,7 +438,19 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 displayed in Lean as <code class="docutils literal notranslate"><span class="pre">&#8704;</span> <span class="pre">(n</span> <span class="pre">:</span> <span class="pre">&#8469;),</span> <span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. Type <code class="docutils literal notranslate"><span class="pre">\all</span></code> for <code class="docutils literal notranslate"><span class="pre">&#8704;</span></code>.</p>
 <p>Likewise, <code class="docutils literal notranslate"><span class="pre">&#8707;</span> <span class="pre">(m</span> <span class="pre">:</span> <span class="pre">&#8469;),</span> <span class="pre">m</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">=</span> <span class="pre">5</span></code> is how to write &#8216;there exists a natural number
 <span class="math notranslate nohighlight">\(m\)</span> such that <span class="math notranslate nohighlight">\(m + 2 = 5\)</span>&#8217;. Here, <code class="docutils literal notranslate"><span class="pre">&#8707;</span></code> is typed <code class="docutils literal notranslate"><span class="pre">\ex</span></code>.</p>
-</section>
+<div class="proof proof-type-problem" id="id4">
+
+    <div class="proof-title">
+        <span class="proof-type">Problem 2.3</span>
+        
+    </div><div class="proof-content">
+<p>For each of the following expressions:</p>
+<ul class="simple">
+<li><p>Without using Lean, determine the type of the expression.</p></li>
+<li><p>Verify your answer using the <code class="docutils literal notranslate"><span class="pre">#check</span></code> Lean command.</p></li>
+</ul>
+<p>(i) <span class="math notranslate nohighlight">\(2 + 3\)</span>, (ii) <span class="math notranslate nohighlight">\(2 + 3 = 10\)</span>, (iii) &#8216;for all integers <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(2x = 10\)</span>&#8217;.</p>
+</div></div></section>
 <section id="the-root-of-a-parse-tree-in-lean">
 <h2><span class="section-number">2.3. </span>The root of a parse tree in Lean<a class="headerlink" href="#the-root-of-a-parse-tree-in-lean" title="Permalink to this headline">#</a></h2>
 <p>This project defines the command <code class="docutils literal notranslate"><span class="pre">#pp_app</span></code> that displays the root of a parse tree of
@@ -450,10 +462,10 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </pre></div>
 </div>
 </div><p>gives the output <code class="docutils literal notranslate"><span class="pre">multiply</span></code>. This shows that <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">3</span></code> is an application of multiplication.</p>
-<div class="proof proof-type-problem" id="id4">
+<div class="proof proof-type-problem" id="id5">
 
     <div class="proof-title">
-        <span class="proof-type">Problem 2.3</span>
+        <span class="proof-type">Problem 2.4</span>
         
     </div><div class="proof-content">
 <p>For each of the following expressions:</p>
@@ -498,10 +510,10 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="n">f</span> <span class="mi">5</span>
 </pre></div>
 </div>
-</div><div class="proof proof-type-problem" id="id5">
+</div><div class="proof proof-type-problem" id="id6">
 
     <div class="proof-title">
-        <span class="proof-type">Problem 2.4</span>
+        <span class="proof-type">Problem 2.5</span>
         
             <span class="proof-title-name">(Applying <span class="math notranslate nohighlight">\(f\)</span> to an integer)</span>
         
@@ -519,10 +531,10 @@ an integer, Lean will not understand <code class="docutils literal notranslate">
 then expects another natural number. However, Lean will understand <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">u</span></code>.
 After reading <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code>, Lean expects an integer. Though <code class="docutils literal notranslate"><span class="pre">u</span></code> is not
 of integer type, Lean is able to &#8216;coerce&#8217; <code class="docutils literal notranslate"><span class="pre">u</span></code> into an integer.</p>
-<div class="proof proof-type-problem" id="id6">
+<div class="proof proof-type-problem" id="id7">
 
     <div class="proof-title">
-        <span class="proof-type">Problem 2.5</span>
+        <span class="proof-type">Problem 2.6</span>
         
             <span class="proof-title-name">(Which expressions are meaningful?)</span>
         
@@ -562,10 +574,10 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </pre></div>
 </div>
 </div><p>The function above has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>.</p>
-<div class="proof proof-type-problem" id="id7">
+<div class="proof proof-type-problem" id="id8">
 
     <div class="proof-title">
-        <span class="proof-type">Problem 2.6</span>
+        <span class="proof-type">Problem 2.7</span>
         
     </div><div class="proof-content">
 <p>Write a Lean expression that corresponds to the abstraction of the integer expression
