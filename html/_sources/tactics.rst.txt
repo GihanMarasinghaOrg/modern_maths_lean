@@ -4,7 +4,7 @@ Tactics
 =======
 
 
-.. topic:: show
+.. todo:: show
   :class: dropdown
 
   ``show`` is used to state or rephrase the current target of the proof.
@@ -30,7 +30,7 @@ Tactics
 .. topic:: linarith
   :class: dropdown
 
-    boo
+  boo
 
 
 .. glossary::
