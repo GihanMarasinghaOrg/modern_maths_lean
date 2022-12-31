@@ -4,7 +4,7 @@ Tactics
 =======
 
 
-.. admonition:: show
+.. topic:: show
   :class: dropdown
 
   ``show`` is used to state or rephrase the current target of the proof.
@@ -27,7 +27,7 @@ Tactics
     show ∀ (b : B), ∃ (a : A), f(a) = b
 
 
-.. admonition:: linarith
+.. topic:: linarith
   :class: dropdown
 
     boo
