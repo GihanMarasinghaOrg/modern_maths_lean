@@ -6,7 +6,6 @@ Tactics
 .. glossary::
 
   .. admonition:: show
-
       ``show`` is used to state or rephrase the current target of the proof.
       If the current target is to prove ``x + y = x + y``, you can indicate this by typing
 
