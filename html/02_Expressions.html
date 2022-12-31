@@ -777,6 +777,30 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 to get used to functions that return propositions. Here, <span class="math notranslate nohighlight">\(f(2)\)</span>
 is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span>. It is not a number!</p>
 </div>
+<p>With <span class="math notranslate nohighlight">\(f\)</span> as above, <span class="math notranslate nohighlight">\(f(2)\)</span> is the false proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span> and <span class="math notranslate nohighlight">\(f(6)\)</span> is the true proposition
+<span class="math notranslate nohighlight">\(6 &gt; 5\)</span>.</p>
+<p>Below, we <cite>prove</cite> <span class="math notranslate nohighlight">\(f(6)\)</span> in Lean.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/02_Expressions/05_Predicates.lean" target="_blank" tryitfile="../src/02_Expressions/05_Predicates.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">f</span><span class="o">(</span><span class="mi">6</span><span class="o">)</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">show</span> <span class="mi">6</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">,</span>
+  <span class="n">linarith</span>
+<span class="kd">end</span>
+</pre></div>
+</div>
+</div><p id="index-3">In the proof above, the words <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> denote the start and end of a &#8216;tactic block&#8217;.
+Each of the lines within the tactic block uses a tactic. Here, we use the <code class="docutils literal notranslate"><span class="pre">show</span></code> and <code class="docutils literal notranslate"><span class="pre">linarith</span></code>
+tactics.</p>
+<p>In the next problem, you will construct a predicate.</p>
+<div class="proof proof-type-problem" id="id14">
+
+    <div class="proof-title">
+        <span class="proof-type">Problem 2.13</span>
+        
+    </div><div class="proof-content">
+<p>In Lean, define</p>
+</div></div><p>-/</p>
 </section>
 </section>
 
