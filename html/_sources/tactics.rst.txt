@@ -3,6 +3,24 @@
 Tactics
 =======
 
+.. admonition:: show
+  
+    ``show`` is used to state or rephrase the current target of the proof.
+    If the current target is to prove ``x + y = x + y``, you can indicate this by typing
+
+    .. code-block:: lean
+
+        show x + y = x + y
+
+    More practically, ``show`` can be used to transform the target to a definitionally equal
+    target. For example, if ``f : A → B`` is a function and the target is to show
+    ``surjective f``, then the target can be changed to the (definitionally equal) target
+    ``∀ (b : B), ∃ (a : A), f(a) = b`` via
+
+    .. code-block:: lean
+
+      show ∀ (b : B), ∃ (a : A), f(a) = b
+
 .. glossary::
 
   .. admonition:: show
