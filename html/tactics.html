@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -40,6 +41,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -256,41 +258,37 @@ title="Print to PDF"
                 
   <section id="tactics">
 <span id="id1"></span><h1>Tactics<a class="headerlink" href="#tactics" title="Permalink to this headline">#</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">show</span></code> is used to state or rephrase the current target of the proof.
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+show<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">show</span></code> is used to state or rephrase the current target of the proof.
 If the current target is to prove <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code>, you can indicate this by typing</p>
 <div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span> <span class="bp">=</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span>
 </pre></div>
 </div>
-<p>More practically, <code class="docutils literal notranslate"><span class="pre">show</span></code> can be used to transform the target to a definitionally equal
+<p class="sd-card-text">More practically, <code class="docutils literal notranslate"><span class="pre">show</span></code> can be used to transform the target to a definitionally equal
 target. For example, if <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">A</span> <span class="pre">&#8594;</span> <span class="pre">B</span></code> is a function and the target is to show
 <code class="docutils literal notranslate"><span class="pre">surjective</span> <span class="pre">f</span></code>, then the target can be changed to the (definitionally equal) target</p>
-<p><code class="docutils literal notranslate"><span class="pre">&#8704;</span> <span class="pre">(b</span> <span class="pre">:</span> <span class="pre">B),</span> <span class="pre">&#8707;</span> <span class="pre">(a</span> <span class="pre">:</span> <span class="pre">A),</span> <span class="pre">f(a)</span> <span class="pre">=</span> <span class="pre">b</span></code></p>
-<p>via</p>
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">&#8704;</span> <span class="pre">(b</span> <span class="pre">:</span> <span class="pre">B),</span> <span class="pre">&#8707;</span> <span class="pre">(a</span> <span class="pre">:</span> <span class="pre">A),</span> <span class="pre">f(a)</span> <span class="pre">=</span> <span class="pre">b</span></code></p>
+<p class="sd-card-text">via</p>
 <div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="bp">&#8704;</span> <span class="o">(</span><span class="n">b</span> <span class="o">:</span> <span class="n">B</span><span class="o">),</span> <span class="bp">&#8707;</span> <span class="o">(</span><span class="n">a</span> <span class="o">:</span> <span class="n">A</span><span class="o">),</span> <span class="n">f</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="bp">=</span> <span class="n">b</span>
 </pre></div>
 </div>
-<div class="dropdown topic">
-<p class="topic-title">linarith</p>
-<p>boo</p>
 </div>
-<dl class="glossary">
-<dt id="term-show">show<a class="headerlink" href="#term-show" title="Permalink to this term">#</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">show</span></code> is used to state or rephrase the current target of the proof.
-If the current target is to prove <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code>, you can indicate this by typing</p>
-<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span> <span class="bp">=</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span>
-</pre></div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+linarith<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">boo</p>
 </div>
-<p>More practically, <code class="docutils literal notranslate"><span class="pre">show</span></code> can be used to transform the target to a definitionally equal
-target. For example, if <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">A</span> <span class="pre">&#8594;</span> <span class="pre">B</span></code> is a function and the target is to show
-<code class="docutils literal notranslate"><span class="pre">surjective</span> <span class="pre">f</span></code>, then the target can be changed to the (definitionally equal) target
-<code class="docutils literal notranslate"><span class="pre">&#8704;</span> <span class="pre">(b</span> <span class="pre">:</span> <span class="pre">B),</span> <span class="pre">&#8707;</span> <span class="pre">(a</span> <span class="pre">:</span> <span class="pre">A),</span> <span class="pre">f(a)</span> <span class="pre">=</span> <span class="pre">b</span></code> via</p>
-<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="bp">&#8704;</span> <span class="o">(</span><span class="n">b</span> <span class="o">:</span> <span class="n">B</span><span class="o">),</span> <span class="bp">&#8707;</span> <span class="o">(</span><span class="n">a</span> <span class="o">:</span> <span class="n">A</span><span class="o">),</span> <span class="n">f</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="bp">=</span> <span class="n">b</span>
-</pre></div>
-</div>
-</dd>
-<dt id="term-linarith">linarith<a class="headerlink" href="#term-linarith" title="Permalink to this term">#</a></dt><dd><p>This is a glossary item for roo.</p>
-</dd>
-</dl>
-</section>
+</details></section>
 
 
               </div>
