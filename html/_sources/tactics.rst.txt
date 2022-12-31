@@ -4,7 +4,7 @@ Tactics
 =======
 
 
-.. admonition:: show
+.. admonition-theorem:: show
   :class: dropdown
 
   ``show`` is used to state or rephrase the current target of the proof.
