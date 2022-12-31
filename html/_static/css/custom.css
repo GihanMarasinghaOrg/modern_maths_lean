@@ -15,6 +15,7 @@ code.literal {
     background-color: #fbfbfb !important;
 }
 
-.admonition.note .admonition-title:before {
+div.admonition.note > .admonition-title:before {
     content: none;
+    width: 0em;
 }
