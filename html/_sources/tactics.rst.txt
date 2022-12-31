@@ -4,8 +4,8 @@ Tactics
 =======
 
 
-.. admonition:theoremm:: show
-  :class: dropdown
+.. admonition:: show
+  :class: dropdown adminition-theorem
 
   ``show`` is used to state or rephrase the current target of the proof.
   If the current target is to prove ``x + y = x + y``, you can indicate this by typing
