@@ -256,6 +256,22 @@ title="Print to PDF"
                 
   <section id="tactics">
 <span id="id1"></span><h1>Tactics<a class="headerlink" href="#tactics" title="Permalink to this headline">#</a></h1>
+<div class="dropdown admonition">
+<p class="admonition-title">show</p>
+<p><code class="docutils literal notranslate"><span class="pre">show</span></code> is used to state or rephrase the current target of the proof.
+If the current target is to prove <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code>, you can indicate this by typing</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span> <span class="bp">=</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>More practically, <code class="docutils literal notranslate"><span class="pre">show</span></code> can be used to transform the target to a definitionally equal
+target. For example, if <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">A</span> <span class="pre">&#8594;</span> <span class="pre">B</span></code> is a function and the target is to show
+<code class="docutils literal notranslate"><span class="pre">surjective</span> <span class="pre">f</span></code>, then the target can be changed to the (definitionally equal) target</p>
+<p><code class="docutils literal notranslate"><span class="pre">&#8704;</span> <span class="pre">(b</span> <span class="pre">:</span> <span class="pre">B),</span> <span class="pre">&#8707;</span> <span class="pre">(a</span> <span class="pre">:</span> <span class="pre">A),</span> <span class="pre">f(a)</span> <span class="pre">=</span> <span class="pre">b</span></code></p>
+<p>via</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="bp">&#8704;</span> <span class="o">(</span><span class="n">b</span> <span class="o">:</span> <span class="n">B</span><span class="o">),</span> <span class="bp">&#8707;</span> <span class="o">(</span><span class="n">a</span> <span class="o">:</span> <span class="n">A</span><span class="o">),</span> <span class="n">f</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="bp">=</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
 <div class="dropdown topic">
 <p class="topic-title">linarith</p>
 <p>boo</p>

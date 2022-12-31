@@ -4,7 +4,7 @@ Tactics
 =======
 
 
-.. adminition:: show
+.. admonition:: show
   :class: dropdown
 
   ``show`` is used to state or rephrase the current target of the proof.
