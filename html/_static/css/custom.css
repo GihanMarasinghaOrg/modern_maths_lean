@@ -20,6 +20,11 @@ div.admonition.note > .admonition-title:before {
     width: 0em;
 }
 
+div.admonition.note > .admonition-title {
+    padding : 0em 0em;
+}
+
+
 .admonition.note>.admonition-title:before {
     content: none;
     width: 0em;   
