@@ -14,5 +14,6 @@ Modern Mathematics with Lean
    :hidden:
 
    typing_lean_symbols
+   tactics
    genindex
 
