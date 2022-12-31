@@ -9,9 +9,9 @@ Tactics
     ``show`` is used to state or rephrase the current target of the proof.
     If the current target is to prove ``x + y = x + y``, you can indicate this by typing
 
-      .. code-block:: lean
+    .. code-block:: lean
 
-          show x + y = x + y
+        show x + y = x + y
 
     More practicallyk, ``show`` can be used to transform the target a definitionally equal
     target. For example, if ``f : A → B`` is a function and the target is to show

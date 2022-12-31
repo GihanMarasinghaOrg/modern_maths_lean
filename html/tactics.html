@@ -259,11 +259,9 @@ title="Print to PDF"
 <dl class="glossary">
 <dt id="term-show">show<a class="headerlink" href="#term-show" title="Permalink to this term">#</a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">show</span></code> is used to state or rephrase the current target of the proof.
 If the current target is to prove <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code>, you can indicate this by typing</p>
-<blockquote>
-<div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span> <span class="bp">=</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">show</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span> <span class="bp">=</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span>
 </pre></div>
 </div>
-</div></blockquote>
 <p>More practicallyk, <code class="docutils literal notranslate"><span class="pre">show</span></code> can be used to transform the target a definitionally equal
 target. For example, if <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">A</span> <span class="pre">&#8594;</span> <span class="pre">B</span></code> is a function and the target is to show
 <code class="docutils literal notranslate"><span class="pre">surjective</span> <span class="pre">f</span></code>, then the target can be changed to the (definitionally equal) target
