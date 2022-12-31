@@ -31,29 +31,24 @@ Tactics
   boo
 
 
-.. glossary::
+.. admonition:: show
+    :class: dropdown
+  
+  ``show`` is used to state or rephrase the current target of the proof.
+  If the current target is to prove ``x + y = x + y``, you can indicate this by typing
 
-  show
-    .. dropdown::
+  .. code-block:: lean
 
-      ``show`` is used to state or rephrase the current target of the proof.
-      If the current target is to prove ``x + y = x + y``, you can indicate this by typing
+      show x + y = x + y
 
-      .. code-block:: lean
+  More practically, ``show`` can be used to transform the target to a definitionally equal
+  target. For example, if ``f : A → B`` is a function and the target is to show
+  ``surjective f``, then the target can be changed to the (definitionally equal) target
 
-          show x + y = x + y
+  ``∀ (b : B), ∃ (a : A), f(a) = b``
+  
+  via
 
-      More practically, ``show`` can be used to transform the target to a definitionally equal
-      target. For example, if ``f : A → B`` is a function and the target is to show
-      ``surjective f``, then the target can be changed to the (definitionally equal) target
+  .. code-block:: lean
 
-      ``∀ (b : B), ∃ (a : A), f(a) = b``
-      
-      via
-
-      .. code-block:: lean
-
-        show ∀ (b : B), ∃ (a : A), f(a) = b
-
-  linarith
-    bish
+    show ∀ (b : B), ∃ (a : A), f(a) = b
