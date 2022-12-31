@@ -30,3 +30,11 @@ Tactics
   
   boo
 
+
+.. glossary::
+
+    show
+      fish
+
+    linarith
+      bish
