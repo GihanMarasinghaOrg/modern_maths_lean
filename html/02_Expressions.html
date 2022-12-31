@@ -769,8 +769,10 @@ As <code class="docutils literal notranslate"><span class="pre">f</span></code> 
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">f</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="bp">=</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rfl</span>
 </pre></div>
 </div>
-</div><div class="admonition warning">
-<p class="admonition-title">Warning</p>
+</div><p>Note we haven&#8217;t proved that <span class="math notranslate nohighlight">\(2 &gt; 5\)</span> (which would be impossible). Rather, we have proved that
+<span class="math notranslate nohighlight">\(f(2)\)</span> is <span class="math notranslate nohighlight">\(2 &gt; 5\)</span>.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
 <p>In school mathematics, functions typically return numeric values. It can take time
 to get used to functions that return propositions. Here, <span class="math notranslate nohighlight">\(f(2)\)</span>
 is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span>. It is not a number!</p>

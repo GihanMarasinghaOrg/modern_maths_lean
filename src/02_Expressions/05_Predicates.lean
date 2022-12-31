@@ -9,6 +9,5 @@ def f(x) := x > 5
 
 #check f
 
-
 example : f(2) = (2 > 5) := rfl
 
