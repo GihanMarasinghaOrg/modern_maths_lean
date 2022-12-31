@@ -21,21 +21,6 @@ div.admonition.note > .admonition-title:before {
 }
 
 div.admonition.note > .admonition-title {
-    padding : 0em 0em;
+    padding-left : 1rem;
 }
 
-
-.admonition.note>.admonition-title:before {
-    content: none;
-    width: 0em;   
-}
-
-.admonition >.admonition-title:before {
-    content: none;
-    width: 0em;   
-}
-
-div.admonition > .admonition-title:before {
-    content: none;
-    width: 0em;
-}
