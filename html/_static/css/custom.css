@@ -19,3 +19,18 @@ div.admonition.note > .admonition-title:before {
     content: none;
     width: 0em;
 }
+
+.admonition.note>.admonition-title:before {
+    content: none;
+    width: 0em;   
+}
+
+.admonition >.admonition-title:before {
+    content: none;
+    width: 0em;   
+}
+
+div.admonition > .admonition-title:before {
+    content: none;
+    width: 0em;
+}
