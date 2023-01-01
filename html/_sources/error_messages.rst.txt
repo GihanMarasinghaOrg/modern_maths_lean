@@ -69,6 +69,6 @@ Error messages
       ```
       in the Infoview window. The important part of this message is the end,
       ``∀ (b : β), ∃ (a : α), f a = b``.
-    * Click on the word ``surjective`` and type :kbd:`F12` to open a new Lean editor containing
-      the source of the definition. Reading the original source files is a great way to
-      learn Lean.
+    * Click on the word ``surjective`` and press :kbd:`F12` on your keyboard to open a new Lean
+      editor containing the source of the definition. Reading the original source files is a great
+      way to learn Lean.
