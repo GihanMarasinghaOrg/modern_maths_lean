@@ -814,11 +814,15 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <h3><span class="section-number">2.5.1. </span>Tactic blocks<a class="headerlink" href="#tactic-blocks" title="Permalink to this headline">#</a></h3>
 <p id="index-3">In the proof above, the words <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> denote the start and end of a &#8216;tactic block&#8217;.
 You will use tactic blocks to write proofs interactively.</p>
-<p>Locate the tactic block in the Lean editor corresponding to the code above. Click anywhere within
-the block (anywhere after the <code class="docutils literal notranslate"><span class="pre">begin</span></code> and before the <code class="docutils literal notranslate"><span class="pre">end</span></code>). The Infoview pane w</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Click anywhere within the tactic block</p>
+<p>Let&#8217;s learn about tactic-mode proofs.</p>
+<p>In the Lean editor pane, locate the code corresponding to the example above. Click anywhere within
+the tactic block (anywhere after the <code class="docutils literal notranslate"><span class="pre">begin</span></code> and before the <code class="docutils literal notranslate"><span class="pre">end</span></code>). The Infoview pane will
+show the &#8216;tactic state&#8217; at that particular point in the proof.</p>
+<p>The tactic state shows the &#8216;goal&#8217; at any given point in the proof. This consistst of (1)
+the &#8216;context&#8217; (the set of hypotheses) and (2) the target (that which is to be proved).</p>
+<p>In this simple proof, there are no hypothesis. The target is marked with a <code class="docutils literal notranslate"><span class="pre">&#8866;</span></code></p>
 </div>
 <p>Each of the lines within the tactic block uses a tactic. Here, we use the <code class="docutils literal notranslate"><span class="pre">show</span></code> and <code class="docutils literal notranslate"><span class="pre">linarith</span></code>
 tactics.</p>
