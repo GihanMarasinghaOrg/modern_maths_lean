@@ -11,11 +11,9 @@ import expressions.predicates
 
 
 
-/- IMPORTANT:
-
+/- 
 Below is our first example of a tactic block. Read the instructions in the book for
 working with tactic blocks before continuing.
-
 -/
 
 example : P(6) :=
