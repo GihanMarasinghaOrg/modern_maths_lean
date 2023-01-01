@@ -3,6 +3,10 @@
 ## 2.6 Tactics
 -/
 import data.int.basic tactic.norm_num
+/-
+The statement below imports the contents of the `predicates.lean` file from the `expressions`
+chapter.
+-/
 import expressions.predicates
 
 

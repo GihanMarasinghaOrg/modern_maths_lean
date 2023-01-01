@@ -5,11 +5,11 @@
 import data.int.basic tactic.norm_num data.nat.prime
 
 
-def f(x : ℕ) := x > 5 
+def P(x : ℕ) := x > 5 
 
-#check f
+#check P
 
-example : f(2) = (2 > 5) := rfl
+example : P(2) = (2 > 5) := rfl
 
 
 

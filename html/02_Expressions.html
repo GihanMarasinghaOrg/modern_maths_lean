@@ -783,32 +783,32 @@ in Lean.</p>
 that takes each natural number <code class="docutils literal notranslate"><span class="pre">x</span></code> to the proposition <code class="docutils literal notranslate"><span class="pre">Prop</span></code></p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/predicates.lean" target="_blank" tryitfile="../src/expressions/predicates.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">x</span> <span class="bp">&gt;</span> <span class="mi">5</span>
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">P</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">x</span> <span class="bp">&gt;</span> <span class="mi">5</span>
 </pre></div>
 </div>
-</div><p>As usual, we can find the type of <code class="docutils literal notranslate"><span class="pre">f</span></code> using</p>
+</div><p>As usual, we can find the type of <code class="docutils literal notranslate"><span class="pre">P</span></code> using</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/predicates.lean" target="_blank" tryitfile="../src/expressions/predicates.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="n">f</span>
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="n">P</span>
 </pre></div>
 </div>
-</div><p>This shows <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">Prop</span></code>.
-As <code class="docutils literal notranslate"><span class="pre">f</span></code> is a function on the type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>, it can be applied to natural numbers. We show
-<code class="docutils literal notranslate"><span class="pre">f(2)</span></code> equals <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&gt;</span> <span class="pre">5</span></code> in Lean:</p>
+</div><p>This shows <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">Prop</span></code>.
+As <code class="docutils literal notranslate"><span class="pre">P</span></code> is a function on the type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>, it can be applied to natural numbers. We show
+<code class="docutils literal notranslate"><span class="pre">P(2)</span></code> equals <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&gt;</span> <span class="pre">5</span></code> in Lean:</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/predicates.lean" target="_blank" tryitfile="../src/expressions/predicates.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">f</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="bp">=</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rfl</span>
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">P</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="bp">=</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rfl</span>
 </pre></div>
 </div>
 </div><p>Note we haven&#8217;t proved that <span class="math notranslate nohighlight">\(2 &gt; 5\)</span> (which would be impossible). Rather, we have proved that
-<span class="math notranslate nohighlight">\(f(2)\)</span> is <span class="math notranslate nohighlight">\(2 &gt; 5\)</span>.</p>
+<span class="math notranslate nohighlight">\(P(2)\)</span> is <span class="math notranslate nohighlight">\(2 &gt; 5\)</span>.</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>In school mathematics, functions typically return numeric values. It can take time
-to get used to functions that return propositions. Here, <span class="math notranslate nohighlight">\(f(2)\)</span>
+to get used to functions that return propositions. Here, <span class="math notranslate nohighlight">\(P(2)\)</span>
 is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span>. It is not a number!</p>
 </div>
-<p>With <span class="math notranslate nohighlight">\(f\)</span> as above, <span class="math notranslate nohighlight">\(f(2)\)</span> is the false proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span> and <span class="math notranslate nohighlight">\(f(6)\)</span> is the true proposition
+<p>With <span class="math notranslate nohighlight">\(P\)</span> as above, <span class="math notranslate nohighlight">\(P(2)\)</span> is the false proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span> and <span class="math notranslate nohighlight">\(P(6)\)</span> is the true proposition
 <span class="math notranslate nohighlight">\(6 &gt; 5\)</span>.</p>
 <p>In the next problem, you will construct a predicate.</p>
 <div class="proof proof-type-problem" id="id14">
@@ -817,21 +817,21 @@ is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span
         <span class="proof-type">Problem 2.13</span>
         
     </div><div class="proof-content">
-<p>In Lean, define a predicate <code class="docutils literal notranslate"><span class="pre">g</span></code> on the type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> so that <code class="docutils literal notranslate"><span class="pre">g(y)</span></code> means <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">12</span></code>.</p>
+<p>In Lean, define a predicate <code class="docutils literal notranslate"><span class="pre">Q</span></code> on the type <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> so that <code class="docutils literal notranslate"><span class="pre">Q(y)</span></code> means <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">12</span></code>.
+Prove that <code class="docutils literal notranslate"><span class="pre">Q(-3)</span></code> equals <code class="docutils literal notranslate"><span class="pre">-3</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">12</span></code>.</p>
 </div></div></section>
 <section id="tactics">
 <h2><span class="section-number">2.6. </span>Tactics<a class="headerlink" href="#tactics" title="Permalink to this headline">#</a></h2>
 <p>In this important section, you&#8217;ll learn about Lean <cite>tactics</cite>, these being tools for writing proofs
 interactively.</p>
 <p>This is also the first section in which we&#8217;ll import the Lean code from a previous section. This
-we do by using an <cite>import</cite> statement at the beginning of the file.</p>
+we do by using an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement at the beginning of the file.</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/tactics.lean" target="_blank" tryitfile="../src/expressions/tactics.lean">
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="n">expressions.predicates</span>
 </pre></div>
 </div>
-</div><p>Below is the definition of a predicate. It&#8217;s simply a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
-that takes each natural number <code class="docutils literal notranslate"><span class="pre">x</span></code> to the proposition <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
+</div><p>In the previous section, we defined a function <code class="docutils literal notranslate"><span class="pre">f</span></code>
 As usual, we can find the type of <code class="docutils literal notranslate"><span class="pre">f</span></code> using</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/tactics.lean" target="_blank" tryitfile="../src/expressions/tactics.lean">
