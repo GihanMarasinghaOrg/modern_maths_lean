@@ -3,9 +3,6 @@
 ## 2.6 Tactics
 -/
 import data.int.basic tactic.norm_num
-
-
-
 import expressions.predicates
 
 
