@@ -4,16 +4,11 @@
 -/
 import data.int.basic tactic.norm_num data.nat.prime
 
-
 def P(x : ℕ) := x > 5 
 
 #check P
 
 example : P(2) = (2 > 5) := rfl
-
-
-
-
 
 /- PROBLEM:
 
@@ -22,13 +17,9 @@ example : P(2) = (2 > 5) := rfl
 
 -/
 
-
-
 def T (x y : ℤ) := x + y < 7
 
-
 example : T (-3) (5) = (-3 + 5 < 7) := rfl
-
 
 /- PROBLEM:
 
