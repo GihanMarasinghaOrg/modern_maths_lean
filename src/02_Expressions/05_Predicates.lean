@@ -26,3 +26,11 @@ begin
   norm_num,
 end
 
+
+/- PROBLEM
+
+Read the appendix items on the `show` and `norm_num` tactics. 
+After reading those items, write an explanation below, in English, of how the tactic proof
+above works.
+-/
+
