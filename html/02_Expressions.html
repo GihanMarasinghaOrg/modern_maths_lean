@@ -806,7 +806,7 @@ is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">f</span><span class="o">(</span><span class="mi">6</span><span class="o">)</span> <span class="o">:=</span>
 <span class="kd">begin</span>
   <span class="k">show</span> <span class="mi">6</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">,</span>
-  <span class="n">linarith</span><span class="o">,</span>
+  <span class="n">norm_num</span><span class="o">,</span>
 <span class="kd">end</span>
 </pre></div>
 </div>
@@ -826,10 +826,10 @@ the &#8216;context&#8217; (the set of hypotheses) and (2) the target (that which
 can be read &#8216;to prove&#8217;.</p>
 <p>At the start of the proof (just after the <code class="docutils literal notranslate"><span class="pre">begin</span></code>), the target is to prove <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">6</span></code>.
 After the line <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">6</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>, the target is to prove <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.
-After the <code class="docutils literal notranslate"><span class="pre">linarith</span></code> line, the tactic state shows &#8216;goals accomplished&#8217;, indicating that
+After the <code class="docutils literal notranslate"><span class="pre">norm_num</span></code> line, the tactic state shows &#8216;goals accomplished&#8217;, indicating that
 the proof is complete.</p>
 </div>
-<p>Each of the lines within the tactic block uses a tactic. Here, we use the <code class="docutils literal notranslate"><span class="pre">show</span></code> and <code class="docutils literal notranslate"><span class="pre">linarith</span></code>
+<p>Each of the lines within the tactic block uses a tactic. Here, we use the <code class="docutils literal notranslate"><span class="pre">show</span></code> and <code class="docutils literal notranslate"><span class="pre">norm_num</span></code>
 tactics.</p>
 <div class="admonition-reading-more-about-tactics admonition">
 <p class="admonition-title">Reading more about tactics</p>

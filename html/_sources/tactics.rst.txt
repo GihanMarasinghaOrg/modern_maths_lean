@@ -26,9 +26,24 @@ Tactics
     show ∀ (b : B), ∃ (a : A), f(a) = b
 
 
-.. dropdown:: linarith
+.. dropdown:: norm_num
   
-  boo
+  ``norm_num`` proves many numeric equations and inequalities involving addition, subtraction,
+  multiplication, division, exponentiation, and congruences.
+
+  .. code-block:: lean
+
+    example : 2 < 3 * 6 := by norm_num
+
+    example : 5 + 10 = 15 := by norm_num
+
+    example : 9 ≠ 4 := by norm_num
+
+    -- Show `12` is congruent to `2` modulo `10`.
+    example : 12 % 10 = 2 := by norm_num
+
+    -- Show that `163` is prime.
+    example : nat.prime 163 := by norm_num
 
 
 .. admonition:: show

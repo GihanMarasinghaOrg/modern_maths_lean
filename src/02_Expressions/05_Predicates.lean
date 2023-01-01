@@ -2,7 +2,7 @@
 # Chapter 2: Expressions
 ## 2.5 Predicates and tactics
 -/
-import data.int.basic tactic.linarith
+import data.int.basic tactic.norm_num data.nat.prime
 
 
 def f(x) := x > 5 
@@ -23,6 +23,6 @@ working with tactic blocks before continuing.
 example : f(6) :=
 begin
   show 6 > 5,
-  linarith,
+  norm_num,
 end
 

@@ -281,12 +281,26 @@ target. For example, if <code class="docutils literal notranslate"><span class="
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-linarith<div class="sd-summary-down docutils">
+norm_num<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">boo</p>
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">norm_num</span></code> proves many numeric equations and inequalities involving addition, subtraction,
+multiplication, division, exponentiation, and congruences.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="mi">2</span> <span class="bp">&lt;</span> <span class="mi">3</span> <span class="bp">*</span> <span class="mi">6</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
+
+<span class="kd">example</span> <span class="o">:</span> <span class="mi">5</span> <span class="bp">+</span> <span class="mi">10</span> <span class="bp">=</span> <span class="mi">15</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
+
+<span class="kd">example</span> <span class="o">:</span> <span class="mi">9</span> <span class="bp">&#8800;</span> <span class="mi">4</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
+
+<span class="c1">-- Show `12` is congruent to `2` modulo `10`.</span>
+<span class="kd">example</span> <span class="o">:</span> <span class="mi">12</span> <span class="bp">%</span> <span class="mi">10</span> <span class="bp">=</span> <span class="mi">2</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
+
+<span class="c1">-- Show that `163` is prime.</span>
+<span class="kd">example</span> <span class="o">:</span> <span class="n">nat.prime</span> <span class="mi">163</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
+</pre></div>
+</div>
 </div>
 </details><div class="dropdown admonition">
 <p class="admonition-title">show</p>
