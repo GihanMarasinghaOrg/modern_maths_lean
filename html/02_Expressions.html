@@ -288,9 +288,16 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#predicates">
-   2.5. Predicates
+  <a class="reference internal nav-link" href="#predicates-and-tactics">
+   2.5. Predicates and tactics
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tactic-blocks">
+     2.5.1. Tactic blocks
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -344,9 +351,16 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#predicates">
-   2.5. Predicates
+  <a class="reference internal nav-link" href="#predicates-and-tactics">
+   2.5. Predicates and tactics
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tactic-blocks">
+     2.5.1. Tactic blocks
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -368,7 +382,7 @@ title="Print to PDF"
 Go to source</a></div><div class="highlight-lean notranslate" id="index-0"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="mi">2</span> <span class="bp">*</span> <span class="mi">3</span>
 </pre></div>
 </div>
-</div><p>The above code outputs <code class="docutils literal notranslate"><span class="pre">6</span></code> in the Infoview window.</p>
+</div><p>The above code outputs <code class="docutils literal notranslate"><span class="pre">6</span></code> in the Infoview pane.</p>
 <div class="proof proof-type-problem" id="id2">
 
     <div class="proof-title">
@@ -753,8 +767,8 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 in Lean.</p>
 </div></div></section>
 </section>
-<section id="predicates">
-<h2><span class="section-number">2.5. </span>Predicates<a class="headerlink" href="#predicates" title="Permalink to this headline">#</a></h2>
+<section id="predicates-and-tactics">
+<h2><span class="section-number">2.5. </span>Predicates and tactics<a class="headerlink" href="#predicates-and-tactics" title="Permalink to this headline">#</a></h2>
 <p>Below is the definition of a predicate. It&#8217;s simply a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
 that takes each natural number <code class="docutils literal notranslate"><span class="pre">x</span></code> to the proposition <code class="docutils literal notranslate"><span class="pre">Prop</span></code></p>
 <div style="position: relative">
@@ -792,16 +806,25 @@ is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">f</span><span class="o">(</span><span class="mi">6</span><span class="o">)</span> <span class="o">:=</span>
 <span class="kd">begin</span>
   <span class="k">show</span> <span class="mi">6</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">,</span>
-  <span class="n">linarith</span>
+  <span class="n">linarith</span><span class="o">,</span>
 <span class="kd">end</span>
 </pre></div>
 </div>
-</div><p id="index-3">In the proof above, the words <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> denote the start and end of a &#8216;tactic block&#8217;.
-Each of the lines within the tactic block uses a tactic. Here, we use the <code class="docutils literal notranslate"><span class="pre">show</span></code> and <code class="docutils literal notranslate"><span class="pre">linarith</span></code>
+</div><section id="tactic-blocks">
+<h3><span class="section-number">2.5.1. </span>Tactic blocks<a class="headerlink" href="#tactic-blocks" title="Permalink to this headline">#</a></h3>
+<p id="index-3">In the proof above, the words <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> denote the start and end of a &#8216;tactic block&#8217;.
+You will use tactic blocks to write proofs interactively.</p>
+<p>Locate the tactic block in the Lean editor corresponding to the code above. Click anywhere within
+the block (anywhere after the <code class="docutils literal notranslate"><span class="pre">begin</span></code> and before the <code class="docutils literal notranslate"><span class="pre">end</span></code>). The Infoview pane w</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Click anywhere within the tactic block</p>
+</div>
+<p>Each of the lines within the tactic block uses a tactic. Here, we use the <code class="docutils literal notranslate"><span class="pre">show</span></code> and <code class="docutils literal notranslate"><span class="pre">linarith</span></code>
 tactics.</p>
 <div class="admonition-reading-more-about-tactics admonition">
 <p class="admonition-title">Reading more about tactics</p>
-<p>All the tactics used in this book are described in the Appendix <a class="reference internal" href="tactics.html#tactics"><span class="std std-ref">Tactics</span></a></p>
+<p>All the tactics used in this book are described in the Appendix <a class="reference internal" href="tactics.html#tactics"><span class="std std-ref">Tactics</span></a>.</p>
 </div>
 <p>In the next problem, you will construct a predicate.</p>
 <div class="proof proof-type-problem" id="id14">
@@ -812,6 +835,7 @@ tactics.</p>
     </div><div class="proof-content">
 <p>In Lean, define</p>
 </div></div></section>
+</section>
 </section>
 
 

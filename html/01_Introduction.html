@@ -327,12 +327,12 @@ Go to source</a></div><div class="highlight-lean notranslate" id="index-0"><div 
 </div>
 </div><p>Two things should have happened: (1) the left-most editor will contain the
 contents of the Lean file corresponding to this section of the book and
-(2) the middle pane will display the Lean Infoview window. Initially, it
+(2) the middle pane will display the Lean Infoview pane. Initially, it
 shows nothing.</p>
 <p>1. Click in the Lean file in the left-most pane to start
 Infoview.
-2. Click the end of the line <code class="docutils literal notranslate"><span class="pre">#reduce</span> <span class="pre">lean.version</span></code> in the Lean window.
-You&#8217;ll then the output from this command in the Infoview window.</p>
+2. Click the end of the line <code class="docutils literal notranslate"><span class="pre">#reduce</span> <span class="pre">lean.version</span></code> in the Lean editor pane.
+You&#8217;ll then the output from this command in the Infoview pane.</p>
 <p>The output from <code class="docutils literal notranslate"><span class="pre">#reduce</span> <span class="pre">lean.version</span></code> is a triple of numbers that
 represents the Lean version number used by this project.</p>
 <p>Now, we&#8217;ll apply the <code class="docutils literal notranslate"><span class="pre">fst</span></code> function to the triple <code class="docutils literal notranslate"><span class="pre">lean.version</span></code>.</p>
@@ -342,7 +342,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </pre></div>
 </div>
 </div><p>If you click the end of the line <code class="docutils literal notranslate"><span class="pre">#reduce</span> <span class="pre">lean.version.fst</span></code> in the
-Infoview window, you wee see Lean&#8217;s output: <code class="docutils literal notranslate"><span class="pre">3</span></code>. It has calcuated this
+Infoview pane, you wee see Lean&#8217;s output: <code class="docutils literal notranslate"><span class="pre">3</span></code>. It has calcuated this
 from the first element (indicated by <code class="docutils literal notranslate"><span class="pre">fst</span></code>) of the Lean version number.</p>
 <div class="proof proof-type-problem" id="id2">
 
@@ -351,10 +351,10 @@ from the first element (indicated by <code class="docutils literal notranslate">
         
     </div><div class="proof-content">
 <p>Modify the Lean code, replacing <code class="docutils literal notranslate"><span class="pre">fst</span></code> with <code class="docutils literal notranslate"><span class="pre">snd</span></code>. Is that what you expected?</p>
-</div></div><p>If you ever accidentally close the Lean Documentation window, you can retrieve it
+</div></div><p>If you ever accidentally close the Lean Documentation pane, you can retrieve it
 by opening the Command Palette from the View -&gt; Command Palette menu and searching for:
 &#8216;Lean: Open Documentation View&#8217;. Then click &#8216;Open documentation of current project&#8217;.</p>
-<p>Likewise, you can display the Infoview window by searching for &#8216;Lean: Infoview: Display Goal&#8217;
+<p>Likewise, you can display the Infoview pane by searching for &#8216;Lean: Infoview: Display Goal&#8217;
 in the Command Palette.</p>
 <p><strong>To navigate between chapters</strong>, either use the &#8216;Next&#8217; and &#8216;Previous&#8217;
 buttons below or use the table of contents menus.</p>

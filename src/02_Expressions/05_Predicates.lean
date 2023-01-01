@@ -1,6 +1,6 @@
 /-
 # Chapter 2: Expressions
-## 2.5 Predicates
+## 2.5 Predicates and tactics
 -/
 import data.int.basic tactic.linarith
 
@@ -13,9 +13,16 @@ example : f(2) = (2 > 5) := rfl
 
 
 
+/- IMPORTANT:
+
+Below is our first example of a tactic block. Read the instructions in the book for
+working with tactic blocks before continuing.
+
+-/
+
 example : f(6) :=
 begin
   show 6 > 5,
-  linarith
+  linarith,
 end
 
