@@ -23,7 +23,7 @@ example : T (-3) (5) = (-3 + 5 < 7) := rfl
 
 /- PROBLEM:
 
-Prove that `T (500) (-100)` means `500 + (-100) < 7`.
+Prove that `T (500) (-100)` equald `500 + (-100) < 7`.
 
 -/
 
