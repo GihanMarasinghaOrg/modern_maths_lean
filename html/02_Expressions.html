@@ -818,7 +818,16 @@ is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span
         
     </div><div class="proof-content">
 <p>In Lean, define a predicate <code class="docutils literal notranslate"><span class="pre">g</span></code> on the type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> so that <code class="docutils literal notranslate"><span class="pre">g(y)</span></code> means <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">12</span></code>.</p>
-</div></div></section>
+</div></div><p>In this important section, you&#8217;ll learn about Lean <cite>tactics</cite>, these being tools for writing proofs
+interactively.</p>
+<p>This is the first section in which we&#8217;ll import the Lean code from a previous section. This
+we do by using an <cite>import</cite> statement at the beginning of the file.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/tactics.lean" target="_blank" tryitfile="../src/expressions/tactics.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="n">expressions.predicates</span>
+</pre></div>
+</div>
+</div></section>
 <section id="tactics">
 <h2><span class="section-number">2.6. </span>Tactics<a class="headerlink" href="#tactics" title="Permalink to this headline">#</a></h2>
 <p>Below is the definition of a predicate. It&#8217;s simply a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
