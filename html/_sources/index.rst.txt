@@ -12,6 +12,7 @@ Modern Mathematics with Lean
 
 
 Appendices
+----------
 
 .. toctree::
    :maxdepth: 2
