@@ -1,11 +1,10 @@
 /-
 # Chapter 2: Expressions
-## 2.5 Predicates and tactics
+## 2.6 Tactics
 -/
-import data.int.basic tactic.norm_num data.nat.prime
+import data.int.basic tactic.norm_num data.nat.prime expressions.predicates
 
 
-def f(x) := x > 5 
 
 #check f
 
@@ -26,11 +25,19 @@ begin
   norm_num,
 end
 
-
 /- PROBLEM
 
 Read the appendix items on the `show` and `norm_num` tactics. 
 After reading those items, write an explanation below, in English, of how the tactic proof
 above works.
+
 -/
 
+
+def g (y : ℕ) := y + 5 = 12
+
+example : g(7) :=
+begin
+  show 7 + 5 = 12,
+  norm_num,
+end
