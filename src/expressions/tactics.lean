@@ -25,7 +25,11 @@ end
 /- PROBLEM
 
 Read the appendix items on the `show` and `norm_num` tactics. 
-After reading those items, write an explanation below, in English, of how the tactic proof
+After reading those items, write an English-language explanation of how the tactic proof
 above works.
 
 -/
+
+
+
+def 

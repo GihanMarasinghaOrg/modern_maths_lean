@@ -21,3 +21,18 @@ example : P(2) = (2 > 5) := rfl
   Prove that `Q(-3)` equals `-3 + 5 = 12`.
 
 -/
+
+
+
+def T (x y : ℤ) := x + y < 7
+
+
+example : T (-3) (5) = (-3 + 5 < 7) := rfl
+
+
+/- PROBLEM:
+
+Prove that `T (500) (-100)` means `500 + (-100) < 7`.
+
+-/
+
