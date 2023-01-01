@@ -8,3 +8,4 @@ Expressions
 .. include:: 02_Expressions/03_Root_of_parse_tree.inc
 .. include:: 02_Expressions/04_Functions.inc
 .. include:: 02_Expressions/05_Predicates.inc    
+.. include:: 02_Expressions/06_Predicates.inc    
