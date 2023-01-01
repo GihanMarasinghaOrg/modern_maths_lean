@@ -27,9 +27,25 @@ end
 Read the appendix items on the `show` and `norm_num` tactics. 
 After reading those items, write an English-language explanation of how the tactic proof
 above works.
-
 -/
 
 
 
+example:  P(10) :=
+begin
+  show 10 > 5,
+  sorry,
+end
+
+
+
+
+def R (x y : ℕ) := x * y + y > x
+
+example : R 3 3 :=
+begin
+  show 3 * 3 + 3 > 3,
+  norm_num,
+
+end
 

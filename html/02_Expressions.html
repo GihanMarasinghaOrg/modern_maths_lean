@@ -302,6 +302,11 @@ title="Print to PDF"
      2.6.1. Tactic blocks
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#who-s-sorry-now">
+     2.6.2. Who&#8217;s sorry now?
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -368,6 +373,11 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tactic-blocks">
      2.6.1. Tactic blocks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#who-s-sorry-now">
+     2.6.2. Who&#8217;s sorry now?
     </a>
    </li>
   </ul>
@@ -896,19 +906,26 @@ the proof is complete.</p>
 (the <cite>Introduction to tactics</cite> section in the <cite>Expressions</cite> chapter).
 After reading those items, write an English-language explanation of how the tactic proof
 above works.</p>
-</div></div><div class="proof proof-type-problem" id="id17">
+</div></div></section>
+<section id="who-s-sorry-now">
+<h3><span class="section-number">2.6.2. </span>Who&#8217;s sorry now?<a class="headerlink" href="#who-s-sorry-now" title="Permalink to this headline">#</a></h3>
+<p>The best way to tackle a problem is to break it down into smaller manageable pieces and to apply
+the same decomposition process recursively to each piece until what is left is trivial.</p>
+<p>You can apply this idea to writing a proof. Start with a proof that is <cite>structurally correct</cite> but
+has missing pieces. Recursively flesh out the gaps in the proof while ensuring, at each stage,
+that the proof has no logical flaws.</p>
+<p>Lean provides a mechanism for writing proofs piecewise &#8212; the <code class="docutils literal notranslate"><span class="pre">sorry</span></code> tactic.</p>
+<div class="proof proof-type-problem" id="id17">
 
     <div class="proof-title">
         <span class="proof-type">Problem 2.16</span>
         
     </div><div class="proof-content">
-<ol class="arabic simple">
-<li><p>Define a predicate <code class="docutils literal notranslate"><span class="pre">R</span></code> so that <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">x</span> <span class="pre">y</span></code> means <span class="math notranslate nohighlight">\(x y + y  &gt; x\)</span>.</p></li>
-<li><p>Find (by hand) values <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> such that <span class="math notranslate nohighlight">\(R(a,b)\)</span> is true. In Lean, prove <span class="math notranslate nohighlight">\(R(a,b)\)</span>,</p></li>
-</ol>
-<blockquote>
-<div><p>for those values <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.</p>
-</div></blockquote>
+<ul class="simple">
+<li><p>Define a predicate <code class="docutils literal notranslate"><span class="pre">R</span></code> on <code class="docutils literal notranslate"><span class="pre">N</span></code> so that <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">x</span> <span class="pre">y</span></code> means <span class="math notranslate nohighlight">\(x y + y  &gt; x\)</span>.</p></li>
+<li><p>Find (by hand) values <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> such that <span class="math notranslate nohighlight">\(R(a,b)\)</span> is true. In Lean, prove <span class="math notranslate nohighlight">\(R(a,b)\)</span>,
+for those values <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.</p></li>
+</ul>
 </div></div></section>
 </section>
 </section>
