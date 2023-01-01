@@ -11,12 +11,6 @@ import expressions.predicates
 
 
 
-#check f
-
-example : f(2) = (2 > 5) := rfl
-
-
-
 /- IMPORTANT:
 
 Below is our first example of a tactic block. Read the instructions in the book for
@@ -24,7 +18,7 @@ working with tactic blocks before continuing.
 
 -/
 
-example : f(6) :=
+example : P(6) :=
 begin
   show 6 > 5,
   norm_num,
@@ -37,12 +31,3 @@ After reading those items, write an explanation below, in English, of how the ta
 above works.
 
 -/
-
-
-def g (y : ℕ) := y + 5 = 12
-
-example : g(7) :=
-begin
-  show 7 + 5 = 12,
-  norm_num,
-end

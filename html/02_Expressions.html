@@ -831,35 +831,12 @@ we do by using an <code class="docutils literal notranslate"><span class="pre">i
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="n">expressions.predicates</span>
 </pre></div>
 </div>
-</div><p>In the previous section, we defined a function <code class="docutils literal notranslate"><span class="pre">f</span></code>
-As usual, we can find the type of <code class="docutils literal notranslate"><span class="pre">f</span></code> using</p>
+</div><p>In the previous section, we defined a predicate <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">Prop</span></code> so that <code class="docutils literal notranslate"><span class="pre">P(x)</span></code> means <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.
+By importing <code class="docutils literal notranslate"><span class="pre">expressions.predicates</span></code>, we have access to <code class="docutils literal notranslate"><span class="pre">P</span></code> in this section.</p>
+<p>Below, we <cite>prove</cite> <span class="math notranslate nohighlight">\(P(6)\)</span> in Lean.</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/tactics.lean" target="_blank" tryitfile="../src/expressions/tactics.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="n">f</span>
-</pre></div>
-</div>
-</div><p>This shows <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">Prop</span></code>.
-As <code class="docutils literal notranslate"><span class="pre">f</span></code> is a function on the type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>, it can be applied to natural numbers. We show
-<code class="docutils literal notranslate"><span class="pre">f(2)</span></code> equals <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&gt;</span> <span class="pre">5</span></code> in Lean:</p>
-<div style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/tactics.lean" target="_blank" tryitfile="../src/expressions/tactics.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">f</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="bp">=</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rfl</span>
-</pre></div>
-</div>
-</div><p>Note we haven&#8217;t proved that <span class="math notranslate nohighlight">\(2 &gt; 5\)</span> (which would be impossible). Rather, we have proved that
-<span class="math notranslate nohighlight">\(f(2)\)</span> is <span class="math notranslate nohighlight">\(2 &gt; 5\)</span>.</p>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>In school mathematics, functions typically return numeric values. It can take time
-to get used to functions that return propositions. Here, <span class="math notranslate nohighlight">\(f(2)\)</span>
-is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span>. It is not a number!</p>
-</div>
-<p>With <span class="math notranslate nohighlight">\(f\)</span> as above, <span class="math notranslate nohighlight">\(f(2)\)</span> is the false proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span> and <span class="math notranslate nohighlight">\(f(6)\)</span> is the true proposition
-<span class="math notranslate nohighlight">\(6 &gt; 5\)</span>.</p>
-<p>Below, we <cite>prove</cite> <span class="math notranslate nohighlight">\(f(6)\)</span> in Lean.</p>
-<div style="position: relative">
-<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/tactics.lean" target="_blank" tryitfile="../src/expressions/tactics.lean">
-Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">f</span><span class="o">(</span><span class="mi">6</span><span class="o">)</span> <span class="o">:=</span>
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">P</span><span class="o">(</span><span class="mi">6</span><span class="o">)</span> <span class="o">:=</span>
 <span class="kd">begin</span>
   <span class="k">show</span> <span class="mi">6</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">,</span>
   <span class="n">norm_num</span><span class="o">,</span>
@@ -879,7 +856,7 @@ show the &#8216;tactic state&#8217;.</p>
 the &#8216;context&#8217; (the set of hypotheses) and (2) the target (that which is to be proved).</p>
 <p>In this simple proof, there are no hypotheses. The target is marked with the syymbol <code class="docutils literal notranslate"><span class="pre">&#8866;</span></code>, which
 is read &#8216;to prove&#8217;.</p>
-<p>At the start of the proof (just after the <code class="docutils literal notranslate"><span class="pre">begin</span></code>), the target is to prove <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">6</span></code>.
+<p>At the start of the proof (just after the <code class="docutils literal notranslate"><span class="pre">begin</span></code>), the target is to prove <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">6</span></code>.
 After the line <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">6</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>, the target is to prove <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.
 After the <code class="docutils literal notranslate"><span class="pre">norm_num</span></code> line, the tactic state shows &#8216;goals accomplished&#8217;, indicating that
 the proof is complete.</p>
@@ -893,14 +870,6 @@ the proof is complete.</p>
 Read the appendix items on the <code class="docutils literal notranslate"><span class="pre">show</span></code> and <code class="docutils literal notranslate"><span class="pre">norm_num</span></code> tactics.
 After reading those items, write an explanation, in English, of how the tactic proof
 above works.</p>
-</div></div><p>In the next problem, you will construct a predicate.</p>
-<div class="proof proof-type-problem" id="id16">
-
-    <div class="proof-title">
-        <span class="proof-type">Problem 2.15</span>
-        
-    </div><div class="proof-content">
-<p>In Lean, define a predicate <code class="docutils literal notranslate"><span class="pre">g</span></code> on the type <code class="docutils literal notranslate"><span class="pre">&#8474;</span></code> so that <code class="docutils literal notranslate"><span class="pre">g(y)</span></code> means <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p>
 </div></div></section>
 </section>
 </section>
