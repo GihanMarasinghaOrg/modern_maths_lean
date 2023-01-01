@@ -826,7 +826,8 @@ so that <code class="docutils literal notranslate"><span class="pre">T</span> <s
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">T</span> <span class="o">(</span><span class="n">x</span> <span class="n">y</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span> <span class="bp">&lt;</span> <span class="mi">7</span>
 </pre></div>
 </div>
-</div><p>We prove below that <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">(-3)</span> <span class="pre">(5)</span></code> means <code class="docutils literal notranslate"><span class="pre">-3</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">&lt;</span> <span class="pre">7</span></code>.</p>
+</div><p>We prove below that <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">(-3)</span> <span class="pre">(5)</span></code> means <code class="docutils literal notranslate"><span class="pre">-3</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">&lt;</span> <span class="pre">7</span></code>. Here, <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">(-3)</span> <span class="pre">(5)</span></code> is what we might
+write in English-language mathematics as <span class="math notranslate nohighlight">\(T(-3,5)\)</span>.</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/predicates.lean" target="_blank" tryitfile="../src/expressions/predicates.lean">
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">T</span> <span class="o">(</span><span class="bp">-</span><span class="mi">3</span><span class="o">)</span> <span class="o">(</span><span class="mi">5</span><span class="o">)</span> <span class="bp">=</span> <span class="o">(</span><span class="bp">-</span><span class="mi">3</span> <span class="bp">+</span> <span class="mi">5</span> <span class="bp">&lt;</span> <span class="mi">7</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rfl</span>
@@ -895,8 +896,20 @@ the proof is complete.</p>
 (the <cite>Introduction to tactics</cite> section in the <cite>Expressions</cite> chapter).
 After reading those items, write an English-language explanation of how the tactic proof
 above works.</p>
-</div></div><p>Below is the definition of a predicate <code class="docutils literal notranslate"><span class="pre">R</span></code></p>
-</section>
+</div></div><div class="proof proof-type-problem" id="id17">
+
+    <div class="proof-title">
+        <span class="proof-type">Problem 2.16</span>
+        
+    </div><div class="proof-content">
+<ol class="arabic simple">
+<li><p>Define a predicate <code class="docutils literal notranslate"><span class="pre">R</span></code> so that <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">x</span> <span class="pre">y</span></code> means <span class="math notranslate nohighlight">\(x y + y  &gt; x\)</span>.</p></li>
+<li><p>Find (by hand) values <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> such that <span class="math notranslate nohighlight">\(R(a,b)\)</span> is true. In Lean, prove <span class="math notranslate nohighlight">\(R(a,b)\)</span>,</p></li>
+</ol>
+<blockquote>
+<div><p>for those values <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.</p>
+</div></blockquote>
+</div></div></section>
 </section>
 </section>
 
