@@ -39,9 +39,7 @@ end
 /-
 You've just encountered two error messages. Understanding how to deal with errors in your proofs
 is a fundamental skill. You can read more about error messages in the Appendix
-`Error messages <error_messages>`.
+:ref:`Error messages <error_messages>`.
 
 
 -/
-
-

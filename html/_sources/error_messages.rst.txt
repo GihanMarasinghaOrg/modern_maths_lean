@@ -50,10 +50,10 @@ Error messages
 
   To fix errors such as these:
   
-    1. Click at the end of the line before the offending one and use the
+    * Click at the end of the line before the offending one and use the
       Infoview pane to review the tactic state. This may be enough to let you know what the
       ``show`` line should be.
-    2. In more complicated cases, where you are ``show`` to rewrite the target using a definition,
+    * In more complicated cases, where you are ``show`` to rewrite the target using a definition,
       you should ensure you know the definition correctly. In the example above, we had the
       wrong idea of ``surjective``. To view the correct definition, you can do one of the following:
       
