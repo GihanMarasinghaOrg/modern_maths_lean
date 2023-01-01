@@ -6,7 +6,9 @@
 #eval 2 * 3
 
 /- PROBLEM:
+
 Adapt the code above to evaluate other expressions, as described in the book.
+
 -/
 
 

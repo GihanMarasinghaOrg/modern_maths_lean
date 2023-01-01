@@ -8,6 +8,8 @@
 #reduce lean.version.fst
 
 /- PROBLEM:
+
 Modify the Lean code, replacing ``fst`` with ``snd``. Is the result what you expected?
+
 -/
 

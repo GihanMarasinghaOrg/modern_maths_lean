@@ -14,8 +14,10 @@ import data.rat
 #eval (3.4 ^ 2 : ℚ)
 
 /- PROBLEM:
+
 Use the space below to evaluate the expressions given in the book first
 without Lean then with the Lean ``#eval`` command.
+
 -/
 
 
@@ -25,6 +27,8 @@ without Lean then with the Lean ``#eval`` command.
 
 
 /- PROBLEM:
+
 Determine the types of each of the expressions given in the book, first without
 Lean, then using the `#check` command.
+
 -/
