@@ -125,9 +125,9 @@ Tactics
     -- Show that `163` is prime.
     example : nat.prime 163 := by norm_num
 
-  .. admonition:: sorry
-    :class: dropdown
-  
+.. admonition:: sorry
+  :class: dropdown
+
   ``sorry`` closes the current goal while raising a warning to remind you that you need to
   supply the missing proof.
 
