@@ -11,14 +11,14 @@ Modern Mathematics with Lean
    02_Expressions
 
 
+Appendices
+
 .. toctree::
    :maxdepth: 2
 
    typing_lean_symbols
    tactics
-
-.. toctree::
-   :hidden:
-
    genindex
+
+
 
