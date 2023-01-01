@@ -37,25 +37,3 @@ begin
 end
 
 
-
-
-def R (x y : ℕ) := x * y + y > x
-
-example : R 3 3 :=
-begin
-  show 3 * 3 + 3 > 3,
-  norm_num,
-
-end
-
-
-
-
-example (p q : Prop) (h₁ : p) (h₂ : q) : q ∧ p :=
-begin
-  split,
-  { show q, 
-    sorry, },
-  { show p,
-    sorry, },
-end

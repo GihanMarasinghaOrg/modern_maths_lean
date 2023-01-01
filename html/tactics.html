@@ -311,11 +311,11 @@ sorry<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">sorry</span></code> closes the current goal while raising a warning to remind you that you need to
 supply the missing proof.</p>
-<p class="sd-card-text">If you want to prove <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">&#8594;</span> <span class="pre">(q</span> <span class="pre">&#8594;</span> <span class="pre">p)</span></code>, for example, a natural first step is to
+<p class="sd-card-text">If you want to prove <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">&#8594;</span> <span class="pre">(q</span> <span class="pre">&#8594;</span> <span class="pre">p)</span></code>, a natural first step is to
 <code class="docutils literal notranslate"><span class="pre">assume</span> <span class="pre">h</span> <span class="pre">:</span> <span class="pre">p</span></code>. Writing <code class="docutils literal notranslate"><span class="pre">sorry</span></code> after this step closes the goal and gives a warning.</p>
 <p class="sd-card-text">If you&#8217;d mistakenly written <code class="docutils literal notranslate"><span class="pre">assume</span> <span class="pre">h</span> <span class="pre">:</span> <span class="pre">q</span></code> instead of <code class="docutils literal notranslate"><span class="pre">assume</span> <span class="pre">h</span> <span class="pre">:</span> <span class="pre">p</span></code>, Lean would
-give an error message instead. Thus, the <code class="docutils literal notranslate"><span class="pre">sorry</span></code> tactic is used to verify that what you
-have written is correct, albeit incomplete.</p>
+give an error message instead. Thus, the <code class="docutils literal notranslate"><span class="pre">sorry</span></code> tactic is used to verify that your proof
+is correct, albeit incomplete.</p>
 <div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">p</span> <span class="n">q</span> <span class="o">:</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">:</span> <span class="n">p</span> <span class="bp">&#8594;</span> <span class="o">(</span><span class="n">q</span> <span class="bp">&#8594;</span> <span class="n">p</span><span class="o">)</span> <span class="o">:=</span>
 <span class="kd">begin</span>
   <span class="k">assume</span> <span class="n">h</span> <span class="o">:</span> <span class="n">p</span><span class="o">,</span>
@@ -325,7 +325,7 @@ have written is correct, albeit incomplete.</p>
 </div>
 <p class="sd-card-text">Some proofs involve multiple goals. In such cases, <code class="docutils literal notranslate"><span class="pre">sorry</span></code> can be used to close any combination
 of the goals. Suppose we wish to prove <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&#8743;</span> <span class="pre">p</span></code> on the hypotheses <code class="docutils literal notranslate"><span class="pre">h&#8321;</span> <span class="pre">:</span> <span class="pre">p</span></code> and
-<code class="docutils literal notranslate"><span class="pre">h&#8322;</span> <span class="pre">:</span> <span class="pre">q</span></code>. We can split the goal in two (1) to prove <code class="docutils literal notranslate"><span class="pre">q</span></code> and (2) to prove <code class="docutils literal notranslate"><span class="pre">p</span></code>.
+<code class="docutils literal notranslate"><span class="pre">h&#8322;</span> <span class="pre">:</span> <span class="pre">q</span></code>. We can split the goal in two: (1) to prove <code class="docutils literal notranslate"><span class="pre">q</span></code> and (2) to prove <code class="docutils literal notranslate"><span class="pre">p</span></code>.
 Each of the two goals can be closed with <code class="docutils literal notranslate"><span class="pre">sorry</span></code> until we complete the proof.</p>
 <div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">p</span> <span class="n">q</span> <span class="o">:</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">(</span><span class="n">h&#8321;</span> <span class="o">:</span> <span class="n">p</span><span class="o">)</span> <span class="o">(</span><span class="n">h&#8322;</span> <span class="o">:</span> <span class="n">q</span><span class="o">)</span> <span class="o">:</span> <span class="n">q</span> <span class="bp">&#8743;</span> <span class="n">p</span> <span class="o">:=</span>
 <span class="kd">begin</span>
@@ -369,6 +369,34 @@ multiplication, division, exponentiation, and congruences.</p>
 
 <span class="c1">-- Show that `163` is prime.</span>
 <span class="kd">example</span> <span class="o">:</span> <span class="n">nat.prime</span> <span class="mi">163</span> <span class="o">:=</span> <span class="kd">by</span> <span class="n">norm_num</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sorry</span></code> closes the current goal while raising a warning to remind you that you need to
+supply the missing proof.</p>
+<p>If you want to prove <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">&#8594;</span> <span class="pre">(q</span> <span class="pre">&#8594;</span> <span class="pre">p)</span></code>, a natural first step is to
+<code class="docutils literal notranslate"><span class="pre">assume</span> <span class="pre">h</span> <span class="pre">:</span> <span class="pre">p</span></code>. Writing <code class="docutils literal notranslate"><span class="pre">sorry</span></code> after this step closes the goal and gives a warning.</p>
+<p>If you&#8217;d mistakenly written <code class="docutils literal notranslate"><span class="pre">assume</span> <span class="pre">h</span> <span class="pre">:</span> <span class="pre">q</span></code> instead of <code class="docutils literal notranslate"><span class="pre">assume</span> <span class="pre">h</span> <span class="pre">:</span> <span class="pre">p</span></code>, Lean would
+give an error message instead. Thus, the <code class="docutils literal notranslate"><span class="pre">sorry</span></code> tactic is used to verify that your proof
+is correct, albeit incomplete.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">p</span> <span class="n">q</span> <span class="o">:</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">:</span> <span class="n">p</span> <span class="bp">&#8594;</span> <span class="o">(</span><span class="n">q</span> <span class="bp">&#8594;</span> <span class="n">p</span><span class="o">)</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">assume</span> <span class="n">h</span> <span class="o">:</span> <span class="n">p</span><span class="o">,</span>
+  <span class="gr">sorry</span><span class="o">,</span>
+<span class="kd">end</span>
+</pre></div>
+</div>
+<p>Some proofs involve multiple goals. In such cases, <code class="docutils literal notranslate"><span class="pre">sorry</span></code> can be used to close any combination
+of the goals. Suppose we wish to prove <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&#8743;</span> <span class="pre">p</span></code> on the hypotheses <code class="docutils literal notranslate"><span class="pre">h&#8321;</span> <span class="pre">:</span> <span class="pre">p</span></code> and
+<code class="docutils literal notranslate"><span class="pre">h&#8322;</span> <span class="pre">:</span> <span class="pre">q</span></code>. We can split the goal in two: (1) to prove <code class="docutils literal notranslate"><span class="pre">q</span></code> and (2) to prove <code class="docutils literal notranslate"><span class="pre">p</span></code>.
+Each of the two goals can be closed with <code class="docutils literal notranslate"><span class="pre">sorry</span></code> until we complete the proof.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">p</span> <span class="n">q</span> <span class="o">:</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">(</span><span class="n">h&#8321;</span> <span class="o">:</span> <span class="n">p</span><span class="o">)</span> <span class="o">(</span><span class="n">h&#8322;</span> <span class="o">:</span> <span class="n">q</span><span class="o">)</span> <span class="o">:</span> <span class="n">q</span> <span class="bp">&#8743;</span> <span class="n">p</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">split</span><span class="o">,</span>
+  <span class="o">{</span> <span class="k">show</span> <span class="n">q</span><span class="o">,</span>
+    <span class="gr">sorry</span><span class="o">,</span> <span class="o">},</span>
+  <span class="o">{</span> <span class="k">show</span> <span class="n">p</span><span class="o">,</span>
+    <span class="gr">sorry</span><span class="o">,</span> <span class="o">},</span>
+<span class="kd">end</span>
 </pre></div>
 </div>
 </div>
