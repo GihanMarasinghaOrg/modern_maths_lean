@@ -19,6 +19,7 @@ Appendix
 
    typing_lean_symbols
    tactics
+   error_messages
    genindex
 
 

@@ -119,6 +119,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="error_messages.html">
+   Error messages
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="genindex.html">
    Index
   </a>
@@ -855,15 +860,15 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <h2><span class="section-number">2.6. </span>Introduction to tactics<a class="headerlink" href="#introduction-to-tactics" title="Permalink to this headline">#</a></h2>
 <p>In this important section, you&#8217;ll learn about Lean <cite>tactics</cite>, these being tools for writing proofs
 interactively.</p>
-<p>This is also the first section in which we&#8217;ll import the Lean code from a previous section. To do this,
-we insert an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement at the beginning of the file.</p>
+<p>This is also the first section in which we&#8217;ll import the Lean code from a previous section. To do
+this, we insert an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement at the beginning of the file.</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/tactics.lean" target="_blank" tryitfile="../src/expressions/tactics.lean">
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="n">expressions.predicates</span>
 </pre></div>
 </div>
 </div><p>In the previous section, we defined a predicate <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">Prop</span></code> so that <code class="docutils literal notranslate"><span class="pre">P(x)</span></code> means <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.
-By importing <code class="docutils literal notranslate"><span class="pre">expressions.predicates</span></code>, we have access to <code class="docutils literal notranslate"><span class="pre">P</span></code> in this section.</p>
+By importing <code class="docutils literal notranslate"><span class="pre">expressions.predicates</span></code>, we can access <code class="docutils literal notranslate"><span class="pre">P</span></code> in this section.</p>
 <p>Below, we <cite>prove</cite> <code class="docutils literal notranslate"><span class="pre">P(6)</span></code> in Lean.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">What if the code below gives an error message?</p>
@@ -883,7 +888,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <h3><span class="section-number">2.6.1. </span>Tactic blocks<a class="headerlink" href="#tactic-blocks" title="Permalink to this headline">#</a></h3>
 <p id="index-3">In the proof above, the words <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> denote the start and end of a &#8216;tactic block&#8217;.</p>
 <p>Each of the lines within the tactic block uses a <cite>tactic</cite>. Here, we use the <code class="docutils literal notranslate"><span class="pre">show</span></code> and
-<code class="docutils literal notranslate"><span class="pre">norm_num</span></code> tactics.</p>
+<code class="docutils literal notranslate"><span class="pre">norm_num</span></code> tactics. Each tactic line ends with a comma.</p>
 <p>In the Lean editor pane, locate the code corresponding to the example above. Click anywhere within
 the tactic block (anywhere after the <code class="docutils literal notranslate"><span class="pre">begin</span></code> and before the <code class="docutils literal notranslate"><span class="pre">end</span></code>). The Infoview pane will
 show the &#8216;tactic state&#8217;.</p>
@@ -919,8 +924,27 @@ This tactic has the effect of saying to Lean, &#8220;I don&#8217;t know what to 
 back to it later.&#8221; In more technical language, it &#8220;closes the current goal&#8221;. Using <code class="docutils literal notranslate"><span class="pre">sorry</span></code>
 emits a warning message in the Infoview pane, reminding you that the proof is not complete.</p>
 <p>However, even if you use <code class="docutils literal notranslate"><span class="pre">sorry</span></code>, if any part of the proof is incorrect, Lean will give an
-error message. Thus, <code class="docutils literal notranslate"><span class="pre">sorry</span></code> is used to</p>
-<div style="position: relative">
+error message. Thus, <code class="docutils literal notranslate"><span class="pre">sorry</span></code>  is used to verify that your proof is correct, albeit incomplete.</p>
+<div class="proof proof-type-problem" id="id17">
+
+    <div class="proof-title">
+        <span class="proof-type">Problem 2.16</span>
+        
+    </div><div class="proof-content">
+<p>Below is an incomplete proof of <code class="docutils literal notranslate"><span class="pre">P(10)</span></code>, where <code class="docutils literal notranslate"><span class="pre">P</span></code> is the predicate defined previously
+by <code class="docutils literal notranslate"><span class="pre">P(x)</span> <span class="pre">:=</span> <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.</p>
+<ul class="simple">
+<li><p>Observe that Lean emits the orange warning in the Infoview pane to indicate that the example
+uses <code class="docutils literal notranslate"><span class="pre">sorry</span></code>.</p></li>
+<li><p>Delete the <code class="docutils literal notranslate"><span class="pre">sorry</span></code> line. Now Lean gives an error message telling you,
+&#8220;there are unsolved goals&#8221;. This means the proof is incomplete.</p></li>
+<li><p>Replace the <code class="docutils literal notranslate"><span class="pre">sorry</span></code>. Don&#8217;t forget the comma at the end of the line!</p></li>
+<li><p>Change the <code class="docutils literal notranslate"><span class="pre">show</span></code> line to something incorrect, such as <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">10</span> <span class="pre">&gt;</span> <span class="pre">10</span></code>. Now Lean
+gives the error message &#8220;show tactic failed&#8221;. This means that your show line does not
+accurately restate the target.</p></li>
+<li><p>Change the <code class="docutils literal notranslate"><span class="pre">show</span></code> line back to what it should be. Complete the proof.</p></li>
+</ul>
+</div></div><div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/tactics.lean" target="_blank" tryitfile="../src/expressions/tactics.lean">
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">P</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span> <span class="o">:=</span>
 <span class="kd">begin</span>
@@ -929,10 +953,10 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <span class="kd">end</span>
 </pre></div>
 </div>
-</div><div class="proof proof-type-problem" id="id17">
+</div><div class="proof proof-type-problem" id="id18">
 
     <div class="proof-title">
-        <span class="proof-type">Problem 2.16</span>
+        <span class="proof-type">Problem 2.17</span>
         
     </div><div class="proof-content">
 <ul class="simple">

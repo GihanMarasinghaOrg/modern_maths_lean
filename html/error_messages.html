@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="ascii" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Error messages &#8212; Modern Mathematics with Lean</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/proof.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Index" href="genindex.html" />
+    <link rel="prev" title="Tactics" href="tactics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Modern Mathematics with Lean</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_Introduction.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_Expressions.html">
+   2. Expressions
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="typing_lean_symbols.html">
+   Typing Lean symbols
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tactics.html">
+   Tactics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Error messages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/error_messages.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Error messages</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="error-messages">
+<span id="id1"></span><h1>Error messages<a class="headerlink" href="#error-messages" title="Permalink to this headline">#</a></h1>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+tactic failed, there are unsolved goals<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This message means you haven&#8217;t finished the proof. One or more goals remain to be proved.
+Ideally, you should write <code class="docutils literal notranslate"><span class="pre">sorry</span></code> for each gap in the proof and keep working until you
+have completed the proof. You will, temporarily, see this message while you fill in the <code class="docutils literal notranslate"><span class="pre">sorry</span></code>.</p>
+<p class="sd-card-text">The following code will produce this error as the goal of proving <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&#8594;</span> <span class="pre">p</span></code> remains after the
+<code class="docutils literal notranslate"><span class="pre">assume</span></code> line.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">p</span> <span class="n">q</span> <span class="o">:</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">:</span> <span class="n">p</span> <span class="bp">&#8594;</span> <span class="o">(</span><span class="n">q</span> <span class="bp">&#8594;</span> <span class="n">p</span><span class="o">)</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">assume</span> <span class="n">h</span> <span class="o">:</span> <span class="n">p</span><span class="o">,</span>
+<span class="kd">end</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+show tactic failed<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You made a mistake when trying to restate the target using <code class="docutils literal notranslate"><span class="pre">show</span></code>.
+In the example below, the target after the <code class="docutils literal notranslate"><span class="pre">assume</span></code> line should be to show <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&#8594;</span> <span class="pre">p</span></code>.
+I&#8217;ve incorrectlly written <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">q</span></code>, thereby raising the &#8220;show tactic failed&#8221; error message.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">p</span> <span class="n">q</span> <span class="o">:</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">:</span> <span class="n">p</span> <span class="bp">&#8594;</span> <span class="o">(</span><span class="n">q</span> <span class="bp">&#8594;</span> <span class="n">p</span><span class="o">)</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">assume</span> <span class="n">h</span> <span class="o">:</span> <span class="n">p</span><span class="o">,</span>
+  <span class="k">show</span> <span class="n">q</span><span class="o">,</span>
+  <span class="gr">sorry</span><span class="o">,</span>
+<span class="kd">end</span>
+</pre></div>
+</div>
+<p class="sd-card-text">As another example, suppose you are trying to show that a function <code class="docutils literal notranslate"><span class="pre">f</span></code> is surjective. You
+might start with the following (incorrect) argument.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">f</span> <span class="o">:</span> <span class="n">&#8469;</span> <span class="bp">&#8594;</span> <span class="n">&#8484;</span><span class="o">)</span> <span class="o">:</span> <span class="n">function.surjective</span> <span class="n">f</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">show</span> <span class="bp">&#8704;</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">),</span> <span class="bp">&#8707;</span> <span class="o">(</span><span class="n">y</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">),</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="bp">=</span> <span class="n">y</span><span class="o">,</span>
+  <span class="gr">sorry</span><span class="o">,</span>
+<span class="kd">end</span>
+</pre></div>
+</div>
+<p class="sd-card-text">The problem is that you have the wrong notion of &#8216;surjective&#8217;.</p>
+<p class="sd-card-text">To fix errors such as these:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p class="sd-card-text">Click at the end of the line before the offending one and use the</p></li>
+</ol>
+<blockquote>
+<div><p class="sd-card-text">Infoview pane to review the tactic state. This may be enough to let you know what the
+<code class="docutils literal notranslate"><span class="pre">show</span></code> line should be.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p class="sd-card-text">In more complicated cases, where you are <code class="docutils literal notranslate"><span class="pre">show</span></code> to rewrite the target using a definition,</p></li>
+</ol>
+<blockquote>
+<div><p class="sd-card-text">you should ensure you know the definition correctly. In the example above, we had the
+wrong idea of <code class="docutils literal notranslate"><span class="pre">surjective</span></code>. To view the correct definition, you can do one of the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="sd-card-text">Hover your cursor over the word <code class="docutils literal notranslate"><span class="pre">surjective</span></code> to view a brief description via a tool tip.
+In this case, you&#8217;ll get the message, &#8221; A function <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#945;</span> <span class="pre">&#8594;</span> <span class="pre">&#946;</span></code> is called surjective if
+every <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">:</span> <span class="pre">&#946;</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">a</span></code> for some <code class="docutils literal notranslate"><span class="pre">`a</span> <span class="pre">:</span> <span class="pre">&#945;</span></code>.&#8221;</p></li>
+<li><p class="sd-card-text">Type the command <code class="docutils literal notranslate"><span class="pre">#print</span> <span class="pre">function.surjective</span></code> outside any example. For this function,
+you&#8217;ll the message
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">&#64;[reducible]</span>
+<span class="pre">def</span> <span class="pre">function.surjective</span> <span class="pre">:</span> <span class="pre">&#928;</span> <span class="pre">{&#945;</span> <span class="pre">:</span> <span class="pre">Sort</span> <span class="pre">u&#8321;}</span> <span class="pre">{&#946;</span> <span class="pre">:</span> <span class="pre">Sort</span> <span class="pre">u&#8322;},</span> <span class="pre">(&#945;</span> <span class="pre">&#8594;</span> <span class="pre">&#946;)</span> <span class="pre">&#8594;</span> <span class="pre">Prop</span> <span class="pre">:=</span>
+<span class="pre">&#955;</span> <span class="pre">{&#945;</span> <span class="pre">:</span> <span class="pre">Sort</span> <span class="pre">u&#8321;}</span> <span class="pre">{&#946;</span> <span class="pre">:</span> <span class="pre">Sort</span> <span class="pre">u&#8322;}</span> <span class="pre">(f</span> <span class="pre">:</span> <span class="pre">&#945;</span> <span class="pre">&#8594;</span> <span class="pre">&#946;),</span> <span class="pre">&#8704;</span> <span class="pre">(b</span> <span class="pre">:</span> <span class="pre">&#946;),</span> <span class="pre">&#8707;</span> <span class="pre">(a</span> <span class="pre">:</span> <span class="pre">&#945;),</span> <span class="pre">f</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">b</span>
+<span class="pre">`</span></code>
+in the Infoview window. The important part of this message is the end,
+<code class="docutils literal notranslate"><span class="pre">&#8704;</span> <span class="pre">(b</span> <span class="pre">:</span> <span class="pre">&#946;),</span> <span class="pre">&#8707;</span> <span class="pre">(a</span> <span class="pre">:</span> <span class="pre">&#945;),</span> <span class="pre">f</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">b</span></code>.</p></li>
+<li><p class="sd-card-text">Click on the word <code class="docutils literal notranslate"><span class="pre">surjective</span></code> and type <kbd class="kbd docutils literal notranslate">F12</kbd> to open a new Lean editor containing
+the source of the definition. Reading the original source files is a great way to
+learn Lean.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>
+</details></section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="tactics.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tactics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="genindex.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Index</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Gihan Marasingha<br/>
+  
+      &copy; Copyright 2022, Gihan Marasingha.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

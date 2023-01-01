@@ -1,0 +1,74 @@
+.. _error_messages:
+
+Error messages
+==============
+
+
+.. dropdown:: tactic failed, there are unsolved goals
+
+  This message means you haven't finished the proof. One or more goals remain to be proved.
+  Ideally, you should write ``sorry`` for each gap in the proof and keep working until you
+  have completed the proof. You will, temporarily, see this message while you fill in the ``sorry``.
+
+  The following code will produce this error as the goal of proving ``q → p`` remains after the
+  ``assume`` line.
+
+  .. code-block:: lean
+
+    example (p q : Prop) : p → (q → p) :=
+    begin
+      assume h : p,
+    end
+
+.. dropdown:: show tactic failed
+
+  You made a mistake when trying to restate the target using ``show``.
+  In the example below, the target after the ``assume`` line should be to show ``q → p``.
+  I've incorrectlly written ``show q``, thereby raising the "show tactic failed" error message.
+
+  .. code-block:: lean
+
+    example (p q : Prop) : p → (q → p) :=
+    begin
+      assume h : p,
+      show q,
+      sorry,
+    end
+
+  As another example, suppose you are trying to show that a function ``f`` is surjective. You
+  might start with the following (incorrect) argument.
+
+  .. code-block:: lean
+
+    example (f : ℕ → ℤ) : function.surjective f :=
+    begin
+      show ∀ (x : ℕ), ∃ (y : ℤ), f(x) = y,
+      sorry,
+    end
+
+  The problem is that you have the wrong notion of 'surjective'.
+
+  To fix errors such as these:
+  
+    1. Click at the end of the line before the offending one and use the
+      Infoview pane to review the tactic state. This may be enough to let you know what the
+      ``show`` line should be.
+    2. In more complicated cases, where you are ``show`` to rewrite the target using a definition,
+      you should ensure you know the definition correctly. In the example above, we had the
+      wrong idea of ``surjective``. To view the correct definition, you can do one of the following:
+      
+        * Hover your cursor over the word ``surjective`` to view a brief description via a tool tip.
+          In this case, you'll get the message, " A function ``f : α → β`` is called surjective if
+          every ``b : β`` is equal to ``f a`` for some ```a : α``."
+        * Type the command ``#print function.surjective`` outside any example. For this function,
+          you'll the message
+          ```
+          @[reducible]
+          def function.surjective : Π {α : Sort u₁} {β : Sort u₂}, (α → β) → Prop :=
+          λ {α : Sort u₁} {β : Sort u₂} (f : α → β), ∀ (b : β), ∃ (a : α), f a = b
+          ```
+          in the Infoview window. The important part of this message is the end,
+          ``∀ (b : β), ∃ (a : α), f a = b``.
+        * Click on the word ``surjective`` and type :kbd:`F12` to open a new Lean editor containing
+          the source of the definition. Reading the original source files is a great way to
+          learn Lean.
