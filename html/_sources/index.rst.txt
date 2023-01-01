@@ -9,11 +9,13 @@ Modern Mathematics with Lean
 
    01_Introduction
    02_Expressions
+   typing_lean_symbols
+   tactics
+
 
 .. toctree::
    :hidden:
 
-   typing_lean_symbols
-   tactics
+
    genindex
 
