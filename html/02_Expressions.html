@@ -818,7 +818,10 @@ is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span
         
     </div><div class="proof-content">
 <p>In Lean, define a predicate <code class="docutils literal notranslate"><span class="pre">g</span></code> on the type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> so that <code class="docutils literal notranslate"><span class="pre">g(y)</span></code> means <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">12</span></code>.</p>
-</div></div><p>In this important section, you&#8217;ll learn about Lean <cite>tactics</cite>, these being tools for writing proofs
+</div></div></section>
+<section id="tactics">
+<h2><span class="section-number">2.6. </span>Tactics<a class="headerlink" href="#tactics" title="Permalink to this headline">#</a></h2>
+<p>In this important section, you&#8217;ll learn about Lean <cite>tactics</cite>, these being tools for writing proofs
 interactively.</p>
 <p>This is the first section in which we&#8217;ll import the Lean code from a previous section. This
 we do by using an <cite>import</cite> statement at the beginning of the file.</p>
@@ -827,10 +830,7 @@ we do by using an <cite>import</cite> statement at the beginning of the file.</p
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="n">expressions.predicates</span>
 </pre></div>
 </div>
-</div></section>
-<section id="tactics">
-<h2><span class="section-number">2.6. </span>Tactics<a class="headerlink" href="#tactics" title="Permalink to this headline">#</a></h2>
-<p>Below is the definition of a predicate. It&#8217;s simply a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
+</div><p>Below is the definition of a predicate. It&#8217;s simply a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
 that takes each natural number <code class="docutils literal notranslate"><span class="pre">x</span></code> to the proposition <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
 As usual, we can find the type of <code class="docutils literal notranslate"><span class="pre">f</span></code> using</p>
 <div style="position: relative">
