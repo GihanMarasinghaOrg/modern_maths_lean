@@ -30,8 +30,7 @@ above works.
 -/
 
 
-
-example:  P(10) :=
+example : P(10) :=
 begin
   show 10 > 5,
   sorry,
@@ -49,3 +48,14 @@ begin
 
 end
 
+
+
+
+example (p q : Prop) (h₁ : p) (h₂ : q) : q ∧ p :=
+begin
+  split,
+  { show q, 
+    sorry, },
+  { show p,
+    sorry, },
+end
