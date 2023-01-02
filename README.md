@@ -2,11 +2,9 @@
 
 This is an interactive set of resources to accompany the book 'Modern Mathematics'.
 
-It is designed to be used within Visual Studio Code via a pre-installed bundle
-or GitHub Codespace. If you aren't reading this in a Visual Studio window
-you should either:
+It is designed to be used within Visual Studio Code via a GitPod or GitHub Codespaces. If you aren't reading this in a Visual Studio window you should either:
 
-1. Downwload a bundle via BLAH or
+1. Open the repository in [GitPod](https://gitpod.io/#https://github.com/GihanMarasinghaOrg/modern_maths_lean).
 2. Go to the [GitHub Repository](https://github.com/GihanMarasinghaOrg/modern_maths_lean).
     * Click on the green "Code" button
     * Click on the Codespaces tab and
