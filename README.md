@@ -1,5 +1,7 @@
 # Modern Mathematics with Lean
 
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/GihanMarasinghaOrg/modern_maths_lean)
+
 This is an interactive set of resources to accompany the book 'Modern Mathematics'.
 
 It is designed to be used within Visual Studio Code via a GitPod or GitHub Codespaces. If you aren't reading this in a Visual Studio window you should either:
