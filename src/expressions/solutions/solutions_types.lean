@@ -43,6 +43,9 @@ Use the space below to evaluate the expressions `(1-4)^5`, `(1 + 4)`, `5/4+1/2`,
   * Verify your answer using the ``#check`` Lean command.
 
   (i) `2 + 3`, (ii) `2 + 3 = 10`, (iii) 'for all integers `x`, `2x = 10`'.
+-/
+
+
 -- SOLUTION:
 
 #check 2 + 3
