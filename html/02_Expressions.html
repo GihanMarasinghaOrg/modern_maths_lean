@@ -852,7 +852,7 @@ is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span
     </div><div class="proof-content">
 <p>In Lean, define a predicate <code class="docutils literal notranslate"><span class="pre">Q</span></code> on the type <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> so that <code class="docutils literal notranslate"><span class="pre">Q(y)</span></code> means <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">12</span></code>.
 Prove that <code class="docutils literal notranslate"><span class="pre">Q(-3)</span></code> equals <code class="docutils literal notranslate"><span class="pre">-3</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">12</span></code>.</p>
-</div></div><p>We can defined predicates that take more than one input. The predicate <code class="docutils literal notranslate"><span class="pre">T</span></code> below is defined
+</div></div><p>We can define predicates that take more than one input. The predicate <code class="docutils literal notranslate"><span class="pre">T</span></code> below is defined
 so that <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">x</span> <span class="pre">y</span></code> means <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span> <span class="pre">&lt;</span> <span class="pre">7</span></code>.</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/predicates.lean" target="_blank" tryitfile="../src/expressions/predicates.lean">
@@ -1037,7 +1037,29 @@ with the integer <cite>10</cite> instead of the natural number <cite>10</cite>.<
         
     </div><div class="proof-content">
 <p>By adpating the proof above, prove that <code class="docutils literal notranslate"><span class="pre">g(12)</span> <span class="pre">=</span> <span class="pre">32</span></code>.</p>
-</div></div></section>
+</div></div><p>Predicates of many variables are really no different.
+If I define a predicate <span class="math notranslate nohighlight">\(P\)</span> by <span class="math notranslate nohighlight">\(P(x, y) = 5*x + y &lt; 2\)</span>,
+where <span class="math notranslate nohighlight">\(x\)</span> is an integer and <span class="math notranslate nohighlight">\(y\)</span> is a natural number, then
+<span class="math notranslate nohighlight">\(P\)</span> is a function of type <code class="docutils literal notranslate"><span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">(&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">Prop)</span></code></p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/functions_and_predicates_of_many_variables.lean" target="_blank" tryitfile="../src/expressions/functions_and_predicates_of_many_variables.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span> <span class="kd">def</span> <span class="n">P</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span> <span class="o">(</span><span class="n">y</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">5</span> <span class="bp">*</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span> <span class="bp">&lt;</span> <span class="mi">2</span>
+
+ <span class="k">#check</span> <span class="n">P</span>
+
+
+<span class="bp">..</span> <span class="n">proof</span><span class="o">:</span><span class="n">problem</span><span class="o">::</span>
+
+ <span class="n">Suppose</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">Q</span><span class="bp">`</span> <span class="n">is</span> <span class="n">a</span> <span class="n">predicate</span> <span class="n">given</span> <span class="kd">by</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">Q</span><span class="o">(</span><span class="n">u</span><span class="o">,</span> <span class="n">v</span><span class="o">)</span> <span class="o">:=</span> <span class="n">v</span><span class="bp">^</span><span class="mi">2</span> <span class="bp">+</span> <span class="n">u</span> <span class="bp">=</span> <span class="mi">10</span><span class="bp">`</span><span class="o">,</span>
+ <span class="n">where</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">u</span><span class="bp">`</span> <span class="n">is</span> <span class="n">a</span> <span class="n">natural</span> <span class="n">number</span> <span class="n">and</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">v</span><span class="bp">`</span> <span class="n">is</span> <span class="n">an</span> <span class="n">integer.</span>
+
+ <span class="bp">*</span> <span class="n">What</span> <span class="n">is</span> <span class="n">the</span> <span class="n">type</span> <span class="n">of</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">Q</span><span class="bp">`?</span>
+
+ <span class="bp">*</span> <span class="n">Give</span> <span class="n">a</span> <span class="n">Lean</span> <span class="kd">definition</span> <span class="n">of</span> <span class="o">:</span><span class="n">math</span><span class="o">:</span><span class="bp">`</span><span class="n">Q</span><span class="bp">`</span> <span class="n">and</span> <span class="n">thereby</span> <span class="n">check</span> <span class="n">your</span> <span class="n">answer</span> <span class="n">to</span>
+   <span class="n">the</span> <span class="n">first</span> <span class="n">part</span> <span class="n">of</span> <span class="n">this</span> <span class="n">question.</span>
+</pre></div>
+</div>
+</div></section>
 </section>
 
 

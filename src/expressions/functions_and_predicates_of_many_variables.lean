@@ -12,7 +12,6 @@ Use the `#check` command to find the type of `f`.
 
 -/
 
-
 /- PROBLEM:
 
   Use the `#check` command to verify that `f 10` has type `ℕ → ℤ`.
@@ -21,13 +20,11 @@ Use the `#check` command to find the type of `f`.
 
 def g := f 10
 
-
 example : g(7) = 27 :=
 begin
   show 2 * (10 : ℤ) + 7 = 27,
   norm_num,
 end
-
 
 /- PROBLEM:
 
@@ -40,3 +37,19 @@ begin
   show 2 * (10 : ℤ) + 12 = 32,
   sorry,
 end
+def P (x : ℤ) (y : ℕ) := 5 * x + y < 2
+
+#check P
+
+
+/- PROBLEM:
+
+  Suppose Q is a predicate given by Q(u, v) := v^2 + u = 10,
+  where u is a natural number and v is an integer.
+  
+  * What is the type of Q?
+
+  * Give a Lean definition of Q and thereby check your answer to
+    the first part of this question.
+
+-/

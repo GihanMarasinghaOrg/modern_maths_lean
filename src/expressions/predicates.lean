@@ -17,13 +17,14 @@ example : P(2) = (2 > 5) := rfl
 
 -/
 
+
 def T (x y : ℤ) := x + y < 7
 
 example : T (-3) (5) = (-3 + 5 < 7) := rfl
 
 /- PROBLEM:
 
-Prove that `T (500) (-100)` equald `500 + (-100) < 7`.
+Prove that `T (500) (-100)` equals `500 + (-100) < 7`.
 
 -/
 
