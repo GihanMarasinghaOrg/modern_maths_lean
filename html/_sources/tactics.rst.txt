@@ -4,7 +4,7 @@ Tactics
 =======
 
 This Appendix consists of a brief description of tactics in general before moving on
-to a drop-down list of details for particualar tactics.
+to a drop-down `Tactic glossary`_ of  particualar tactics.
 
 Using tactics
 -------------
@@ -47,6 +47,7 @@ A sequence of tactics can be made into a block by enclosing them in braces:
     example (a b c : ℕ): (a + b) + c = b + (a + c) :=
     y { rw nat.add_comm a b, rw nat.add_assoc, }
 
+.. Tactic glossary
 
 Tactic glossary
 ---------------
