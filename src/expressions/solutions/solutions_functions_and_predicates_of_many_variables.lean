@@ -68,6 +68,3 @@ def Q (u : ℕ) (v : ℤ) := v ^ 2 + u = 10
 -- The type of `Q` is `ℕ → (ℤ → Prop)` as we check below.
 
 #check Q
-
-  example (a b c : ℕ): (a + b) + c = b + (a + c) :=
-  by { rw nat.add_comm a b, rw nat.add_assoc, }
