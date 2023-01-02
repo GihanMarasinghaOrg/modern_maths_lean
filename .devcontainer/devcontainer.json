@@ -20,6 +20,7 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": { 
+				"editor.minimap.enabled": false
 			//	"resmon.show.battery": false,
 			//	"latex-workshop.view.pdf.viewer": "browser"
 			},
