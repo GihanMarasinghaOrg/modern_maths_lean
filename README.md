@@ -26,7 +26,9 @@ It is designed to be used within Visual Studio Code via a GitPod or GitHub Codes
 
 If you are viewing this in Visual Studio Code, then you should:
 
-1. Close the terminal 'panel' that stretches across the bottom of the screen by
+1. If it's open, close the terminal 'panel' that stretches across the bottom of the screen by
 clicking on the X in the top-right of the panel.
-2. Click in the editor pane that contains this text and split the editor to right either by typing Ctrl+\ (or Cmd+\ on Mac) or by clicking the split editor button. This button looks like a square bisected by a vertical line.
-3. Read the book in the right-most pane. Start by cliking on the link for Chapter 1. Introduction.
+2.  Click in the editor pane that contains this text and split the editor to right either
+    by typing <kbd>Ctrl</kbd>+<kbd>\\</kbd> (or <kbd>&#8984;</kbd>+<kbd>\\</kbd> on Mac) or
+    by clicking the split editor button. This button looks like a square bisected by a vertical line.
+3. Read the book in the right-most pane. Start by clicking on the link for Chapter 1. Introduction.

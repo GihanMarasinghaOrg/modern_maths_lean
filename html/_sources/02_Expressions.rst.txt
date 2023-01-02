@@ -10,3 +10,4 @@ Expressions
 .. include:: 02_Expressions/05_Predicates.inc
 .. include:: 02_Expressions/06_Tactics.inc
 .. include:: 02_Expressions/07_Functions_and_predicates_of_many_variables.inc
+.. include:: 02_Expressions/08_Definitions.inc
