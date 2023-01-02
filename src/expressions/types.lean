@@ -14,8 +14,8 @@ import data.rat
 
 /- PROBLEM:
 
-Use the space below to evaluate the expressions given in the book first
-without Lean then with the Lean ``#eval`` command.
+Use the space below to evaluate the expressions `(1-4)^5`, `(1 + 4)`, `5/4+1/2`, and
+`66/2` first without Lean then with the Lean ``#eval`` command.
 
 -/
 
@@ -28,8 +28,11 @@ without Lean then with the Lean ``#eval`` command.
 
 /- PROBLEM:
 
-Determine the types of each of the expressions given in the book, first without
-Lean, then using the `#check` command.
+  For each of the following expressions:
 
--/
+  * Without using Lean, determine the type of the expression.
+  * Verify your answer using the ``#check`` Lean command.
+
+  (i) `2 + 3`, (ii) `2 + 3 = 10`, (iii) 'for all integers `x`, `2x = 10`'.
+
 
