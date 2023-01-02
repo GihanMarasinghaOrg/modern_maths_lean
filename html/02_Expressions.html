@@ -314,6 +314,11 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-and-predicates-of-many-variables">
+   2.7. Functions and predicates of many variables
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -386,6 +391,11 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-and-predicates-of-many-variables">
+   2.7. Functions and predicates of many variables
+  </a>
  </li>
 </ul>
 
@@ -958,6 +968,38 @@ is a fundamental skill. You can read more about error messages in the Appendix
 <a class="reference internal" href="error_messages.html#error-messages"><span class="std std-ref">Error messages</span></a>.</p>
 </section>
 </section>
+<section id="functions-and-predicates-of-many-variables">
+<h2><span class="section-number">2.7. </span>Functions and predicates of many variables<a class="headerlink" href="#functions-and-predicates-of-many-variables" title="Permalink to this headline">#</a></h2>
+<p>Let&#8217;s dig a little deeper into how Lean treats functions of many variables.</p>
+<p>Consider a &#8216;function&#8217; <span class="math notranslate nohighlight">\(f\)</span> defined so that <span class="math notranslate nohighlight">\(f(x,y) := 2x + y\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> is an integer
+and <span class="math notranslate nohighlight">\(y\)</span> is a natural number. In Lean, we might write this as:</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/functions_and_predicates_of_many_variables.lean" target="_blank" tryitfile="../src/expressions/functions_and_predicates_of_many_variables.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span> <span class="o">(</span><span class="n">y</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div><p>We&#8217;ve already seen that every function has a type. So what is the type of <code class="docutils literal notranslate"><span class="pre">f</span></code>?</p>
+<div class="proof proof-type-problem" id="id18">
+
+    <div class="proof-title">
+        <span class="proof-type">Problem 2.17</span>
+        
+    </div><div class="proof-content">
+<p>Use the <code class="docutils literal notranslate"><span class="pre">#check</span></code> command to find the type of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</div></div><p>If you did the problem above, you&#8217;ll have received the message <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>. There are
+really brackets in the expression that Lean has omitted for convenience. In full, the type
+of <code class="docutils literal notranslate"><span class="pre">f</span></code> is <code class="docutils literal notranslate"><span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">(&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;)</span></code>.</p>
+<p>This means <code class="docutils literal notranslate"><span class="pre">f</span></code> is a function that takes an input of type <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> and returns an output of
+type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>. But a term of type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code> is a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code>. Thus, <code class="docutils literal notranslate"><span class="pre">f</span></code>
+takes an integer and returns a <cite>function</cite> from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code>.</p>
+<div class="proof proof-type-problem" id="id19">
+
+    <div class="proof-title">
+        <span class="proof-type">Problem 2.18</span>
+        
+    </div><div class="proof-content">
+<p>Use the <code class="docutils literal notranslate"><span class="pre">#check</span></code> command to verify that <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">10</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>.</p>
+</div></div></section>
 </section>
 
 
