@@ -4,7 +4,11 @@ This is an interactive set of resources to accompany the book 'Modern Mathematic
 
 It is designed to be used within Visual Studio Code via a GitPod or GitHub Codespaces. If you aren't reading this in a Visual Studio window you should either:
 
-1. Open the repository in [GitPod](https://gitpod.io/#https://github.com/GihanMarasinghaOrg/modern_maths_lean).
+1. Open the repository in
+  [GitPod](https://gitpod.io/#https://github.com/GihanMarasinghaOrg/modern_maths_lean)
+  and wait while the project builds. This may take a couple of minutes. Then click on the
+  `README.md` file (this file!) in the explorer pane in the left pane. Continue reading 
+  at [Setting up VSCode](#setting-up-vscode) below.
 2. Go to the [GitHub Repository](https://github.com/GihanMarasinghaOrg/modern_maths_lean).
     * Click on the green "Code" button
     * Click on the Codespaces tab and
@@ -15,6 +19,8 @@ It is designed to be used within Visual Studio Code via a GitPod or GitHub Codes
       can save time by using the codespace you have built.
     * Once Visual Studio Code opens, wait a little while until
       the documentation appears in the right-hand pane.
+
+## Setting up VSCode
 
 If you are viewing this in Visual Studio Code, then you should:
 
