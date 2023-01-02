@@ -45,7 +45,7 @@ A sequence of tactics can be made into a block by enclosing them in braces:
 .. code-block:: lean
 
     example (a b c : ℕ): (a + b) + c = b + (a + c) :=
-    y { rw nat.add_comm a b, rw nat.add_assoc, }
+    by { rw nat.add_comm a b, rw nat.add_assoc, }
 
 .. Tactic glossary
 
