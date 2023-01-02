@@ -27,7 +27,8 @@
 			
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"jroesch.lean"
+				"sirmspencer.vscode-autohide",  // hides the panel and sidebar
+				"jroesch.lean"                  // lean 3 extension
 			]
 		}
 	},
