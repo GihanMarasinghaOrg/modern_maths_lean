@@ -6,7 +6,6 @@ import data.int.basic tactic.norm_num
 
 def f(x : ℤ) (y : ℕ) := 2 * x + y
 
-
 /- PROBLEM:
 
 Use the `#check` command to find the type of `f`.
@@ -20,3 +19,24 @@ Use the `#check` command to find the type of `f`.
 
 -/
 
+def g := f 10
+
+
+example : g(7) = 27 :=
+begin
+  show 2 * (10 : ℤ) + 7 = 27,
+  norm_num,
+end
+
+
+/- PROBLEM:
+
+By adapting the proof above, prove that `g(12) = 32`.
+
+-/
+
+example : g(12) = 32 :=
+begin
+  show 2 * (10 : ℤ) + 12 = 32,
+  sorry,
+end

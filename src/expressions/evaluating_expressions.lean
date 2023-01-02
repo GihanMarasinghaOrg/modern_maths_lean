@@ -2,6 +2,7 @@
 # Chapter 2: Expressions
 ## 2.1 Evaluating expressions
 -/
+import data.nat.basic
 
 #eval 2 * 3
 

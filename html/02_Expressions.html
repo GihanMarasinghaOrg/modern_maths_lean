@@ -745,16 +745,16 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
         <span class="proof-type">Problem 2.10</span>
         
     </div><div class="proof-content">
-<p>Give the Lean definition of two functions <code class="docutils literal notranslate"><span class="pre">f</span></code> and <code class="docutils literal notranslate"><span class="pre">f&#8322;</span></code> where
-<span class="math notranslate nohighlight">\(f(x) := x^2 + 5x + 2\)</span> and where <span class="math notranslate nohighlight">\(f_2\)</span> is the same except with <span class="math notranslate nohighlight">\(y\)</span> in place of <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p>Use Lean to prove <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">f&#8322;</span></code>.</p>
+<p>Give the Lean definition of two functions <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">p&#8322;</span></code> where
+<span class="math notranslate nohighlight">\(p(x) := x^2 + 5x + 2\)</span> and where <span class="math notranslate nohighlight">\(p_2\)</span> is the same except with <span class="math notranslate nohighlight">\(y\)</span> in place of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Use Lean to prove <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">p&#8322;</span></code>.</p>
 </div></div><p>Equality of functions is preserved under changing the names of bound variables, but not
 necessarily the names of the &#8216;free&#8217; variables. Suppose <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are natural number constants.
 If functions <span class="math notranslate nohighlight">\(t : \mathbb N \to \mathbb N\)</span> and <span class="math notranslate nohighlight">\(t_2 : \mathbb N \to \mathbb N\)</span> are defined by
 <span class="math notranslate nohighlight">\(t(x) := a + x\)</span>
 and <span class="math notranslate nohighlight">\(t_2(x) := b + x\)</span>, then <span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> are not necessarily equal.</p>
-<p>Here is a Lean implementation of the functions described above. For the moment, you may be
-content to be ignorant of the meanings of <code class="docutils literal notranslate"><span class="pre">constants</span></code> and <code class="docutils literal notranslate"><span class="pre">noncomputable</span></code>.</p>
+<p>Here is a Lean implementation of the functions described above. For the moment, don&#8217;t concern
+yourself with the meanings of <code class="docutils literal notranslate"><span class="pre">constants</span></code> and <code class="docutils literal notranslate"><span class="pre">noncomputable</span></code>.</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/functions.lean" target="_blank" tryitfile="../src/expressions/functions.lean">
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">constants</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span>
@@ -764,7 +764,15 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">t&#8322;</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">b</span> <span class="bp">+</span> <span class="n">x</span>
 </pre></div>
 </div>
-</div><div class="proof proof-type-problem" id="id12">
+</div><p>The error message is: &#8220;type mismatch, term <code class="docutils literal notranslate"><span class="pre">rfl</span></code> has type <code class="docutils literal notranslate"><span class="pre">?m_2</span> <span class="pre">=</span> <span class="pre">?m_2</span></code> but is expected to
+have type <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>.</p>
+<p>As mentioned, <code class="docutils literal notranslate"><span class="pre">rfl</span></code> is used to prove equality of two terms that are definitionally equal.
+More technically, <code class="docutils literal notranslate"><span class="pre">rfl</span></code> is a function that returns a proof of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span></code>. In Lean, to be
+a term of type <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span></code> is to be a proof of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span></code>.</p>
+<p>This explains the phrase &#8220;term <code class="docutils literal notranslate"><span class="pre">rfl</span></code> as type <code class="docutils literal notranslate"><span class="pre">?m_2</span> <span class="pre">=</span> <span class="pre">?m_2</span></code>&#8221;.</p>
+<p>We are trying to prove <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>. That is, to give a term of type <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>. But, as
+<code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">t&#8322;</span></code> are not definitionally equal, <code class="docutils literal notranslate"><span class="pre">rfl</span></code> does not return a term of type <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>.</p>
+<div class="proof proof-type-problem" id="id12">
 
     <div class="proof-title">
         <span class="proof-type">Problem 2.11</span>
@@ -986,9 +994,11 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
         
     </div><div class="proof-content">
 <p>Use the <code class="docutils literal notranslate"><span class="pre">#check</span></code> command to find the type of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
-</div></div><p>If you did the problem above, you&#8217;ll have received the message <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>. There are
-really brackets in the expression that Lean has omitted for convenience. In full, the type
-of <code class="docutils literal notranslate"><span class="pre">f</span></code> is <code class="docutils literal notranslate"><span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">(&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;)</span></code>.</p>
+</div></div><p>If you did the problem above, you&#8217;ll have received the message
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span>
+<span class="pre">`</span></code>
+Lean has omitted brackets in this expression. In full, the type of <code class="docutils literal notranslate"><span class="pre">f</span></code> is <code class="docutils literal notranslate"><span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">(&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;)</span></code>.</p>
 <p>This means <code class="docutils literal notranslate"><span class="pre">f</span></code> is a function that takes an input of type <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> and returns an output of
 type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>. But a term of type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code> is a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code>. Thus, <code class="docutils literal notranslate"><span class="pre">f</span></code>
 takes an integer and returns a <cite>function</cite> from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code>.</p>
@@ -999,6 +1009,34 @@ takes an integer and returns a <cite>function</cite> from <code class="docutils 
         
     </div><div class="proof-content">
 <p>Use the <code class="docutils literal notranslate"><span class="pre">#check</span></code> command to verify that <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">10</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>.</p>
+</div></div><p>Let&#8217;s name <cite>f 10</cite>. We&#8217;ll call it <cite>g</cite>, using a <cite>def</cite>.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/functions_and_predicates_of_many_variables.lean" target="_blank" tryitfile="../src/expressions/functions_and_predicates_of_many_variables.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">g</span> <span class="o">:=</span> <span class="n">f</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div><p>We&#8217;ve determined that <cite>g : &#8469; &#8594; &#8484;</cite> is a function. So we should be able to compute with it.
+Let&#8217;s show that <span class="math notranslate nohighlight">\(g(7) = 27\)</span>.</p>
+<div style="position: relative">
+<div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="../src/expressions/functions_and_predicates_of_many_variables.lean" target="_blank" tryitfile="../src/expressions/functions_and_predicates_of_many_variables.lean">
+Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">g</span><span class="o">(</span><span class="mi">7</span><span class="o">)</span> <span class="bp">=</span> <span class="mi">27</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">show</span> <span class="mi">2</span> <span class="bp">*</span> <span class="o">(</span><span class="mi">10</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span> <span class="bp">+</span> <span class="mi">7</span> <span class="bp">=</span> <span class="mi">27</span><span class="o">,</span>
+  <span class="n">norm_num</span><span class="o">,</span>
+<span class="kd">end</span>
+</pre></div>
+</div>
+</div><p>If the <code class="docutils literal notranslate"><span class="pre">show</span></code> statement looks a bit odd, it&#8217;s because Lean treats numerals as natural numbers
+unless it has reason not do. The type ascription <cite>10 : &#8484;</cite> is needed so Lean knows we&#8217;re working
+with the integer <cite>10</cite> instead of the natural number <cite>10</cite>.</p>
+<p>If we wrote <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">10</span> <span class="pre">+</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">27</span></code> instead, we would receive a &#8220;show tactic failed&#8221; error.</p>
+<div class="proof proof-type-problem" id="id20">
+
+    <div class="proof-title">
+        <span class="proof-type">Problem 2.19</span>
+        
+    </div><div class="proof-content">
+<p>By adpating the proof above, prove that <code class="docutils literal notranslate"><span class="pre">g(12)</span> <span class="pre">=</span> <span class="pre">32</span></code>.</p>
 </div></div></section>
 </section>
 

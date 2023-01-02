@@ -9,7 +9,7 @@
 
 /- PROBLEM:
 
-Modify the Lean code, replacing ``fst`` with ``snd``. Is the result what you expected?
+Modify the Lean code `#reduce lean.version.fst`, replacing ``fst`` with ``snd``.
+Is the result what you expected?
 
 -/
-
