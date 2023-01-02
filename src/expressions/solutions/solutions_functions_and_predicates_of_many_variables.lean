@@ -51,13 +51,13 @@ end
 
 /- PROBLEM:
 
-  Suppose Q is a predicate given by Q(u, v) := v^2 + u = 10,
-  where u is a natural number and v is an integer.
-  
-  * What is the type of Q?
+Suppose Q is a predicate given by Q(u, v) := v^2 + u = 10,
+where u is a natural number and v is an integer.
 
-  * Give a Lean definition of Q and thereby check your answer to
-    the first part of this question.
+* What is the type of Q?
+
+* Give a Lean definition of Q and thereby check your answer to
+  the first part of this question.
 
 -/
 
