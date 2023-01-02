@@ -3,6 +3,44 @@
 Tactics
 =======
 
+Tactics are computer programs that produce Lean expressions. In particular, some tactics are
+used to produce `proofs`. They help to make proof-writing easier by providing automation of
+complex tasks or by displaying useful information to the user.
+
+A `tactic block` is delimited by ``begin`` and ``end`` identifiers and contains
+one or more tactics.
+
+We can prove ``(a + b) + c = b + (a + c)`` via a tactic block with two tactics,
+as below. The first tactic ``rw nat.add_comm a b`` transforms the target into 
+one of proving ``(b + a) + c = b + (a + c)``. The goal is closed by the
+second tactic.
+
+If you click at a point within the tactic block, the Infoview window will show
+you the `tactic state` at that point. This displays all the goals within the proof,
+where a goal consists of (1) the context (the set of hypotheses) and (2) the target
+(that which is to be proved).
+
+.. code-block:: lean
+
+  example (a b c : ℕ): (a + b) + c = b + (a + c) :=
+  begin
+    rw nat.add_comm a b,
+    rw nat.add_assoc,
+  end
+
+A single tactic can be used to close a goal by preceding it with the ``by`` keyword.
+
+.. code-block:: lean
+
+  example : 1 + 2 < 10 := by norm_num
+
+A sequence of tactics can be made into a block by enclosing them in braces:
+
+.. code-block:: lean
+
+    example (a b c : ℕ): (a + b) + c = b + (a + c) :=
+    y { rw nat.add_comm a b, rw nat.add_assoc, }
+
 .. dropdown:: norm_num
   
   ``norm_num`` proves many numeric equations and inequalities involving addition, subtraction,
