@@ -3,6 +3,12 @@
 Tactics
 =======
 
+This Appendix consists of a brief description of tactics in general before moving on
+to a drop-down list of details for particualar tactics.
+
+Using tactics
+-------------
+
 Tactics are computer programs that produce Lean expressions. In particular, some tactics are
 used to produce `proofs`. They help to make proof-writing easier by providing automation of
 complex tasks or by displaying useful information to the user.
@@ -19,6 +25,9 @@ If you click at a point within the tactic block, the Infoview window will show
 you the `tactic state` at that point. This displays all the goals within the proof,
 where a goal consists of (1) the context (the set of hypotheses) and (2) the target
 (that which is to be proved).
+
+Tactic glossary
+---------------
 
 .. code-block:: lean
 

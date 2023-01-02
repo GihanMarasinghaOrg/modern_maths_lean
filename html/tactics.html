@@ -237,12 +237,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-tactics">
+   Using tactics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tactic-glossary">
+   Tactic glossary
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -254,6 +283,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-tactics">
+   Using tactics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tactic-glossary">
+   Tactic glossary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -263,6 +310,10 @@ title="Print to PDF"
                 
   <section id="tactics">
 <span id="id1"></span><h1>Tactics<a class="headerlink" href="#tactics" title="Permalink to this headline">#</a></h1>
+<p>This Appendix consists of a brief description of tactics in general before moving on
+to a drop-down list of details for particualar tactics.</p>
+<section id="using-tactics">
+<h2>Using tactics<a class="headerlink" href="#using-tactics" title="Permalink to this headline">#</a></h2>
 <p>Tactics are computer programs that produce Lean expressions. In particular, some tactics are
 used to produce <cite>proofs</cite>. They help to make proof-writing easier by providing automation of
 complex tasks or by displaying useful information to the user.</p>
@@ -276,6 +327,9 @@ second tactic.</p>
 you the <cite>tactic state</cite> at that point. This displays all the goals within the proof,
 where a goal consists of (1) the context (the set of hypotheses) and (2) the target
 (that which is to be proved).</p>
+</section>
+<section id="tactic-glossary">
+<h2>Tactic glossary<a class="headerlink" href="#tactic-glossary" title="Permalink to this headline">#</a></h2>
 <div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">):</span> <span class="o">(</span><span class="n">a</span> <span class="bp">+</span> <span class="n">b</span><span class="o">)</span> <span class="bp">+</span> <span class="n">c</span> <span class="bp">=</span> <span class="n">b</span> <span class="bp">+</span> <span class="o">(</span><span class="n">a</span> <span class="bp">+</span> <span class="n">c</span><span class="o">)</span> <span class="o">:=</span>
 <span class="kd">begin</span>
   <span class="n">rw</span> <span class="n">nat.add_comm</span> <span class="n">a</span> <span class="n">b</span><span class="o">,</span>
@@ -373,6 +427,7 @@ Each of the two goals can be closed with <code class="docutils literal notransla
 </div>
 </div>
 </details></section>
+</section>
 
 
               </div>
