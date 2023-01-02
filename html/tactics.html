@@ -327,9 +327,6 @@ second tactic.</p>
 you the <cite>tactic state</cite> at that point. This displays all the goals within the proof,
 where a goal consists of (1) the context (the set of hypotheses) and (2) the target
 (that which is to be proved).</p>
-</section>
-<section id="tactic-glossary">
-<h2>Tactic glossary<a class="headerlink" href="#tactic-glossary" title="Permalink to this headline">#</a></h2>
 <div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">):</span> <span class="o">(</span><span class="n">a</span> <span class="bp">+</span> <span class="n">b</span><span class="o">)</span> <span class="bp">+</span> <span class="n">c</span> <span class="bp">=</span> <span class="n">b</span> <span class="bp">+</span> <span class="o">(</span><span class="n">a</span> <span class="bp">+</span> <span class="n">c</span><span class="o">)</span> <span class="o">:=</span>
 <span class="kd">begin</span>
   <span class="n">rw</span> <span class="n">nat.add_comm</span> <span class="n">a</span> <span class="n">b</span><span class="o">,</span>
@@ -346,6 +343,9 @@ where a goal consists of (1) the context (the set of hypotheses) and (2) the tar
 <span class="n">y</span> <span class="o">{</span> <span class="n">rw</span> <span class="n">nat.add_comm</span> <span class="n">a</span> <span class="n">b</span><span class="o">,</span> <span class="n">rw</span> <span class="n">nat.add_assoc</span><span class="o">,</span> <span class="o">}</span>
 </pre></div>
 </div>
+</section>
+<section id="tactic-glossary">
+<h2>Tactic glossary<a class="headerlink" href="#tactic-glossary" title="Permalink to this headline">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 norm_num<div class="sd-summary-down docutils">

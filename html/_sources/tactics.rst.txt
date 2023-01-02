@@ -26,9 +26,6 @@ you the `tactic state` at that point. This displays all the goals within the pro
 where a goal consists of (1) the context (the set of hypotheses) and (2) the target
 (that which is to be proved).
 
-Tactic glossary
----------------
-
 .. code-block:: lean
 
   example (a b c : ℕ): (a + b) + c = b + (a + c) :=
@@ -49,6 +46,10 @@ A sequence of tactics can be made into a block by enclosing them in braces:
 
     example (a b c : ℕ): (a + b) + c = b + (a + c) :=
     y { rw nat.add_comm a b, rw nat.add_assoc, }
+
+
+Tactic glossary
+---------------
 
 .. dropdown:: norm_num
   
