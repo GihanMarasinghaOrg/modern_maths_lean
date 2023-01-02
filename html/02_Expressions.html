@@ -502,6 +502,9 @@ title="Print to PDF"
 <section id="evaluating-expressions">
 <h2><span class="section-number">2.1. </span>Evaluating expressions<a class="headerlink" href="#evaluating-expressions" title="Permalink to this headline">#</a></h2>
 <p>Lean can be used as a calculator to evaluate expressions.</p>
+<div class="highlight-lean notranslate" id="index-0"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="mi">2</span> <span class="bp">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
 <p>The above code outputs <code class="docutils literal notranslate"><span class="pre">6</span></code> in the Infoview pane.</p>
 <div class="proof proof-type-problem" id="id8">
 
@@ -514,23 +517,41 @@ title="Print to PDF"
 </div></div><p>Remember that to work with the code for this section, you just need
 to click on the &#8216;Go to source&#8217; link in any code fragment.</p>
 <p>You may add comments to your Lean code. Lean ignores any text within a comment.</p>
+<div class="highlight-lean notranslate" id="index-1"><div class="highlight"><pre><span></span><span class="c">/-</span><span class="cm"></span>
+<span class="cm">This is a block comment. It is ignored by Lean</span>
+<span class="cm">-/</span>
+
+<span class="k">#eval</span> <span class="mi">1</span> <span class="bp">+</span> <span class="mi">2</span> <span class="c1">-- This line comment starts at the `--` and ends at the end of the line.</span>
+</pre></div>
+</div>
 <section id="solutions">
 <h3><span class="section-number">2.1.1. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h3>
+<p>This section has solutions.
+</p>
 </section>
 </section>
 <section id="types-in-lean">
 <h2><span class="section-number">2.2. </span>Types in Lean<a class="headerlink" href="#types-in-lean" title="Permalink to this headline">#</a></h2>
 <p>Every expression in mathematics (and in Lean) has a <cite>type</cite>.</p>
+<div class="highlight-lean notranslate" id="index-2"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="mi">2</span>
+</pre></div>
+</div>
 <p>The code above outputs <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">:</span> <span class="pre">&#8469;</span></code>, showing that <code class="docutils literal notranslate"><span class="pre">2</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>, the type
 of natural numbers.</p>
 <p>Numerals are treated as natural numbers by default. Consider the output
 of the following code</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="mi">3</span> <span class="bp">-</span> <span class="mi">5</span>
+</pre></div>
+</div>
 <p>Lean claims that <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">-</span> <span class="pre">5</span></code> is <code class="docutils literal notranslate"><span class="pre">0</span></code>.The reason is that subtraction of two
 natural numbers (non-negative integers) in Lean always returns a natural number.
 To deal with awkward situations like this, Lean defines <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">-</span> <span class="pre">b</span></code> to be <code class="docutils literal notranslate"><span class="pre">0</span></code>
 if <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are natural numbers where <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">&#8805;</span> <span class="pre">a</span></code>.</p>
 <p>To get the expected answer, we must request that Lean treats these numerals
 as integers.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="o">(</span><span class="mi">3</span> <span class="bp">-</span> <span class="mi">5</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span>
+</pre></div>
+</div>
 <p>To produce the <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> symbold, type <code class="docutils literal notranslate"><span class="pre">\Z</span></code> followed by a space or tab.
 Alternatively, type <code class="docutils literal notranslate"><span class="pre">\int</span></code>. Likewise, <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> is typesd <code class="docutils literal notranslate"><span class="pre">\nat</span></code> or <code class="docutils literal notranslate"><span class="pre">\N</span></code>.</p>
 <p>A full list of the Lean symbols used in this resource are shown
@@ -544,6 +565,9 @@ easier-to-type symbol. For example, if you change it to <code class="docutils li
 <code class="docutils literal notranslate"><span class="pre">!N</span></code> (followed by space) will produce <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>.</p>
 </div>
 <p>You can evaluate the rational number <span class="math notranslate nohighlight">\(3.4^2\)</span> by typing:</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="o">(</span><span class="mi">3</span><span class="bp">.</span><span class="mi">4</span> <span class="bp">^</span> <span class="mi">2</span> <span class="o">:</span> <span class="n">&#8474;</span><span class="o">)</span>
+</pre></div>
+</div>
 <p>Here, <code class="docutils literal notranslate"><span class="pre">&#8474;</span></code> is typed <code class="docutils literal notranslate"><span class="pre">\rat</span></code> or <code class="docutils literal notranslate"><span class="pre">\Q</span></code>. Lean reduces <span class="math notranslate nohighlight">\(3.4^2\)</span> to
 the rational number <span class="math notranslate nohighlight">\(289/25\)</span>.</p>
 <div class="proof proof-type-problem" id="id9">
@@ -563,6 +587,9 @@ and prefer <span class="math notranslate nohighlight">\(\mathbb Z\)</span> to <s
 </div></div><p>For proof, the most important type is <code class="docutils literal notranslate"><span class="pre">Prop</span></code>, the type of propositions.
 Examples of propositions include <span class="math notranslate nohighlight">\(3 = 1 + 2\)</span>, <span class="math notranslate nohighlight">\(1 + 1 &lt; 10\)</span> and
 &#8216;for every natural number <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(n \ge 0\)</span>&#8217;.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="mi">3</span> <span class="bp">=</span> <span class="mi">1</span> <span class="bp">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
 <p>The code above gives output <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">:</span> <span class="pre">Prop</span></code>, showing that <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code> is a proposition.</p>
 <p>The proposition &#8216;for all natural numbers <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(n + 1 &gt; 0\)</span>&#8217; is
 displayed in Lean as <code class="docutils literal notranslate"><span class="pre">&#8704;</span> <span class="pre">(n</span> <span class="pre">:</span> <span class="pre">&#8469;),</span> <span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. Type <code class="docutils literal notranslate"><span class="pre">\all</span></code> for <code class="docutils literal notranslate"><span class="pre">&#8704;</span></code>.</p>
@@ -583,6 +610,8 @@ Here, <code class="docutils literal notranslate"><span class="pre">&#8707;</span
 <p>(i) <span class="math notranslate nohighlight">\(2 + 3\)</span>, (ii) <span class="math notranslate nohighlight">\(2 + 3 = 10\)</span>, (iii) &#8216;for all integers <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(2x = 10\)</span>&#8217;.</p>
 </div></div><section id="id2">
 <h3><span class="section-number">2.2.1. </span>Solutions<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>This section has solutions.
+</p>
 </section>
 </section>
 <section id="the-root-of-a-parse-tree-in-lean">
@@ -590,6 +619,9 @@ Here, <code class="docutils literal notranslate"><span class="pre">&#8707;</span
 <p>This project defines the command <code class="docutils literal notranslate"><span class="pre">#pp_app</span></code> that displays the root of a parse tree of
 an expression.</p>
 <p>For example, typing</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="bp">#</span><span class="n">pp_app</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">*</span> <span class="mi">3</span><span class="o">)</span>
+</pre></div>
+</div>
 <p>gives the output <code class="docutils literal notranslate"><span class="pre">multiply</span></code>. This shows that <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">3</span></code> is an application of multiplication.</p>
 <div class="proof proof-type-problem" id="id11">
 
@@ -606,17 +638,34 @@ an expression.</p>
 <p>If necessary, refer to Appendix <a class="reference internal" href="typing_lean_symbols.html#typing-lean-symbols"><span class="std std-ref">Typing Lean Symbols</span></a>.</p>
 </div></div><section id="id3">
 <h3><span class="section-number">2.3.1. </span>Solutions<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p>This section has solutions.
+</p>
 </section>
 </section>
 <section id="functions-in-lean">
 <h2><span class="section-number">2.4. </span>Functions in Lean<a class="headerlink" href="#functions-in-lean" title="Permalink to this headline">#</a></h2>
 <p>Here is the Lean definition of a function <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code> such that <span class="math notranslate nohighlight">\(f(x) := -x^2\)</span>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">f</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:</span> <span class="n">&#8484;</span> <span class="o">:=</span> <span class="bp">-</span> <span class="n">x</span><span class="bp">^</span><span class="mi">2</span>
+</pre></div>
+</div>
 <p>The arrow <code class="docutils literal notranslate"><span class="pre">&#8594;</span></code> is typed <code class="docutils literal notranslate"><span class="pre">\r</span></code>.</p>
 <p>To find the value of <code class="docutils literal notranslate"><span class="pre">f(10)</span></code>, we can use <code class="docutils literal notranslate"><span class="pre">#eval</span></code>, as below. This outputs <code class="docutils literal notranslate"><span class="pre">-100</span></code>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="n">f</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span>
+</pre></div>
+</div>
 <p>The parentheses here serve no purpose: in Lean, function application is denoted by
 space and has the highest order of precedence.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="n">f</span> <span class="mi">10</span>
+</pre></div>
+</div>
 <p>The <cite>type</cite> of the function <code class="docutils literal notranslate"><span class="pre">f</span></code> is found by:</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="n">f</span>
+</pre></div>
+</div>
 <p>The type is <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>. However, the type of <code class="docutils literal notranslate"><span class="pre">f(5)</span></code> is <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="n">f</span> <span class="mi">5</span>
+</pre></div>
+</div>
 <div class="proof proof-type-problem" id="id12">
 
     <div class="proof-title">
@@ -662,14 +711,23 @@ function that doubles its input. More precisely, Lean assumes that quantities in
 in arithmetic operations are natural numbers (unless told otherwise). So this function
 maps every natural number to twice its value, as a natural number. Here, <code class="docutils literal notranslate"><span class="pre">&#955;</span></code> is typed <code class="docutils literal notranslate"><span class="pre">\lam</span></code>.</p>
 <p>We can see this by checking the type of the expression.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="bp">&#955;</span> <span class="n">x</span><span class="o">,</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">x</span>
+</pre></div>
+</div>
 <p>This shows that <code class="docutils literal notranslate"><span class="pre">&#955;</span> <span class="pre">x,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8469;</span></code>, as expected. We call refer to this
 function in words as the abstraction of (the natural nubmer) <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> over (the natural number)
 <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <p>Lambda abstractions, like all functions, can be applied to terms. Below, we evaluate the application
 of <code class="docutils literal notranslate"><span class="pre">&#955;</span> <span class="pre">x,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#eval</span> <span class="o">(</span><span class="bp">&#955;</span> <span class="n">x</span><span class="o">,</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">x</span><span class="o">)</span> <span class="mi">5</span>
+</pre></div>
+</div>
 <p>As expected, this gives <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
 <p>Using type ascriptions, we can define a similar function, but one that takes its natural number
 input to twice its value <cite>as an integer</cite>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="bp">&#955;</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">),</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">*</span> <span class="n">x</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span>
+</pre></div>
+</div>
 <p>The function above has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>.</p>
 <div class="proof proof-type-problem" id="id14">
 
@@ -682,11 +740,20 @@ input to twice its value <cite>as an integer</cite>.</p>
 function to <span class="math notranslate nohighlight">\(-3\)</span>.</p>
 </div></div><p>Any expression can be given a name. If desired, we can name lambda abstractions. We
 do this through the <code class="docutils literal notranslate"><span class="pre">def</span></code> mechanism.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p</span> <span class="o">:=</span> <span class="bp">&#955;</span> <span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">),</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span>
+</pre></div>
+</div>
 <p>The named lambda abstraction <code class="docutils literal notranslate"><span class="pre">p</span></code> above is just another way to give a function definition.
 It is the same as the function <code class="docutils literal notranslate"><span class="pre">p&#8322;</span></code> defined below (note <code class="docutils literal notranslate"><span class="pre">p&#8322;</span></code> can be written <code class="docutils literal notranslate"><span class="pre">p\2</span></code>).</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p&#8322;</span> <span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:</span> <span class="n">&#8484;</span> <span class="o">:=</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span>
+</pre></div>
+</div>
 <p>As a final alternative, we can declare the type of a lambda abstraction before giving
 its definition.
 This removes the need to give type ascriptions in the lambda abstraction itself:</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p&#8323;</span> <span class="o">:</span> <span class="n">&#8469;</span> <span class="bp">&#8594;</span> <span class="n">&#8484;</span> <span class="o">:=</span> <span class="bp">&#955;</span> <span class="n">u</span><span class="o">,</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span>
+</pre></div>
+</div>
 <div class="proof proof-type-problem" id="id15">
 
     <div class="proof-title">
@@ -699,6 +766,9 @@ the functions <span class="math notranslate nohighlight">\(p\)</span>, <span cla
 </div></div><p>As a first example of <cite>proof</cite>, we&#8217;ll show the claims above regarding equality of <code class="docutils literal notranslate"><span class="pre">p</span></code>,
 <code class="docutils literal notranslate"><span class="pre">p&#8322;</span></code> and <code class="docutils literal notranslate"><span class="pre">p&#8323;</span></code>.</p>
 <p>To begin, we prove that <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">p&#8322;</span></code>:</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">p</span> <span class="bp">=</span> <span class="n">p&#8322;</span> <span class="o">:=</span> <span class="n">rfl</span>
+</pre></div>
+</div>
 <p>In the code above, <code class="docutils literal notranslate"><span class="pre">example</span></code> says to Lean, &#8220;I&#8217;m about to prove something&#8221;.
 The text between the <code class="docutils literal notranslate"><span class="pre">:</span></code> and the <code class="docutils literal notranslate"><span class="pre">:=</span></code> specifies what we will prove. Here, we will prove
 <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">p&#8322;</span></code>. The text after the <code class="docutils literal notranslate"><span class="pre">:=</span></code> is the proof, which in this case is simply the
@@ -716,9 +786,18 @@ of two objects that are definitionally equal.</p>
 <section id="functions-and-variables">
 <h3><span class="section-number">2.4.2. </span>Functions and variables<a class="headerlink" href="#functions-and-variables" title="Permalink to this headline">#</a></h3>
 <p>The name of the &#8216;bound&#8217; variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is irrelevant in a function definition such as</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">q</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">5</span> <span class="bp">+</span> <span class="n">x</span>
+</pre></div>
+</div>
 <p>To illustrate this, I define a function that is syntactically identical to <code class="docutils literal notranslate"><span class="pre">q</span></code>, <cite>except</cite> for the
 name of the bound variable.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">q&#8322;</span><span class="o">(</span><span class="n">u</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">5</span> <span class="bp">+</span> <span class="n">u</span>
+</pre></div>
+</div>
 <p>We can show these functions are equal.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">q</span> <span class="bp">=</span> <span class="n">q&#8322;</span> <span class="o">:=</span> <span class="n">rfl</span>
+</pre></div>
+</div>
 <p>Now it&#8217;s your turn.</p>
 <div class="proof proof-type-problem" id="id17">
 
@@ -736,6 +815,13 @@ If functions <span class="math notranslate nohighlight">\(t : \mathbb N \to \mat
 and <span class="math notranslate nohighlight">\(t_2(x) := b + x\)</span>, then <span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> are not necessarily equal.</p>
 <p>Here is a Lean implementation of the functions described above. For the moment, don&#8217;t concern
 yourself with the meanings of <code class="docutils literal notranslate"><span class="pre">constants</span></code> and <code class="docutils literal notranslate"><span class="pre">noncomputable</span></code>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">constants</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">t</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">a</span> <span class="bp">+</span> <span class="n">x</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">t&#8322;</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">b</span> <span class="bp">+</span> <span class="n">x</span>
+</pre></div>
+</div>
 <p>The error message is: &#8220;type mismatch, term <code class="docutils literal notranslate"><span class="pre">rfl</span></code> has type <code class="docutils literal notranslate"><span class="pre">?m_2</span> <span class="pre">=</span> <span class="pre">?m_2</span></code> but is expected to
 have type <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>.</p>
 <p>As mentioned, <code class="docutils literal notranslate"><span class="pre">rfl</span></code> is used to prove equality of two terms that are definitionally equal.
@@ -757,6 +843,19 @@ a term of type <code class="docutils literal notranslate"><span class="pre">x</s
 <p>and read the error message.</p>
 </div></div><p>It&#8217;s time for a problem that mixes together changes to bound and free variables.</p>
 <p>First we define a few constants and functions.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">constants</span> <span class="o">(</span><span class="n">u</span> <span class="n">v</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">f&#8321;</span><span class="o">(</span><span class="n">w</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">u</span> <span class="bp">*</span> <span class="n">w</span> <span class="bp">^</span> <span class="mi">2</span>
+
+              <span class="kd">def</span> <span class="n">f&#8322;</span><span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">u</span> <span class="bp">*</span> <span class="n">u</span> <span class="bp">^</span> <span class="mi">2</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">f&#8323;</span><span class="o">(</span><span class="n">z</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">u</span> <span class="bp">*</span> <span class="n">z</span> <span class="bp">^</span> <span class="mi">2</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">f&#8324;</span><span class="o">(</span><span class="n">w</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">v</span> <span class="bp">*</span> <span class="n">w</span> <span class="bp">^</span> <span class="mi">2</span>
+
+<span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">f&#8325;</span><span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">v</span> <span class="bp">*</span> <span class="n">u</span> <span class="bp">^</span> <span class="mi">2</span>
+</pre></div>
+</div>
 <div class="proof proof-type-problem" id="id19">
 
     <div class="proof-title">
@@ -768,16 +867,27 @@ in Lean.</p>
 </div></div></section>
 <section id="id4">
 <h3><span class="section-number">2.4.3. </span>Solutions<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<p>This section has solutions.
+</p>
 </section>
 </section>
 <section id="predicates">
 <h2><span class="section-number">2.5. </span>Predicates<a class="headerlink" href="#predicates" title="Permalink to this headline">#</a></h2>
 <p>Below is the definition of a predicate. It&#8217;s simply a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
 that takes each natural number <code class="docutils literal notranslate"><span class="pre">x</span></code> to the proposition <code class="docutils literal notranslate"><span class="pre">Prop</span></code></p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">P</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">x</span> <span class="bp">&gt;</span> <span class="mi">5</span>
+</pre></div>
+</div>
 <p>As usual, we can find the type of <code class="docutils literal notranslate"><span class="pre">P</span></code> using</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="n">P</span>
+</pre></div>
+</div>
 <p>This shows <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">Prop</span></code>.
 As <code class="docutils literal notranslate"><span class="pre">P</span></code> is a function on the type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>, it can be applied to natural numbers. We show
 <code class="docutils literal notranslate"><span class="pre">P(2)</span></code> equals <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&gt;</span> <span class="pre">5</span></code> in Lean:</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">P</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="bp">=</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rfl</span>
+</pre></div>
+</div>
 <p>Note we haven&#8217;t proved that <span class="math notranslate nohighlight">\(2 &gt; 5\)</span> (which would be impossible). Rather, we have proved that
 <span class="math notranslate nohighlight">\(P(2)\)</span> is <span class="math notranslate nohighlight">\(2 &gt; 5\)</span>.</p>
 <div class="admonition caution">
@@ -799,8 +909,14 @@ is the proposition <span class="math notranslate nohighlight">\(2 &gt; 5\)</span
 Prove that <code class="docutils literal notranslate"><span class="pre">Q(-3)</span></code> equals <code class="docutils literal notranslate"><span class="pre">-3</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">12</span></code>.</p>
 </div></div><p>We can define predicates that take more than one input. The predicate <code class="docutils literal notranslate"><span class="pre">T</span></code> below is defined
 so that <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">x</span> <span class="pre">y</span></code> means <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span> <span class="pre">&lt;</span> <span class="pre">7</span></code>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">T</span> <span class="o">(</span><span class="n">x</span> <span class="n">y</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span> <span class="bp">&lt;</span> <span class="mi">7</span>
+</pre></div>
+</div>
 <p>We prove below that <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">(-3)</span> <span class="pre">(5)</span></code> means <code class="docutils literal notranslate"><span class="pre">-3</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">&lt;</span> <span class="pre">7</span></code>. Here, <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">(-3)</span> <span class="pre">(5)</span></code> is what we might
 write in English-language mathematics as <span class="math notranslate nohighlight">\(T(-3,5)\)</span>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">T</span> <span class="o">(</span><span class="bp">-</span><span class="mi">3</span><span class="o">)</span> <span class="o">(</span><span class="mi">5</span><span class="o">)</span> <span class="bp">=</span> <span class="o">(</span><span class="bp">-</span><span class="mi">3</span> <span class="bp">+</span> <span class="mi">5</span> <span class="bp">&lt;</span> <span class="mi">7</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rfl</span>
+</pre></div>
+</div>
 <div class="proof proof-type-problem" id="id21">
 
     <div class="proof-title">
@@ -810,6 +926,8 @@ write in English-language mathematics as <span class="math notranslate nohighlig
 <p>Prove that <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">(500)</span> <span class="pre">(-100)</span></code> equals <code class="docutils literal notranslate"><span class="pre">500</span> <span class="pre">+</span> <span class="pre">(-100)</span> <span class="pre">&lt;</span> <span class="pre">7</span></code>.</p>
 </div></div><section id="id5">
 <h3><span class="section-number">2.5.1. </span>Solutions<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<p>This section has solutions.
+</p>
 </section>
 </section>
 <section id="introduction-to-tactics">
@@ -818,6 +936,9 @@ write in English-language mathematics as <span class="math notranslate nohighlig
 interactively.</p>
 <p>This is also the first section in which we&#8217;ll import the Lean code from a previous section. To do
 this, we insert an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement at the beginning of the file.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="n">expressions.predicates</span>
+</pre></div>
+</div>
 <p>In the previous section, we defined a predicate <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">Prop</span></code> so that <code class="docutils literal notranslate"><span class="pre">P(x)</span></code> means <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.
 By importing <code class="docutils literal notranslate"><span class="pre">expressions.predicates</span></code>, we can access <code class="docutils literal notranslate"><span class="pre">P</span></code> in this section.</p>
 <p>Below, we <cite>prove</cite> <code class="docutils literal notranslate"><span class="pre">P(6)</span></code> in Lean.</p>
@@ -825,6 +946,13 @@ By importing <code class="docutils literal notranslate"><span class="pre">expres
 <p class="admonition-title">What if the code below gives an error message?</p>
 <p>If the code below produces an error message, you may have changed the defintion of <cite>P</cite> in
 Lean file for the previous section. Go back to that section and restore the definition.</p>
+</div>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">P</span><span class="o">(</span><span class="mi">6</span><span class="o">)</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">show</span> <span class="mi">6</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">,</span>
+  <span class="n">norm_num</span><span class="o">,</span>
+<span class="kd">end</span>
+</pre></div>
 </div>
 <section id="tactic-blocks">
 <h3><span class="section-number">2.6.1. </span>Tactic blocks<a class="headerlink" href="#tactic-blocks" title="Permalink to this headline">#</a></h3>
@@ -886,12 +1014,21 @@ gives the error message &#8220;show tactic failed&#8221;. This means that your s
 accurately restate the target.</p></li>
 <li><p>Change the <code class="docutils literal notranslate"><span class="pre">show</span></code> line back to what it should be. Complete the proof.</p></li>
 </ul>
-</div></div><p>You&#8217;ve just encountered two error messages. Understanding how to deal with errors in your proofs
+</div></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">P</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">show</span> <span class="mi">10</span> <span class="bp">&gt;</span> <span class="mi">5</span><span class="o">,</span>
+  <span class="gr">sorry</span><span class="o">,</span>
+<span class="kd">end</span>
+</pre></div>
+</div>
+<p>You&#8217;ve just encountered two error messages. Understanding how to deal with errors in your proofs
 is a fundamental skill. You can read more about error messages in the Appendix
 <a class="reference internal" href="error_messages.html#error-messages"><span class="std std-ref">Error messages</span></a>.</p>
 </section>
 <section id="id6">
 <h3><span class="section-number">2.6.3. </span>Solutions<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
+<p>This section has solutions.
+</p>
 </section>
 </section>
 <section id="functions-and-predicates-of-many-variables">
@@ -899,6 +1036,9 @@ is a fundamental skill. You can read more about error messages in the Appendix
 <p>Let&#8217;s dig a little deeper into how Lean treats functions of many variables.</p>
 <p>Consider a &#8216;function&#8217; <span class="math notranslate nohighlight">\(f\)</span> defined so that <span class="math notranslate nohighlight">\(f(x,y) := 2x + y\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> is an integer
 and <span class="math notranslate nohighlight">\(y\)</span> is a natural number. In Lean, we might write this as:</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span> <span class="o">(</span><span class="n">y</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">2</span> <span class="bp">*</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span>
+</pre></div>
+</div>
 <p>We&#8217;ve already seen that every function has a type. So what is the type of <code class="docutils literal notranslate"><span class="pre">f</span></code>?</p>
 <div class="proof proof-type-problem" id="id24">
 
@@ -923,8 +1063,18 @@ takes an integer and returns a <cite>function</cite> from <code class="docutils 
     </div><div class="proof-content">
 <p>Use the <code class="docutils literal notranslate"><span class="pre">#check</span></code> command to verify that <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">10</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>.</p>
 </div></div><p>Let&#8217;s name <cite>f 10</cite>. We&#8217;ll call it <cite>g</cite>, using a <cite>def</cite>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">g</span> <span class="o">:=</span> <span class="n">f</span> <span class="mi">10</span>
+</pre></div>
+</div>
 <p>We&#8217;ve determined that <cite>g : &#8469; &#8594; &#8484;</cite> is a function. So we should be able to compute with it.
 Let&#8217;s show that <span class="math notranslate nohighlight">\(g(7) = 27\)</span>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">:</span> <span class="n">g</span><span class="o">(</span><span class="mi">7</span><span class="o">)</span> <span class="bp">=</span> <span class="mi">27</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">show</span> <span class="mi">2</span> <span class="bp">*</span> <span class="o">(</span><span class="mi">10</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span> <span class="bp">+</span> <span class="mi">7</span> <span class="bp">=</span> <span class="mi">27</span><span class="o">,</span>
+  <span class="n">norm_num</span><span class="o">,</span>
+<span class="kd">end</span>
+</pre></div>
+</div>
 <p>If the <code class="docutils literal notranslate"><span class="pre">show</span></code> statement looks a bit odd, it&#8217;s because Lean treats numerals as natural numbers
 unless it has reason not do. The type ascription <cite>10 : &#8484;</cite> is needed so Lean knows we&#8217;re working
 with the integer <cite>10</cite> instead of the natural number <cite>10</cite>.</p>
@@ -940,6 +1090,11 @@ with the integer <cite>10</cite> instead of the natural number <cite>10</cite>.<
 If I define a predicate <span class="math notranslate nohighlight">\(P\)</span> by <span class="math notranslate nohighlight">\(P(x, y) = 5x + y &lt; 2\)</span>,
 where <span class="math notranslate nohighlight">\(x\)</span> is an integer and <span class="math notranslate nohighlight">\(y\)</span> is a natural number, then
 <span class="math notranslate nohighlight">\(P\)</span> is a function of type <code class="docutils literal notranslate"><span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">(&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">Prop)</span></code>.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">P</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span> <span class="o">(</span><span class="n">y</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">5</span> <span class="bp">*</span> <span class="n">x</span> <span class="bp">+</span> <span class="n">y</span> <span class="bp">&lt;</span> <span class="mi">2</span>
+
+<span class="k">#check</span> <span class="n">P</span>
+</pre></div>
+</div>
 <div class="proof proof-type-problem" id="id27">
 
     <div class="proof-title">
@@ -955,6 +1110,8 @@ the first part of this question.</p></li>
 </ul>
 </div></div><section id="id7">
 <h3><span class="section-number">2.7.1. </span>Solutions<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<p>This section has solutions.
+</p>
 </section>
 </section>
 </section>
