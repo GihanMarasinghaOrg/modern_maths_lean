@@ -1013,7 +1013,7 @@ Go to solutions source</a>.</p>
 </section>
 <section id="introduction-to-tactics">
 <h2><span class="section-number">2.6. </span>Introduction to tactics<a class="headerlink" href="#introduction-to-tactics" title="Permalink to this headline">#</a></h2>
-<p>In this important section, you&#8217;ll learn about Lean <cite>tactics</cite>, these being tools for writing proofs
+<p id="index-9">In this important section, you&#8217;ll learn about Lean <cite>tactics</cite>, these being tools for writing proofs
 interactively.</p>
 <p>This is also the first section in which we&#8217;ll import the Lean code from a previous section. To do
 this, we insert an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement at the beginning of the file.</p>
@@ -1041,13 +1041,13 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </div>
 </div><section id="tactic-blocks">
 <h3><span class="section-number">2.6.1. </span>Tactic blocks<a class="headerlink" href="#tactic-blocks" title="Permalink to this headline">#</a></h3>
-<p id="index-9">In the proof above, the words <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> denote the start and end of a &#8216;tactic block&#8217;.</p>
+<p id="index-10">In the proof above, the words <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> denote the start and end of a &#8216;tactic block&#8217;.</p>
 <p>Each of the lines within the tactic block uses a <cite>tactic</cite>. Here, we use the <code class="docutils literal notranslate"><span class="pre">show</span></code> and
 <code class="docutils literal notranslate"><span class="pre">norm_num</span></code> tactics. Each tactic line ends with a comma.</p>
 <p>In the Lean editor pane, locate the code corresponding to the example above. Click anywhere within
 the tactic block (anywhere after the <code class="docutils literal notranslate"><span class="pre">begin</span></code> and before the <code class="docutils literal notranslate"><span class="pre">end</span></code>). The Infoview pane will
 show the &#8216;tactic state&#8217;.</p>
-<p id="index-10">The tactic state shows the <cite>goal</cite> at any given point in the proof. This consistst of (1)
+<p id="index-11">The tactic state shows the <cite>goal</cite> at any given point in the proof. This consistst of (1)
 the <cite>context</cite> (the set of hypotheses) and (2) the <cite>target</cite> (that which is to be proved).</p>
 <p>In this simple proof, there are no hypotheses. The target is marked with the syymbol <code class="docutils literal notranslate"><span class="pre">&#8866;</span></code>, which
 is read &#8216;to prove&#8217;.</p>
@@ -1069,7 +1069,7 @@ above works.</p>
 </div></div></section>
 <section id="who-s-sorry-now">
 <h3><span class="section-number">2.6.2. </span>Who&#8217;s sorry now?<a class="headerlink" href="#who-s-sorry-now" title="Permalink to this headline">#</a></h3>
-<p id="index-11">The best way to tackle a problem is to break it down into smaller manageable pieces and to apply
+<p id="index-12">The best way to tackle a problem is to break it down into smaller manageable pieces and to apply
 the same decomposition process recursively to each piece until what is left is trivial.</p>
 <p>You can apply this idea to writing a proof. Start with a proof that is <cite>structurally correct</cite> but
 has missing pieces. Recursively flesh out the gaps in the proof while ensuring, at each stage,
