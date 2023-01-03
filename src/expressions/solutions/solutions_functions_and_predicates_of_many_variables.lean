@@ -68,9 +68,3 @@ def Q (u : ℕ) (v : ℤ) := v ^ 2 + u = 10
 -- The type of `Q` is `ℕ → (ℤ → Prop)` as we check below.
 
 #check Q
-
-
-example (a b : ℕ) : a + b = b + a :=
-begin
-  type_check rfl,
-end
