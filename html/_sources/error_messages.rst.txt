@@ -86,7 +86,7 @@ Error messages
   The term ``rfl`` is a function that returns a proof of ``x = x``. Or, more generally, it returns
   a proof of ``a = b`` whenever ``a`` and ``b`` are `definitionally equal`. It is common for
   beginning mathematicians to assume that ``a + b`` and ``b + a`` are definitionally equal, but
-  they aren't. It needs to be `proved`` that ``a + b = b + a`` (for natural numbers ``a`` and ``b``).
+  they aren't. It needs to be `proved` that ``a + b = b + a`` (for natural numbers ``a`` and ``b``).
 
   Thus, the code above returns the error message "type mismatch, term ``rfl``has type ``?m_2 = ?m_2``
   but is expected to have type ``a + b = b + a``"
