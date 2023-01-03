@@ -748,7 +748,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </pre></div>
 </div>
 </div><p>This shows that <code class="docutils literal notranslate"><span class="pre">&#955;</span> <span class="pre">x,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8469;</span></code>, as expected. Rather than using symbols, we
-can specify this function in English as &#8220;the abstraction of (the natural nubmer) <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> over (the natural number)
+can specify this function in English as &#8220;the abstraction of (the natural number) <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> over (the natural number)
 <code class="docutils literal notranslate"><span class="pre">x</span></code>.&#8221;</p>
 <p>Lambda abstractions, like all functions, can be applied to terms. Below, we evaluate the application
 of <code class="docutils literal notranslate"><span class="pre">&#955;</span> <span class="pre">x,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p>
@@ -759,14 +759,14 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </div>
 </div><p>As expected, this gives <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
 <p>Using type ascriptions, we can define a similar function, but one that takes its natural number
-input to twice its value <cite>as an integer</cite>. It is not the same function as that which returns
-twice its natural number value <cite>as a natural number</cite>.</p>
+input to twice its value <cite>as an integer</cite>.</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/functions.lean" target="_blank" tryitfile="../src/expressions/functions.lean">
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="k">#check</span> <span class="bp">&#955;</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">),</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">*</span> <span class="n">x</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span>
 </pre></div>
 </div>
-</div><p>The function above has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>.</p>
+</div><p>The function above has type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>. It is not the same function as that which returns
+twice its natural number value <cite>as a natural number</cite>.</p>
 <div class="proof proof-type-problem" id="id14">
 
     <div class="proof-title">
