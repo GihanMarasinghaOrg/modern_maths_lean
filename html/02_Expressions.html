@@ -1138,11 +1138,11 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
         
     </div><div class="proof-content">
 <p>Use the <code class="docutils literal notranslate"><span class="pre">#check</span></code> command to find the type of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
-</div></div><p>If you did the problem above, you&#8217;ll have received the message
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span>
-<span class="pre">`</span></code>
-Lean has omitted brackets in this expression. In full, the type of <code class="docutils literal notranslate"><span class="pre">f</span></code> is <code class="docutils literal notranslate"><span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">(&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;)</span></code>.</p>
+</div></div><p>If you did the problem above, you&#8217;ll have received the message:</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">:</span> <span class="n">&#8484;</span> <span class="bp">&#8594;</span> <span class="n">&#8469;</span> <span class="bp">&#8594;</span> <span class="n">&#8484;</span>
+</pre></div>
+</div>
+<p>Lean has omitted brackets in this expression. In full, the type of <code class="docutils literal notranslate"><span class="pre">f</span></code> is <code class="docutils literal notranslate"><span class="pre">&#8484;</span> <span class="pre">&#8594;</span> <span class="pre">(&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;)</span></code>.</p>
 <p>This means <code class="docutils literal notranslate"><span class="pre">f</span></code> is a function that takes an input of type <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> and returns an output of
 type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code>. But a term of type <code class="docutils literal notranslate"><span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code> is a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code>. Thus, <code class="docutils literal notranslate"><span class="pre">f</span></code>
 takes an integer and returns a <cite>function</cite> from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code>.</p>
