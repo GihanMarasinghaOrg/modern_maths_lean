@@ -109,9 +109,9 @@ namespace functions_and_variables
 
 /- PROBLEM:
 
-Below, give the Lean definition of two functions `p` and `p₂` where
-`p(x)` is x-squared plus 5x plus 2 and where `p₂` is the same except with y in
-place of x.
+Below, give the Lean definition of two functions `p` and `p₂`, both from 
+`ℕ` to `ℕ`, where `p(x)` is x-squared plus 5x plus 2 and where `p₂` is the same
+except with y in place of x.
 
 Use Lean to prove `p = p₂`.
 
