@@ -711,9 +711,16 @@ to an integer rather than a natural number.</p>
 </pre></div>
 </div>
 <p>in Lean.</p>
-<p>You&#8217;ll get an error message that term <code class="docutils literal notranslate"><span class="pre">y</span></code> has type <code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> but is expected to
-have type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>. Can you explain this message?</p>
-</div></div><p id="index-4">There are some subtleties with types. If <code class="docutils literal notranslate"><span class="pre">u</span></code> is a natural number and <code class="docutils literal notranslate"><span class="pre">y</span></code> is
+<p>You&#8217;ll get a &#8216;type mismatch&#8217; error message, stating that term <code class="docutils literal notranslate"><span class="pre">y</span></code> has type
+<code class="docutils literal notranslate"><span class="pre">&#8484;</span></code> but is expected to have type <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code>. Can you explain this message?</p>
+</div></div><p>This has been our first attempt at handling error messages.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Whether in Lean or any other computer system, the ability to understand
+error messages (and to minimise their occurrence!) is a vital skill.
+This is also important in</p>
+</div>
+<p id="index-4">There are some subtleties with types. If <code class="docutils literal notranslate"><span class="pre">u</span></code> is a natural number and <code class="docutils literal notranslate"><span class="pre">y</span></code> is
 an integer, Lean will not understand <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">+</span> <span class="pre">v</span></code>. It &#8216;sees&#8217; <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code> and
 then expects another natural number. However, Lean will understand <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">+</span> <span class="pre">u</span></code>.
 After reading <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code>, Lean expects an integer. Though <code class="docutils literal notranslate"><span class="pre">u</span></code> is not
@@ -831,7 +838,7 @@ of two objects that are definitionally equal.</p>
 </div></div></section>
 <section id="functions-and-variables">
 <span id="index-7"></span><h3><span class="section-number">2.4.2. </span>Functions and variables<a class="headerlink" href="#functions-and-variables" title="Permalink to this headline">#</a></h3>
-<p>The name of the &#8216;bound&#8217; variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is irrelevant in a function definition such as</p>
+<p>The name of the &#8216;bound&#8217; variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is (usually) irrelevant in a function definition such as</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/functions.lean" target="_blank" tryitfile="../src/expressions/functions.lean">
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">q</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">:=</span> <span class="mi">5</span> <span class="bp">+</span> <span class="n">x</span>
@@ -860,7 +867,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <p>Give the Lean definition of two functions <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">p&#8322;</span></code> where
 <span class="math notranslate nohighlight">\(p(x) := x^2 + 5x + 2\)</span> and where <span class="math notranslate nohighlight">\(p_2\)</span> is the same except with <span class="math notranslate nohighlight">\(y\)</span> in place of <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>Use Lean to prove <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">p&#8322;</span></code>.</p>
-</div></div><p>Equality of functions is preserved under changing the names of bound variables, but not
+</div></div><p>Equality of functions is (usually) preserved under changing the names of bound variables, but not
 necessarily the names of the &#8216;free&#8217; variables. Suppose <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are natural number constants.
 If functions <span class="math notranslate nohighlight">\(t : \mathbb N \to \mathbb N\)</span> and <span class="math notranslate nohighlight">\(t_2 : \mathbb N \to \mathbb N\)</span> are defined by
 <span class="math notranslate nohighlight">\(t(x) := a + x\)</span>
