@@ -6,6 +6,13 @@ import tactic.pp_app
 
 #pp_app (2 * 3)
 
+
+/- PROBLEM:
+
+For each expression given in the book, determine which operator it is an
+application of, first without Lean, then using the `#pp_app` tactic.
+
+-/
 -- SOLUTION:
 
 #pp_app (3 + 5 * 5)

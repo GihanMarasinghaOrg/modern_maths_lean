@@ -21,31 +21,36 @@ variable y : ℤ
 
 You get an error message:
   
-  `type mismatch at application f y term y has type ℤ but is expected to have type ℕ`
+`type mismatch at application f y term y has type ℤ but is expected to have type ℕ`
 
-The reason is that `f : ℕ → ℤ` expects to be given a natural number argument, but `y` is an
-integer.
+The reason is that `f : ℕ → ℤ` expects to be given a natural number argument,
+but `y` is an integer.
 
 -/
 
 /- PROBLEM:
 
 Give your solutions to 'which expressions are meaningful?' in the space
-following the `variables` declaration below. Give the types of each expression and state which
-expressions are meaningless. Verify your answers using `#check`.
+following the `variables` declaration below. Give the types of each expression
+and state which expressions are meaningless. Verify your answers using `#check`.
+The expressions in question are:
+
+(i) u + v, (ii) y + z, (iii) g(u + v), (iv) g(y + z), (v) u + g(u),
+(vi) y + g(u), (vii) g(u) + u, (viii) g(u) + y
 
 -/
 variables (V : Type) [has_add V] (u v : ℕ) (y z : V) (g : ℕ → V)
 
 /- SOLUTION:
 
-The meaningful expressions are: `u + v : ℕ`, `y + z : V`, `g(u + v) : V`, `y + g(u) : V`,
-and `g(u) + y : V`.
+The meaningful expressions are:
+`u + v : ℕ`, `y + z : V`, `g(u + v) : V`, `y + g(u) : V`, and `g(u) + y : V`.
 
-This can be verified, by typing, for example `#check g(u) + y`, which gives output `g(u) + y : V`.
-Whereas typing `#check u + g(u)` gives the error message:
+This can be verified, by typing, for example `#check g(u) + y`, which gives
+output `g(u) + y : V`. Whereas typing `#check u + g(u)` gives the error message:
 
-  `type mismatch at application u + g u, term  g u has type V but is expected to have type ℕ`.
+`type mismatch at application u + g u, term  g u has type V but is expected to`
+`have type ℕ`.
 -/
 
 end functional_notation
@@ -58,8 +63,9 @@ namespace lambda_abstraction
 
 /- PROBLEM:
 
-Write a lambda abstraction as described in the book. Evaluate the application of this function
-to the integer `-3`.
+Write a Lean expression that corresponds to the abstractin of the integer
+expressoin y^2 + 8y over the integer variable y. Evaluate the application of
+this function to the integer -3.
 
 -/
 -- SOLUTION:
@@ -104,7 +110,8 @@ namespace functions_and_variables
 /- PROBLEM:
 
 Below, give the Lean definition of two functions `p` and `p₂` where
-`p(x)` is x-squared plus 5x plus 2 and where `p₂` is the same except with y in place of x.
+`p(x)` is x-squared plus 5x plus 2 and where `p₂` is the same except with y in
+place of x.
 
 Use Lean to prove `p = p₂`.
 
@@ -117,7 +124,8 @@ def p(x) := x ^ 2 + 5 * x + 2
 def p₂(y) := y ^ 2 + 5 * y + 2 
 
 /-
-The functions `t` and `t₂` below are the same *except* for the name of the free variable.
+The functions `t` and `t₂` below are the same *except* for the name of the free
+variable.
 -/
 
 constants (a b : ℕ)
@@ -136,15 +144,15 @@ Type `example : t = t₂ := rfl` in the space below and read the error message.
 
 The error message is:
 
-  `type mismatch, term rfl has type ?m_2 = ?m_2 but is expected to have type t = t₂`.
+`type mismatch, term rfl has type ?m_2 = ?m_2 but is expected to have type t = t₂`.
 
 This error message is explained in the book.
 -/
 
 /- PROBLEM:
 
-Which of the pairs of functions chosen from `f₁`, …, `f₅` below are equal? Verify your answers
-in Lean.
+Which of the pairs of functions chosen from `f₁`, …, `f₅` below are equal?
+Verify your answers in Lean.
 
 -/
 constants (u v : ℕ)

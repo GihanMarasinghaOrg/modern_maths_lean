@@ -29,8 +29,12 @@ variable y : ℤ
 /- PROBLEM:
 
 Give your solutions to 'which expressions are meaningful?' in the space
-following the `variables` declaration below. Give the types of each expression and state which
-expressions are meaningless. Verify your answers using `#check`.
+following the `variables` declaration below. Give the types of each expression
+and state which expressions are meaningless. Verify your answers using `#check`.
+The expressions in question are:
+
+(i) u + v, (ii) y + z, (iii) g(u + v), (iv) g(y + z), (v) u + g(u),
+(vi) y + g(u), (vii) g(u) + u, (viii) g(u) + y
 
 -/
 variables (V : Type) [has_add V] (u v : ℕ) (y z : V) (g : ℕ → V)
@@ -52,8 +56,9 @@ namespace lambda_abstraction
 
 /- PROBLEM:
 
-Write a lambda abstraction as described in the book. Evaluate the application of this function
-to the integer `-3`.
+Write a Lean expression that corresponds to the abstractin of the integer
+expressoin y^2 + 8y over the integer variable y. Evaluate the application of
+this function to the integer -3.
 
 -/
 
@@ -74,8 +79,8 @@ def p₃ : ℕ → ℤ := λ u, 2 * u
 
 /- PROBLEM:
 
-Give three Lean definitions of a function `h : ℕ → ℤ` so that `h(u) =: u - 3`. Adapt
-the three methods for definining the functions `p`, `p₂`, and `p₃` above.
+Give three Lean definitions of a function `h : ℕ → ℤ` so that `h(u) =: u - 3`.
+Adapt the three methods for definining the functions `p`, `p₂`, and `p₃` above.
 
 -/
 
@@ -111,14 +116,16 @@ example : q = q₂ := rfl
 /- PROBLEM:
 
 Below, give the Lean definition of two functions `p` and `p₂` where
-`p(x)` is x-squared plus 5x plus 2 and where `p₂` is the same except with y in place of x.
+`p(x)` is x-squared plus 5x plus 2 and where `p₂` is the same except with y in
+place of x.
 
 Use Lean to prove `p = p₂`.
 
 -/
 
 /-
-The functions `t` and `t₂` below are the same *except* for the name of the free variable.
+The functions `t` and `t₂` below are the same *except* for the name of the free
+variable.
 -/
 
 constants (a b : ℕ)
@@ -136,8 +143,8 @@ Type `example : t = t₂ := rfl` in the space below and read the error message.
 
 /- PROBLEM:
 
-Which of the pairs of functions chosen from `f₁`, …, `f₅` below are equal? Verify your answers
-in Lean.
+Which of the pairs of functions chosen from `f₁`, …, `f₅` below are equal?
+Verify your answers in Lean.
 
 -/
 constants (u v : ℕ)

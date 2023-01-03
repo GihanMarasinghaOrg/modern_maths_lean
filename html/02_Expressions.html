@@ -783,7 +783,7 @@ do this through the <code class="docutils literal notranslate"><span class="pre"
 Go to source</a></div><div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">def</span> <span class="n">p</span> <span class="o">:=</span> <span class="bp">&#955;</span> <span class="o">(</span><span class="n">u</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">),</span> <span class="o">(</span><span class="mi">2</span> <span class="bp">*</span> <span class="n">u</span> <span class="o">:</span> <span class="n">&#8484;</span><span class="o">)</span>
 </pre></div>
 </div>
-</div><p>The named lambda abstraction <code class="docutils literal notranslate"><span class="pre">p</span></code> above is just another way to give a function definition.
+</div><p id="index-6">The named lambda abstraction <code class="docutils literal notranslate"><span class="pre">p</span></code> above is just another way to give a function definition.
 It is the same as the function <code class="docutils literal notranslate"><span class="pre">p&#8322;</span></code> defined below (note <code class="docutils literal notranslate"><span class="pre">p&#8322;</span></code> can be written <code class="docutils literal notranslate"><span class="pre">p\2</span></code>).</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/functions.lean" target="_blank" tryitfile="../src/expressions/functions.lean">
@@ -816,10 +816,10 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </pre></div>
 </div>
 </div><p>In the code above, <code class="docutils literal notranslate"><span class="pre">example</span></code> says to Lean, &#8220;I&#8217;m about to prove something&#8221;.
-The text between the <code class="docutils literal notranslate"><span class="pre">:</span></code> and the <code class="docutils literal notranslate"><span class="pre">:=</span></code> specifies what we will prove. Here, we will prove
-<code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">p&#8322;</span></code>. The text after the <code class="docutils literal notranslate"><span class="pre">:=</span></code> is the proof, which in this case is simply the
-word <code class="docutils literal notranslate"><span class="pre">rfl</span></code>. This word is short for
-&#8216;reflexivity&#8217;, a notion we will encounter in the next chapter. It is used to prove equality
+The text between the <code class="docutils literal notranslate"><span class="pre">:</span></code> and the <code class="docutils literal notranslate"><span class="pre">:=</span></code> specifies what we will prove. Here,
+we will prove <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">p&#8322;</span></code>. The text after the <code class="docutils literal notranslate"><span class="pre">:=</span></code> is the proof, which in this
+case is simply the word <code class="docutils literal notranslate"><span class="pre">rfl</span></code>. This word is short for &#8216;reflexivity&#8217;, a
+notion we will encounter in the next chapter. It is used to prove equality
 of two objects that are definitionally equal.</p>
 <div class="proof proof-type-problem" id="id16">
 
@@ -830,7 +830,7 @@ of two objects that are definitionally equal.</p>
 <p>Prove that <span class="math notranslate nohighlight">\(p = p_3\)</span>.</p>
 </div></div></section>
 <section id="functions-and-variables">
-<span id="index-6"></span><h3><span class="section-number">2.4.2. </span>Functions and variables<a class="headerlink" href="#functions-and-variables" title="Permalink to this headline">#</a></h3>
+<span id="index-7"></span><h3><span class="section-number">2.4.2. </span>Functions and variables<a class="headerlink" href="#functions-and-variables" title="Permalink to this headline">#</a></h3>
 <p>The name of the &#8216;bound&#8217; variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is irrelevant in a function definition such as</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/functions.lean" target="_blank" tryitfile="../src/expressions/functions.lean">
@@ -929,7 +929,7 @@ Go to solutions source</a>.</p>
 </section>
 </section>
 <section id="predicates">
-<span id="index-7"></span><h2><span class="section-number">2.5. </span>Predicates<a class="headerlink" href="#predicates" title="Permalink to this headline">#</a></h2>
+<span id="index-8"></span><h2><span class="section-number">2.5. </span>Predicates<a class="headerlink" href="#predicates" title="Permalink to this headline">#</a></h2>
 <p>Below is the definition of a predicate. It&#8217;s simply a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
 that takes each natural number <code class="docutils literal notranslate"><span class="pre">x</span></code> to the proposition <code class="docutils literal notranslate"><span class="pre">Prop</span></code></p>
 <div style="position: relative">
@@ -1028,13 +1028,13 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </div>
 </div><section id="tactic-blocks">
 <h3><span class="section-number">2.6.1. </span>Tactic blocks<a class="headerlink" href="#tactic-blocks" title="Permalink to this headline">#</a></h3>
-<p id="index-8">In the proof above, the words <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> denote the start and end of a &#8216;tactic block&#8217;.</p>
+<p id="index-9">In the proof above, the words <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> denote the start and end of a &#8216;tactic block&#8217;.</p>
 <p>Each of the lines within the tactic block uses a <cite>tactic</cite>. Here, we use the <code class="docutils literal notranslate"><span class="pre">show</span></code> and
 <code class="docutils literal notranslate"><span class="pre">norm_num</span></code> tactics. Each tactic line ends with a comma.</p>
 <p>In the Lean editor pane, locate the code corresponding to the example above. Click anywhere within
 the tactic block (anywhere after the <code class="docutils literal notranslate"><span class="pre">begin</span></code> and before the <code class="docutils literal notranslate"><span class="pre">end</span></code>). The Infoview pane will
 show the &#8216;tactic state&#8217;.</p>
-<p id="index-9">The tactic state shows the <cite>goal</cite> at any given point in the proof. This consistst of (1)
+<p id="index-10">The tactic state shows the <cite>goal</cite> at any given point in the proof. This consistst of (1)
 the <cite>context</cite> (the set of hypotheses) and (2) the <cite>target</cite> (that which is to be proved).</p>
 <p>In this simple proof, there are no hypotheses. The target is marked with the syymbol <code class="docutils literal notranslate"><span class="pre">&#8866;</span></code>, which
 is read &#8216;to prove&#8217;.</p>
@@ -1056,7 +1056,7 @@ above works.</p>
 </div></div></section>
 <section id="who-s-sorry-now">
 <h3><span class="section-number">2.6.2. </span>Who&#8217;s sorry now?<a class="headerlink" href="#who-s-sorry-now" title="Permalink to this headline">#</a></h3>
-<p id="index-10">The best way to tackle a problem is to break it down into smaller manageable pieces and to apply
+<p id="index-11">The best way to tackle a problem is to break it down into smaller manageable pieces and to apply
 the same decomposition process recursively to each piece until what is left is trivial.</p>
 <p>You can apply this idea to writing a proof. Start with a proof that is <cite>structurally correct</cite> but
 has missing pieces. Recursively flesh out the gaps in the proof while ensuring, at each stage,
