@@ -889,15 +889,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <span class="kd">noncomputable</span> <span class="kd">def</span> <span class="n">t&#8322;</span><span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:=</span> <span class="n">b</span> <span class="bp">+</span> <span class="n">x</span>
 </pre></div>
 </div>
-</div><p>The error message is: &#8220;type mismatch, term <code class="docutils literal notranslate"><span class="pre">rfl</span></code> has type <code class="docutils literal notranslate"><span class="pre">?m_2</span> <span class="pre">=</span> <span class="pre">?m_2</span></code> but is expected to
-have type <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>&#8221;.</p>
-<p>As mentioned, <code class="docutils literal notranslate"><span class="pre">rfl</span></code> is used to prove equality of two terms that are definitionally equal.
-More technically, <code class="docutils literal notranslate"><span class="pre">rfl</span></code> is a function that returns a proof of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span></code>. In Lean, to be
-a term of type <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span></code> is to be a proof of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span></code>.</p>
-<p>This explains the phrase &#8220;term <code class="docutils literal notranslate"><span class="pre">rfl</span></code> as type <code class="docutils literal notranslate"><span class="pre">?m_2</span> <span class="pre">=</span> <span class="pre">?m_2</span></code>&#8221;.</p>
-<p>We are trying to prove <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>. That is, to give a term of type <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>. But, as
-<code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">t&#8322;</span></code> are not definitionally equal, <code class="docutils literal notranslate"><span class="pre">rfl</span></code> does not return a term of type <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>.</p>
-<div class="proof proof-type-problem" id="id18">
+</div><div class="proof proof-type-problem" id="id18">
 
     <div class="proof-title">
         <span class="proof-type">Problem 2.11</span>
@@ -908,7 +900,15 @@ a term of type <code class="docutils literal notranslate"><span class="pre">x</s
 </pre></div>
 </div>
 <p>and read the error message.</p>
-</div></div><p>It&#8217;s time for a problem that mixes together changes to bound and free variables.</p>
+</div></div><p>The error message is: &#8220;type mismatch, term <code class="docutils literal notranslate"><span class="pre">rfl</span></code> has type <code class="docutils literal notranslate"><span class="pre">?m_2</span> <span class="pre">=</span> <span class="pre">?m_2</span></code> but is expected to
+have type <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>&#8221;.</p>
+<p>As mentioned, <code class="docutils literal notranslate"><span class="pre">rfl</span></code> is used to prove equality of two terms that are definitionally equal.
+More technically, <code class="docutils literal notranslate"><span class="pre">rfl</span></code> is a function that returns a proof of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span></code>. In Lean, to be
+a term of type <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span></code> is to be a proof of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span></code>.</p>
+<p>This explains the phrase &#8220;term <code class="docutils literal notranslate"><span class="pre">rfl</span></code> as type <code class="docutils literal notranslate"><span class="pre">?m_2</span> <span class="pre">=</span> <span class="pre">?m_2</span></code>&#8221;.</p>
+<p>We are trying to prove <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>. That is, to give a term of type <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>. But, as
+<code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">t&#8322;</span></code> are not definitionally equal, <code class="docutils literal notranslate"><span class="pre">rfl</span></code> does not return a term of type <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">t&#8322;</span></code>.</p>
+<p>It&#8217;s time for a problem that mixes together changes to bound and free variables.</p>
 <p>First we define a few constants and functions.</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/functions.lean" target="_blank" tryitfile="../src/expressions/functions.lean">
