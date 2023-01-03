@@ -25,8 +25,8 @@ This is a simple numerical inequality, which the `norm_num` tactic proves.
 Below is an incomplete proof of `P(10)`, where `P` is the predicate defined previously
 by `P(x) := x > 5`.
 
-* Observe that Lean emits the orange warning in the Infoview pane to indicate that the example
-  uses `sorry`.
+* Observe that Lean emits an orange warning in the Infoview pane (under "All
+  Messages") to indicate that the example  uses `sorry`.
 * Delete the `sorry` line. Now Lean gives an error message telling you,
   "there are unsolved goals". This means the proof is incomplete.
 * Replace the `sorry`. Don't forget the comma at the end of the line!

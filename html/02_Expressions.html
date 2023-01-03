@@ -1047,7 +1047,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <p>In the Lean editor pane, locate the code corresponding to the example above. Click anywhere within
 the tactic block (anywhere after the <code class="docutils literal notranslate"><span class="pre">begin</span></code> and before the <code class="docutils literal notranslate"><span class="pre">end</span></code>). The Infoview pane will
 show the &#8216;tactic state&#8217;.</p>
-<p id="index-11">The tactic state shows the <cite>goal</cite> at any given point in the proof. This consistst of (1)
+<p id="index-11">The tactic state shows the <cite>goal</cite> at any given point in the proof. The goal consistst of (1)
 the <cite>context</cite> (the set of hypotheses) and (2) the <cite>target</cite> (that which is to be proved).</p>
 <p>In this simple proof, there are no hypotheses. The target is marked with the syymbol <code class="docutils literal notranslate"><span class="pre">&#8866;</span></code>, which
 is read &#8216;to prove&#8217;.</p>
@@ -1089,7 +1089,8 @@ error message. Thus, <code class="docutils literal notranslate"><span class="pre
 <p>Below is an incomplete proof of <code class="docutils literal notranslate"><span class="pre">P(10)</span></code>, where <code class="docutils literal notranslate"><span class="pre">P</span></code> is the predicate defined previously
 by <code class="docutils literal notranslate"><span class="pre">P(x)</span> <span class="pre">:=</span> <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.</p>
 <ul class="simple">
-<li><p>Observe that Lean emits the orange warning in the Infoview pane to indicate that the example
+<li><p>Observe that Lean emits an orange warning in the Infoview pane (under &#8220;All
+messages&#8221;) to indicate that the example
 uses <code class="docutils literal notranslate"><span class="pre">sorry</span></code>.</p></li>
 <li><p>Delete the <code class="docutils literal notranslate"><span class="pre">sorry</span></code> line. Now Lean gives an error message telling you,
 &#8220;there are unsolved goals&#8221;. This means the proof is incomplete.</p></li>
@@ -1122,7 +1123,7 @@ Go to solutions source</a>.</p>
 <section id="functions-and-predicates-of-many-variables">
 <h2><span class="section-number">2.7. </span>Functions and predicates of many variables<a class="headerlink" href="#functions-and-predicates-of-many-variables" title="Permalink to this headline">#</a></h2>
 <p>Let&#8217;s dig a little deeper into how Lean treats functions of many variables.</p>
-<p>Consider a &#8216;function&#8217; <span class="math notranslate nohighlight">\(f\)</span> defined so that <span class="math notranslate nohighlight">\(f(x,y) := 2x + y\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> is an integer
+<p>Consider a function <span class="math notranslate nohighlight">\(f\)</span> defined so that <span class="math notranslate nohighlight">\(f(x,y) := 2x + y\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> is an integer
 and <span class="math notranslate nohighlight">\(y\)</span> is a natural number. In Lean, we might write this as:</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/functions_and_predicates_of_many_variables.lean" target="_blank" tryitfile="../src/expressions/functions_and_predicates_of_many_variables.lean">
