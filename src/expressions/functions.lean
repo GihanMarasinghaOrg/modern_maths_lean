@@ -71,7 +71,7 @@ Here is a named lambda abstraction:
 def p := λ (u : ℕ), (2 * u : ℤ)
 
 /-
-The quantity `p` is the same as the function `p₂` defined below
+The quantity `p` is the same as the function `p₂` defined below.
 -/
 def p₂ (u : ℕ) : ℤ := 2 * u
 
