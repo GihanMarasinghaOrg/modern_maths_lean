@@ -63,8 +63,8 @@ namespace lambda_abstraction
 
 /- PROBLEM:
 
-Write a Lean expression that corresponds to the abstractin of the integer
-expressoin y^2 + 8y over the integer variable y. Evaluate the application of
+Write a Lean expression that corresponds to the abstraction of the integer
+expression y^2 + 8y over the integer variable y. Evaluate the application of
 this function to the integer -3.
 
 -/
