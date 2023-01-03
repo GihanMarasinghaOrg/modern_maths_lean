@@ -96,7 +96,7 @@ Error messages
   with the ``#check t`` command. Within tactic mode, you can use the ``type_check`` tactic.
   For example,
 
-  .. code_block:: lean
+  .. code-block:: lean
 
     example (a b : ℕ) : a + b = b + a :=
     begin

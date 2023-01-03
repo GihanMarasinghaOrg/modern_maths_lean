@@ -360,6 +360,12 @@ but is expected to have type <code class="docutils literal notranslate"><span cl
 <cite>B</cite>&#8221;, you should check you know the type of <cite>t</cite>. Outside of tactic mode, you can do this
 with the <code class="docutils literal notranslate"><span class="pre">#check</span> <span class="pre">t</span></code> command. Within tactic mode, you can use the <code class="docutils literal notranslate"><span class="pre">type_check</span></code> tactic.
 For example,</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:</span> <span class="n">a</span> <span class="bp">+</span> <span class="n">b</span> <span class="bp">=</span> <span class="n">b</span> <span class="bp">+</span> <span class="n">a</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="n">type_check</span> <span class="n">rfl</span><span class="o">,</span>
+<span class="kd">end</span>
+</pre></div>
+</div>
 <p class="sd-card-text">will show <code class="docutils literal notranslate"><span class="pre">?m_2</span> <span class="pre">=</span> <span class="pre">?m_2</span></code> in the Infoview pane.</p>
 </div>
 </details></section>
