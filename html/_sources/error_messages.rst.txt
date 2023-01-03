@@ -88,7 +88,7 @@ Error messages
   beginning mathematicians to assume that ``a + b`` and ``b + a`` are definitionally equal, but
   they aren't. It needs to be `proved` that ``a + b = b + a`` (for natural numbers ``a`` and ``b``).
 
-  Thus, the code above returns the error message "type mismatch, term ``rfl``has type ``?m_2 = ?m_2``
+  Thus, the code above returns the error message "type mismatch, term ``rfl`` has type ``?m_2 = ?m_2``
   but is expected to have type ``a + b = b + a``"
 
   If you receive the message "type mismatch, term ``t`` has type ``A`` but is expected to have type
