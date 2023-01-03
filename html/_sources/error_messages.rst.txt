@@ -4,22 +4,6 @@ Error messages
 ==============
 
 
-.. dropdown:: tactic failed, there are unsolved goals
-
-  This message means you haven't finished the proof. One or more goals remain to be proved.
-  Ideally, you should write ``sorry`` for each gap in the proof and keep working until you
-  have completed the proof. You will, temporarily, see this message while you fill in the ``sorry``.
-
-  The following code will produce this error as the goal of proving ``q → p`` remains after the
-  ``assume`` line.
-
-  .. code-block:: lean
-
-    example (p q : Prop) : p → (q → p) :=
-    begin
-      assume h : p,
-    end
-
 .. dropdown:: show tactic failed
 
   You made a mistake when trying to restate the target using ``show``.
@@ -72,3 +56,52 @@ Error messages
     * Click on the word ``surjective`` and press :kbd:`F12` on your keyboard to open a new Lean
       editor containing the source of the definition. Reading the original source files is a great
       way to learn Lean.
+
+
+.. dropdown:: tactic failed, there are unsolved goals
+
+  This message means you haven't finished the proof. One or more goals remain to be proved.
+  Ideally, you should write ``sorry`` for each gap in the proof and keep working until you
+  have completed the proof. You will, temporarily, see this message while you fill in the ``sorry``.
+
+  The following code will produce this error as the goal of proving ``q → p`` remains after the
+  ``assume`` line.
+
+  .. code-block:: lean
+
+    example (p q : Prop) : p → (q → p) :=
+    begin
+      assume h : p,
+    end
+
+.. dropdown:: type mismatch
+
+  The message, "type mismatch, term `t` has type `A` but is expected to have type `B`" shows that
+  you have made a type error. Here's a typical example:
+
+  .. code-block:: lean
+
+    example (a b : ℕ) : a + b = b + a := rfl
+
+  The term `rfl` is a function that returns a proof of ```x = x```. Or, more generally, it returns
+  a proof of ``a = b`` whenever ``a`` and ``b`` are `definitionally equal`. It is common for
+  beginning mathematicians to assume that ``a + b`` and ``b + a`` are definitionally equal, but
+  they aren't. It needs to be `proved` that ``a + b = b + a`` (for natural numbers ``a`` and ``b``).
+
+  Thus, the code above returns the error message "type mismatch, term ``rfl``has type ``?m_2 = ?m_2``
+  but is expected to have type ``a + b = b + a``"
+
+  If you receive the message "type mismatch, term `t` has type `A` but is expected to have type
+  `B`", you should check you know the type of `t`. Outside of tactic mode, you can do this
+  with the ``#check t`` command. Within tactic mode, you can use the ``type_check`` tactic.
+  For example,
+
+  .. code_block:: lean
+
+    example (a b : ℕ) : a + b = b + a :=
+    begin
+      type_check rfl,
+    end
+
+  will show ``?m_2 = ?m_2`` in the Infoview pane.
+

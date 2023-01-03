@@ -265,25 +265,6 @@ title="Print to PDF"
 <span id="id1"></span><h1>Error messages<a class="headerlink" href="#error-messages" title="Permalink to this headline">#</a></h1>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-tactic failed, there are unsolved goals<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">This message means you haven&#8217;t finished the proof. One or more goals remain to be proved.
-Ideally, you should write <code class="docutils literal notranslate"><span class="pre">sorry</span></code> for each gap in the proof and keep working until you
-have completed the proof. You will, temporarily, see this message while you fill in the <code class="docutils literal notranslate"><span class="pre">sorry</span></code>.</p>
-<p class="sd-card-text">The following code will produce this error as the goal of proving <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&#8594;</span> <span class="pre">p</span></code> remains after the
-<code class="docutils literal notranslate"><span class="pre">assume</span></code> line.</p>
-<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">p</span> <span class="n">q</span> <span class="o">:</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">:</span> <span class="n">p</span> <span class="bp">&#8594;</span> <span class="o">(</span><span class="n">q</span> <span class="bp">&#8594;</span> <span class="n">p</span><span class="o">)</span> <span class="o">:=</span>
-<span class="kd">begin</span>
-  <span class="k">assume</span> <span class="n">h</span> <span class="o">:</span> <span class="n">p</span><span class="o">,</span>
-<span class="kd">end</span>
-</pre></div>
-</div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
 show tactic failed<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
@@ -337,6 +318,49 @@ way to learn Lean.</p></li>
 </ul>
 </li>
 </ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+tactic failed, there are unsolved goals<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This message means you haven&#8217;t finished the proof. One or more goals remain to be proved.
+Ideally, you should write <code class="docutils literal notranslate"><span class="pre">sorry</span></code> for each gap in the proof and keep working until you
+have completed the proof. You will, temporarily, see this message while you fill in the <code class="docutils literal notranslate"><span class="pre">sorry</span></code>.</p>
+<p class="sd-card-text">The following code will produce this error as the goal of proving <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&#8594;</span> <span class="pre">p</span></code> remains after the
+<code class="docutils literal notranslate"><span class="pre">assume</span></code> line.</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">p</span> <span class="n">q</span> <span class="o">:</span> <span class="kt">Prop</span><span class="o">)</span> <span class="o">:</span> <span class="n">p</span> <span class="bp">&#8594;</span> <span class="o">(</span><span class="n">q</span> <span class="bp">&#8594;</span> <span class="n">p</span><span class="o">)</span> <span class="o">:=</span>
+<span class="kd">begin</span>
+  <span class="k">assume</span> <span class="n">h</span> <span class="o">:</span> <span class="n">p</span><span class="o">,</span>
+<span class="kd">end</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+type mismatch<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The message, &#8220;type mismatch, term <cite>t</cite> has type <cite>A</cite> but is expected to have type <cite>B</cite>&#8221; shows that
+you have made a type error. Here&#8217;s a typical example:</p>
+<div class="highlight-lean notranslate"><div class="highlight"><pre><span></span><span class="kd">example</span> <span class="o">(</span><span class="n">a</span> <span class="n">b</span> <span class="o">:</span> <span class="n">&#8469;</span><span class="o">)</span> <span class="o">:</span> <span class="n">a</span> <span class="bp">+</span> <span class="n">b</span> <span class="bp">=</span> <span class="n">b</span> <span class="bp">+</span> <span class="n">a</span> <span class="o">:=</span> <span class="n">rfl</span>
+</pre></div>
+</div>
+<p class="sd-card-text">The term <cite>rfl</cite> is a function that returns a proof of <code class="docutils literal notranslate"><span class="pre">`x</span> <span class="pre">=</span> <span class="pre">x`</span></code>. Or, more generally, it returns
+a proof of <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">b</span></code> whenever <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are <cite>definitionally equal</cite>. It is common for
+beginning mathematicians to assume that <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">+</span> <span class="pre">a</span></code> are definitionally equal, but
+they aren&#8217;t. It needs to be <cite>proved</cite> that <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">b</span> <span class="pre">+</span> <span class="pre">a</span></code> (for natural numbers <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>).</p>
+<p class="sd-card-text">Thus, the code above returns the error message &#8220;type mismatch, term <code class="docutils literal notranslate"><span class="pre">rfl``has</span> <span class="pre">type</span> <span class="pre">``?m_2</span> <span class="pre">=</span> <span class="pre">?m_2</span></code>
+but is expected to have type <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">b</span> <span class="pre">+</span> <span class="pre">a</span></code>&#8221;</p>
+<p class="sd-card-text">If you receive the message &#8220;type mismatch, term <cite>t</cite> has type <cite>A</cite> but is expected to have type
+<cite>B</cite>&#8221;, you should check you know the type of <cite>t</cite>. Outside of tactic mode, you can do this
+with the <code class="docutils literal notranslate"><span class="pre">#check</span> <span class="pre">t</span></code> command. Within tactic mode, you can use the <code class="docutils literal notranslate"><span class="pre">type_check</span></code> tactic.
+For example,</p>
+<p class="sd-card-text">will show <code class="docutils literal notranslate"><span class="pre">?m_2</span> <span class="pre">=</span> <span class="pre">?m_2</span></code> in the Infoview pane.</p>
 </div>
 </details></section>
 
