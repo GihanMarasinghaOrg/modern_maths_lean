@@ -48,7 +48,6 @@ begin
   norm_num,
 end
 
-
 /- PROBLEM:
 
 Suppose Q is a predicate given by Q(u, v) := v^2 + u = 10,

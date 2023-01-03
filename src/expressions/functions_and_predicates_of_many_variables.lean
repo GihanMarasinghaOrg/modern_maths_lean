@@ -37,6 +37,7 @@ begin
   show 2 * (10 : ℤ) + 12 = 32,
   sorry,
 end
+
 def P (x : ℤ) (y : ℕ) := 5 * x + y < 2
 
 #check P
