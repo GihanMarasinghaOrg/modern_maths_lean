@@ -1,134 +1,342 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Expressions &mdash; Modern Mathematics with Lean</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/proof.css" type="text/css" />
-      <link rel="stylesheet" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/proof.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="ascii" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Expressions &#8212; Modern Mathematics with Lean</title>
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/proof.js"></script>
-        <script>let toggleHintShow = 'Click to show';</script>
-        <script>let toggleHintHide = 'Click to hide';</script>
-        <script>let toggleOpenOnPrint = 'true';</script>
-        <script src="_static/togglebutton.js"></script>
-        <script src="_static/design-tabs.js"></script>
-        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/proof.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_Expressions';</script>
+    <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Typing Lean symbols" href="typing_lean_symbols.html" />
-    <link rel="prev" title="1. Introduction" href="01_Introduction.html" /> 
-</head>
+    <link rel="prev" title="1. Introduction" href="01_Introduction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
 
-          
-          
-          <a href="index.html" class="icon icon-home">
-            Modern Mathematics with Lean
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Modern Mathematics with Lean</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01_Introduction.html">1. Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Expressions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#evaluating-expressions">2.1. Evaluating expressions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#solutions">2.1.1. Solutions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Expressions</a></li>
 </ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#types-in-lean">2.2. Types in Lean</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">2.2.1. Solutions</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#the-root-of-a-parse-tree-in-lean">2.3. The root of a parse tree in Lean</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">2.3.1. Solutions</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#functions-in-lean">2.4. Functions in Lean</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#lambda-abstraction">2.4.1. Lambda abstraction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#functions-and-variables">2.4.2. Functions and variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">2.4.3. Solutions</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#predicates">2.5. Predicates</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id5">2.5.1. Solutions</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-tactics">2.6. Introduction to tactics</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#tactic-blocks">2.6.1. Tactic blocks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#who-s-sorry-now">2.6.2. Who&#8217;s sorry now?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">2.6.3. Solutions</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#functions-and-predicates-of-many-variables">2.7. Functions and predicates of many variables</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id7">2.7.1. Solutions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="typing_lean_symbols.html">Typing Lean symbols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tactics.html">Tactics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="error_messages.html">Error messages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Modern Mathematics with Lean</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">2. </span>Expressions</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/02_Expressions.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/02_Expressions.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Expressions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluating-expressions">2.1. Evaluating expressions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">2.1.1. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-in-lean">2.2. Types in Lean</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2.1. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-root-of-a-parse-tree-in-lean">2.3. The root of a parse tree in Lean</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.3.1. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-in-lean">2.4. Functions in Lean</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-abstraction">2.4.1. Lambda abstraction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-and-variables">2.4.2. Functions and variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.4.3. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predicates">2.5. Predicates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.5.1. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-tactics">2.6. Introduction to tactics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tactic-blocks">2.6.1. Tactic blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#who-s-sorry-now">2.6.2. Who&#8217;s sorry now?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.6.3. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-and-predicates-of-many-variables">2.7. Functions and predicates of many variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.7.1. Solutions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="expressions">
-<span id="id1"></span><h1><span class="section-number">2. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">&#61633;</a></h1>
+<span id="id1"></span><h1><span class="section-number">2. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">#</a></h1>
 <section id="evaluating-expressions">
-<h2><span class="section-number">2.1. </span>Evaluating expressions<a class="headerlink" href="#evaluating-expressions" title="Permalink to this heading">&#61633;</a></h2>
+<h2><span class="section-number">2.1. </span>Evaluating expressions<a class="headerlink" href="#evaluating-expressions" title="Permalink to this heading">#</a></h2>
 <p>Lean can be used as a calculator to evaluate expressions.</p>
 <div id="index-0" style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/evaluating_expressions.lean" id="index-0" target="_blank" tryitfile="../src/expressions/evaluating_expressions.lean">
@@ -157,14 +365,14 @@ Go to source</a></div><div class="highlight-lean notranslate" id="index-1"><div 
 </pre></div>
 </div>
 </div><section id="solutions">
-<h3><span class="section-number">2.1.1. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">&#61633;</a></h3>
+<h3><span class="section-number">2.1.1. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h3>
 <p>This section has solutions.
 <a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/solutions/solutions_evaluating_expressions.lean" target="_blank" tryitfile="../src/expressions/solutions/solutions_evaluating_expressions.lean">
 Go to solutions source</a>.</p>
 </section>
 </section>
 <section id="types-in-lean">
-<h2><span class="section-number">2.2. </span>Types in Lean<a class="headerlink" href="#types-in-lean" title="Permalink to this heading">&#61633;</a></h2>
+<h2><span class="section-number">2.2. </span>Types in Lean<a class="headerlink" href="#types-in-lean" title="Permalink to this heading">#</a></h2>
 <p>Every expression in mathematics (and in Lean) has a <cite>type</cite>.</p>
 <div id="index-2" style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/types.lean" id="index-2" target="_blank" tryitfile="../src/expressions/types.lean">
@@ -252,14 +460,14 @@ Here, <code class="docutils literal notranslate"><span class="pre">&#8707;</span
 </ul>
 <p>(i) <span class="math notranslate nohighlight">\(2 + 3\)</span>, (ii) <span class="math notranslate nohighlight">\(2 + 3 = 10\)</span>, (iii) &#8216;for all integers <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(2x = 10\)</span>&#8217;.</p>
 </div></div><section id="id2">
-<h3><span class="section-number">2.2.1. </span>Solutions<a class="headerlink" href="#id2" title="Permalink to this heading">&#61633;</a></h3>
+<h3><span class="section-number">2.2.1. </span>Solutions<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>This section has solutions.
 <a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/solutions/solutions_types.lean" target="_blank" tryitfile="../src/expressions/solutions/solutions_types.lean">
 Go to solutions source</a>.</p>
 </section>
 </section>
 <section id="the-root-of-a-parse-tree-in-lean">
-<span id="index-3"></span><h2><span class="section-number">2.3. </span>The root of a parse tree in Lean<a class="headerlink" href="#the-root-of-a-parse-tree-in-lean" title="Permalink to this heading">&#61633;</a></h2>
+<span id="index-3"></span><h2><span class="section-number">2.3. </span>The root of a parse tree in Lean<a class="headerlink" href="#the-root-of-a-parse-tree-in-lean" title="Permalink to this heading">#</a></h2>
 <p>This project defines the command <code class="docutils literal notranslate"><span class="pre">#pp_app</span></code> that displays the root of a parse tree of
 an expression.</p>
 <p>For example, typing</p>
@@ -283,14 +491,14 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 <p>(i) <span class="math notranslate nohighlight">\(3 + 5 \times 5\)</span>, (ii) <span class="math notranslate nohighlight">\(7^{3 + 2}\)</span>, (iii) <span class="math notranslate nohighlight">\(3 + 2 = 10\)</span>, (iv) <span class="math notranslate nohighlight">\(10&lt;30\)</span>, (v) <span class="math notranslate nohighlight">\(5 \ne 6/2\)</span>, (vi) <span class="math notranslate nohighlight">\(5^3 \ge 2 + 3\)</span>.</p>
 <p>If necessary, refer to Appendix <a class="reference internal" href="typing_lean_symbols.html#typing-lean-symbols"><span class="std std-ref">Typing Lean Symbols</span></a>.</p>
 </div></div><section id="id3">
-<h3><span class="section-number">2.3.1. </span>Solutions<a class="headerlink" href="#id3" title="Permalink to this heading">&#61633;</a></h3>
+<h3><span class="section-number">2.3.1. </span>Solutions<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p>This section has solutions.
 <a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/solutions/solutions_root_of_parse_tree.lean" target="_blank" tryitfile="../src/expressions/solutions/solutions_root_of_parse_tree.lean">
 Go to solutions source</a>.</p>
 </section>
 </section>
 <section id="functions-in-lean">
-<h2><span class="section-number">2.4. </span>Functions in Lean<a class="headerlink" href="#functions-in-lean" title="Permalink to this heading">&#61633;</a></h2>
+<h2><span class="section-number">2.4. </span>Functions in Lean<a class="headerlink" href="#functions-in-lean" title="Permalink to this heading">#</a></h2>
 <p>Here is the Lean definition of a function <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">:</span> <span class="pre">&#8469;</span> <span class="pre">&#8594;</span> <span class="pre">&#8484;</span></code> such that <span class="math notranslate nohighlight">\(f(x) := -x^2\)</span>.</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/functions.lean" target="_blank" tryitfile="../src/expressions/functions.lean">
@@ -375,7 +583,7 @@ Check your answers in Lean.</p>
 <p>(i) <span class="math notranslate nohighlight">\(u + v\)</span>, (ii) <span class="math notranslate nohighlight">\(y + z\)</span>, (iii) <span class="math notranslate nohighlight">\(g(u + v)\)</span>, (iv) <span class="math notranslate nohighlight">\(g(y + z)\)</span>,
 (v) <span class="math notranslate nohighlight">\(u + g(u)\)</span>, (vi) <span class="math notranslate nohighlight">\(y + g(u)\)</span>, (vii) <span class="math notranslate nohighlight">\(g(u) + u\)</span>, (viii) <span class="math notranslate nohighlight">\(g(u) + y\)</span>.</p>
 </div></div><section id="lambda-abstraction">
-<span id="index-5"></span><h3><span class="section-number">2.4.1. </span>Lambda abstraction<a class="headerlink" href="#lambda-abstraction" title="Permalink to this heading">&#61633;</a></h3>
+<span id="index-5"></span><h3><span class="section-number">2.4.1. </span>Lambda abstraction<a class="headerlink" href="#lambda-abstraction" title="Permalink to this heading">#</a></h3>
 <p>Lambda abstractions are unnamed functions. For example <code class="docutils literal notranslate"><span class="pre">&#955;</span> <span class="pre">x,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">x</span></code> is the
 function that doubles its input. More precisely, Lean assumes that quantities involved
 in arithmetic operations are natural numbers (unless told otherwise). So this function
@@ -470,7 +678,7 @@ of two objects that are definitionally equal.</p>
 <p>Prove that <span class="math notranslate nohighlight">\(p = p_3\)</span>.</p>
 </div></div></section>
 <section id="functions-and-variables">
-<span id="index-7"></span><h3><span class="section-number">2.4.2. </span>Functions and variables<a class="headerlink" href="#functions-and-variables" title="Permalink to this heading">&#61633;</a></h3>
+<span id="index-7"></span><h3><span class="section-number">2.4.2. </span>Functions and variables<a class="headerlink" href="#functions-and-variables" title="Permalink to this heading">#</a></h3>
 <p>The name of the &#8216;bound&#8217; variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is (usually) irrelevant in a function definition such as</p>
 <div style="position: relative">
 <div style='position: absolute; right: 0; top: 0; padding: 1ex'><a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/functions.lean" target="_blank" tryitfile="../src/expressions/functions.lean">
@@ -563,14 +771,14 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 in Lean.</p>
 </div></div></section>
 <section id="id4">
-<h3><span class="section-number">2.4.3. </span>Solutions<a class="headerlink" href="#id4" title="Permalink to this heading">&#61633;</a></h3>
+<h3><span class="section-number">2.4.3. </span>Solutions<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>This section has solutions.
 <a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/solutions/solutions_functions.lean" target="_blank" tryitfile="../src/expressions/solutions/solutions_functions.lean">
 Go to solutions source</a>.</p>
 </section>
 </section>
 <section id="predicates">
-<span id="index-8"></span><h2><span class="section-number">2.5. </span>Predicates<a class="headerlink" href="#predicates" title="Permalink to this heading">&#61633;</a></h2>
+<span id="index-8"></span><h2><span class="section-number">2.5. </span>Predicates<a class="headerlink" href="#predicates" title="Permalink to this heading">#</a></h2>
 <p>Below is the definition of a predicate. It&#8217;s simply a function from <code class="docutils literal notranslate"><span class="pre">&#8469;</span></code> to <code class="docutils literal notranslate"><span class="pre">Prop</span></code>
 that takes each natural number <code class="docutils literal notranslate"><span class="pre">x</span></code> to the proposition <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.</p>
 <div style="position: relative">
@@ -633,14 +841,14 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
     </div><div class="proof-content">
 <p>Prove that <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">(500)</span> <span class="pre">(-100)</span></code> equals <code class="docutils literal notranslate"><span class="pre">500</span> <span class="pre">+</span> <span class="pre">(-100)</span> <span class="pre">&lt;</span> <span class="pre">7</span></code>.</p>
 </div></div><section id="id5">
-<h3><span class="section-number">2.5.1. </span>Solutions<a class="headerlink" href="#id5" title="Permalink to this heading">&#61633;</a></h3>
+<h3><span class="section-number">2.5.1. </span>Solutions<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>This section has solutions.
 <a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/solutions/solutions_predicates.lean" target="_blank" tryitfile="../src/expressions/solutions/solutions_predicates.lean">
 Go to solutions source</a>.</p>
 </section>
 </section>
 <section id="introduction-to-tactics">
-<h2><span class="section-number">2.6. </span>Introduction to tactics<a class="headerlink" href="#introduction-to-tactics" title="Permalink to this heading">&#61633;</a></h2>
+<h2><span class="section-number">2.6. </span>Introduction to tactics<a class="headerlink" href="#introduction-to-tactics" title="Permalink to this heading">#</a></h2>
 <p id="index-9">In this important section, you&#8217;ll learn about Lean <cite>tactics</cite>, these being tools for writing proofs
 interactively.</p>
 <p>This is also the first section in which we&#8217;ll import the Lean code from a previous section. To do
@@ -668,7 +876,7 @@ Go to source</a></div><div class="highlight-lean notranslate"><div class="highli
 </pre></div>
 </div>
 </div><section id="tactic-blocks">
-<h3><span class="section-number">2.6.1. </span>Tactic blocks<a class="headerlink" href="#tactic-blocks" title="Permalink to this heading">&#61633;</a></h3>
+<h3><span class="section-number">2.6.1. </span>Tactic blocks<a class="headerlink" href="#tactic-blocks" title="Permalink to this heading">#</a></h3>
 <p id="index-10">In the proof above, the words <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> denote the start and end of a &#8216;tactic block&#8217;.</p>
 <p>Each of the lines within the tactic block uses a <cite>tactic</cite>. Here, we use the <code class="docutils literal notranslate"><span class="pre">show</span></code> and
 <code class="docutils literal notranslate"><span class="pre">norm_num</span></code> tactics. Each tactic line ends with a comma.</p>
@@ -696,7 +904,7 @@ After reading those items, write an English-language explanation of how the tact
 above works.</p>
 </div></div></section>
 <section id="who-s-sorry-now">
-<h3><span class="section-number">2.6.2. </span>Who&#8217;s sorry now?<a class="headerlink" href="#who-s-sorry-now" title="Permalink to this heading">&#61633;</a></h3>
+<h3><span class="section-number">2.6.2. </span>Who&#8217;s sorry now?<a class="headerlink" href="#who-s-sorry-now" title="Permalink to this heading">#</a></h3>
 <p id="index-12">The best way to tackle a problem is to break it down into smaller manageable pieces and to apply
 the same decomposition process recursively to each piece until what is left is trivial.</p>
 <p>You can apply this idea to writing a proof. Start with a proof that is <cite>structurally correct</cite> but
@@ -742,14 +950,14 @@ is a fundamental skill. You can read more about error messages in the Appendix
 <a class="reference internal" href="error_messages.html#error-messages"><span class="std std-ref">Error messages</span></a>.</p>
 </section>
 <section id="id6">
-<h3><span class="section-number">2.6.3. </span>Solutions<a class="headerlink" href="#id6" title="Permalink to this heading">&#61633;</a></h3>
+<h3><span class="section-number">2.6.3. </span>Solutions<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <p>This section has solutions.
 <a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/solutions/solutions_tactics.lean" target="_blank" tryitfile="../src/expressions/solutions/solutions_tactics.lean">
 Go to solutions source</a>.</p>
 </section>
 </section>
 <section id="functions-and-predicates-of-many-variables">
-<h2><span class="section-number">2.7. </span>Functions and predicates of many variables<a class="headerlink" href="#functions-and-predicates-of-many-variables" title="Permalink to this heading">&#61633;</a></h2>
+<h2><span class="section-number">2.7. </span>Functions and predicates of many variables<a class="headerlink" href="#functions-and-predicates-of-many-variables" title="Permalink to this heading">#</a></h2>
 <p>Let&#8217;s dig a little deeper into how Lean treats functions of many variables.</p>
 <p>Consider a function <span class="math notranslate nohighlight">\(f\)</span> defined so that <span class="math notranslate nohighlight">\(f(x,y) := 2x + y\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> is an integer
 and <span class="math notranslate nohighlight">\(y\)</span> is a natural number. In Lean, we might write this as:</p>
@@ -837,7 +1045,7 @@ where <span class="math notranslate nohighlight">\(u\)</span> is a natural numbe
 the first part of this question.</p></li>
 </ul>
 </div></div><section id="id7">
-<h3><span class="section-number">2.7.1. </span>Solutions<a class="headerlink" href="#id7" title="Permalink to this heading">&#61633;</a></h3>
+<h3><span class="section-number">2.7.1. </span>Solutions<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <p>This section has solutions.
 <a href="https://github.com/GihanMarasinghaOrg/modern_maths_lean/tree/main/src/expressions/solutions/solutions_functions_and_predicates_of_many_variables.lean" target="_blank" tryitfile="../src/expressions/solutions/solutions_functions_and_predicates_of_many_variables.lean">
 Go to solutions source</a>.</p>
@@ -846,34 +1054,136 @@ Go to solutions source</a>.</p>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="01_Introduction.html" class="btn btn-neutral float-left" title="1. Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="typing_lean_symbols.html" class="btn btn-neutral float-right" title="Typing Lean symbols" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Gihan Marasingha.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_Introduction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="typing_lean_symbols.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Typing Lean symbols</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
 
-</body>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluating-expressions">2.1. Evaluating expressions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">2.1.1. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-in-lean">2.2. Types in Lean</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2.1. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-root-of-a-parse-tree-in-lean">2.3. The root of a parse tree in Lean</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.3.1. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-in-lean">2.4. Functions in Lean</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-abstraction">2.4.1. Lambda abstraction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-and-variables">2.4.2. Functions and variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.4.3. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predicates">2.5. Predicates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.5.1. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-tactics">2.6. Introduction to tactics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tactic-blocks">2.6.1. Tactic blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#who-s-sorry-now">2.6.2. Who&#8217;s sorry now?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.6.3. Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-and-predicates-of-many-variables">2.7. Functions and predicates of many variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.7.1. Solutions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gihan Marasingha
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      &#169; Copyright 2022, Gihan Marasingha.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>
